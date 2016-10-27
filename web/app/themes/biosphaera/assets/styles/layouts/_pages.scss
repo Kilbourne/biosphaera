@@ -1,0 +1,202 @@
+.et_divi_builder #et_builder_outer_content{
+	.et_pb_column_1,.et_pb_column_0{
+@media only screen and ( max-width: 767px ) {
+ background-size: cover !important;
+}
+}
+} 
+
+
+.woocommerce div#content div.product{
+	padding:0 3.5%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	>.first-col{ width:53%;}
+	>.second-col{ width:40%;margin-bottom: 0;}
+	>.entry-description{
+		display: flex;
+		flex-direction: column;
+		
+		position: relative;
+	}
+	.initial-text h3{ font-weight: 300; .title-product{ font-weight: bold;}}
+	div.images{
+		width:auto;
+		float:none;
+	margin-bottom: 15px;
+text-align: left;
+padding-top: 11px;
+>.woocommerce-main-image{display: inline-block;}
+	}
+	.buy-wrapper{
+		display: inline-flex;
+	}
+	.price{
+		margin: 0;
+		line-height: 1;
+		margin-right: 1.5rem;
+		height: 4rem;
+		padding: .618em 4px;
+		display: inline-block;
+		box-sizing: border-box;
+		font-size: 1.8rem;
+	}
+	form.cart{
+		margin-bottom: 0;
+	}
+	.qty{
+		-moz-appearance: textfield;
+		font-size: 1.18rem;
+		font-weight: 500;
+		border: 5px solid #aaa;
+		width: 3rem;
+		height: 3rem;
+		text-align: center;
+		padding: 8px;
+		box-sizing: border-box;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+    		-webkit-appearance: none;
+		}
+	}
+	.single_add_to_cart_button{
+		height: 3rem;
+		font-size: 1.2rem;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	.wc-tabs{
+		padding-left: 0;
+		display: flex;
+		&::before{ border:none;}
+		li{
+			flex-grow: 1;
+			text-align: center;
+			margin-right: .5rem;
+			border: none;
+			border-radius: 0%;
+			margin-left: 0;
+			background-color: #FFE800;
+			color:#000;
+			&:before,&:after{
+				content: none;
+			}
+			&.active{
+				background-color: #ebe9eb;
+			}
+		}
+	}
+}
+.woocommerce #reviews #comments {
+	.woocommerce-Reviews-title{
+		background-color: #FFE800;
+	}
+	ol.commentlist{
+		padding-left: 0;
+		li .comment-text{
+			margin-left: 0;
+			display: flex;
+			justify-content: space-between;
+			.description{ flex-grow: 1; }
+			.comment-rest{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+			.star-rating{ 
+				float:none;
+				margin-bottom: .75rem;
+				&::before{ position:static;}
+				span{ float:none;}
+				.meta{ text-align:right;
+					>strong{display:block;}
+				}
+			}
+		}
+	} 
+}
+	
+.single-aree_terapeutiche{
+	.area-img-wrapper{ border-bottom: 3px solid #FFE800;}
+	.area-content{
+		overflow: hidden; 
+		.first-col,.second-col{ float:left;width:50%; }
+	}	
+	.area_terap_attribute_title{
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 1;
+		margin: 0;
+		background-color: #ffe801;
+		padding: .5rem 0;
+		padding-left: 1rem;
+	}
+	.area_terap_attribute_content{
+		padding: 0 4%;
+	}
+} 
+	
+.ok-list{
+	list-style:none;
+	margin-left:0;
+	padding-left: 0;
+	>li{
+		display:block;
+		padding:8px 0;
+
+		&::before{
+		  color:#8dba1f;
+		  margin-right: 4px;
+		}
+	}
+	
+}	
+.area-content-wrapper{ overflow:hidden;}
+body.single-aree_terapeutiche{
+	&.woocommerce div#content{
+		border-top: 5px solid #FFE800;
+		padding: 0 6px;
+	
+	 div.product{
+		padding:0;
+		display:block;
+		.initial-text+div{
+			position:static !important;
+		}
+		 >.first-col,>.second-col{
+			width:50%;
+		 }
+		 div.images{
+		 	margin-top: 1.5rem;
+		 
+			  img{
+			 	width:auto;
+			 }
+		}
+		 .buy-wrapper{
+		 	justify-content:center;
+		 	width:100%;
+		 }
+	}
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

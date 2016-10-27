@@ -1,7 +1,18 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
 // Grid settings
-$enable-flex:           true;
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
 $brand-primary:         #27ae60;
+
+$breakpoints: (
+    "palm"          "screen and (max-width: 49.9375em)",
+    "lap"           "screen and (min-width: 50em) and (max-width: 63.9375em)",
+    "lap-and-up"    "screen and (min-width: 50em)",
+    "portable"      "screen and (max-width: 63.9375em)",
+    "desk"          "screen and (min-width: 64em)",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+) !default;

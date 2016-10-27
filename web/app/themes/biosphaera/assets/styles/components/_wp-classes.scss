@@ -1,6 +1,17 @@
-// WordPress Generated Classes
+ // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
+body.admin-bar{
+ //.wrap.container { margin-top: 32px !important; }
+  * html body { margin-top: 32px !important; }
+  @media screen and ( max-width: 782px ) {
+   //.wrap.container { margin-top: 46px !important; }
+    * html body { margin-top: 46px !important; }
+  }
+}
+html #wpadminbar{
+  position:fixed;
+}
 // Media alignment
 .alignnone {
   margin-left: 0;
@@ -10,37 +21,36 @@
 }
 .aligncenter {
   display: block;
-  margin: ($spacer / 2) auto;
+  margin: 1em auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($spacer / 2);
+  margin-bottom: 1em;
   height: auto;
 }
-@include media-breakpoint-up(sm) {
+@include media-query (lap-and-up) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($spacer / 2);
+    margin-right: 1em;
   }
   .alignright {
     float: right;
-    margin-left: ($spacer / 2);
+    margin-left: 1em;
   }
 }
 
 // Captions
 .wp-caption {
-  @extend .figure-img;
-  @extend .img-fluid;
+  //@extend .thumbnail;
 }
 .wp-caption-text {
-  @extend .figure-caption;
+  padding: 1em;
 }
 
 // Text meant only for screen readers
 .screen-reader-text {
-  @extend .sr-only;
-  @extend .sr-only-focusable;
+   position: absolute !important;
+  text-indent:-9999px;
 }

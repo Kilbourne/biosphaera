@@ -1,1 +1,31 @@
-
+html{
+	font-family:'DINNextLTPro';
+	font-weight: 300;
+}
+strong{ font-weight: bold;}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 500;
+}
+.page-wrapper{
+	width:1280px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.screen-reader {
+    position: absolute !important;    
+    clip: rect(1px, 1px, 1px, 1px);        
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}

@@ -1,5 +1,5 @@
 .comment-list {
-  @extend .list-unstyled;
+  @include list-unstyled;
 }
 .comment-list ol {
   list-style: none;
@@ -15,5 +15,5 @@
 }
 .comment-form input[type="submit"] {
   @extend .btn;
-  @extend .btn-secondary;
+  @extend .btn-primary;
 }
