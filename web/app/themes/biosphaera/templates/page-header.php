@@ -1,5 +1,5 @@
-<?php use Roots\Sage\Titles; ?>
+<?php use Roots\Sage\Titles;use Roots\Sage\Setup; ?>
 
 <div class="page-header">
-  <h1><?= Titles\title(); ?></h1>
+  <h1 <?php if(!Setup\display_title()) echo'class="screen-reader"'; ?> ><?= Titles\title(); ?></h1>
 </div>
