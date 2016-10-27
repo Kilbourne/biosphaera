@@ -9,7 +9,7 @@ web/app/uploads/*
 # WordPress
 web/wp
 web/.htaccess
-
+.htaccess
 # WP-CLI
 db-sync
 sql-dump-*.sql
