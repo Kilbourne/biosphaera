@@ -11,7 +11,7 @@ function setup() {
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/
   add_theme_support('soil-clean-up');
-  add_theme_support('soil-nav-walker');
+  //add_theme_support('soil-nav-walker');
   add_theme_support('soil-nice-search');
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
@@ -90,17 +90,35 @@ function display_sidebar() {
 
   return apply_filters('sage/display_sidebar', $display);
 }
+function display_title() {
+  static $display;
 
+  isset($display) || $display = !in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    true
+  ]);
+
+  return apply_filters('sage/display_title', $display);
+}
 /**
  * Theme assets
  */
 function assets() {
+     wp_deregister_style( 'woocommerce-layout' );
+    wp_deregister_style( 'woocommerce-general' );
+     wp_deregister_style( 'woocommerce-smallscreen' );
+  wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
+  
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
-
+  if ( is_product() || is_singular('aree_terapeutiche' ) ) {
+    wp_deregister_script( 'wc-single-product' );
+    wp_enqueue_script( 'wc-single-product', Assets\asset_path('scripts/single-product.js'), ['jquery'] );
+  }
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
