@@ -12,6 +12,11 @@
       ],
       "main": true
     },
+    "woocommerce.css":{
+      "files":[
+        "styles/woocommerce.scss"
+      ]
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"
@@ -19,6 +24,11 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "single-product.js":{
+      "files": [
+        "scripts/single-product.js"
+      ]
     }
   },
   "config": {
