@@ -1,0 +1,46 @@
+/**
+ * Cart
+ */
+table.cart,
+#content table.cart {
+	.product-thumbnail {
+		display: none;
+	}
+
+	td.actions {
+		text-align: left;
+
+		.coupon {
+			float: none;
+			@include clearfix();
+			padding-bottom: 0.5em;
+
+			input,
+			.button,
+			.input-text {
+				width: 48%;
+				box-sizing: border-box;
+			}
+
+			.input-text + .button,
+			.button.alt {
+				float: right;
+			}
+		}
+
+		.button {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.cart-collaterals {
+	.cart_totals,
+	.shipping_calculator,
+	.cross-sells {
+		width: 100%;
+		float: none;
+		text-align: left;
+	}
+}

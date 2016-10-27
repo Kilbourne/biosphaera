@@ -1,0 +1,22 @@
+/**
+ * Account
+ */
+.woocommerce,
+.woocommerce-page {
+	.lost_reset_password {
+		.form-row-first,
+		.form-row-last {
+			width: 100%;
+			float: none;
+			margin-right: 0;
+		}
+	}
+}
+
+.woocommerce-account {
+	.woocommerce-MyAccount-navigation,
+	.woocommerce-MyAccount-content {
+		float: none;
+		width: 100%;
+	}
+}

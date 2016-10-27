@@ -1,0 +1,99 @@
+/**
+ * woocommerce.scss
+ * Governs the general look and feel of WooCommerce sections of stores using themes that do not
+ * integrate with WooCommerce specifically.
+ */
+/**
+wp_deregister_style( 'woocommerce-layout' );
+    wp_deregister_style( 'woocommerce-general' );
+     wp_deregister_style( 'woocommerce-smallscreen' );
+  wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
+*/  
+/**
+ * Imports
+ */
+@import "bourbon";
+@import 'woocommerce/mixins';
+@import 'woocommerce/variables';
+@import 'woocommerce/animation';
+@import 'woocommerce/fonts';
+
+/**
+ * Global styles
+ */
+p.demo_store {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	width: 100%;
+	font-size: 1em;
+	padding: 1em 0;
+	text-align: center;
+	background-color: $primary;
+	color: $primarytext;
+	z-index: 99998;
+	box-shadow: 0 1px 1em rgba(0, 0, 0, 0.2);
+	a {
+		color: $primarytext;
+	}
+}
+
+.admin-bar {
+	p.demo_store {
+		top: 32px;
+	}
+}
+
+/**
+ * Utility classes
+ */
+.clear {
+	clear: both;
+}
+
+/**
+ * Main WooCommerce styles
+ */
+.woocommerce {
+	@import 'woocommerce/global';
+	@import 'woocommerce/product';
+	@import 'woocommerce/product-loop';
+	@import 'woocommerce/buttons';
+	@import 'woocommerce/reviews';
+	@import 'woocommerce/rating';
+	@import 'woocommerce/tables';
+	@import 'woocommerce/cart-sidebar';
+	@import 'woocommerce/forms';
+	@import 'woocommerce/order';
+	@import 'woocommerce/widgets';
+}
+	@import 'woocommerce/alerts';
+	@import 'woocommerce/account';
+	@import 'woocommerce/cart';
+	@import 'woocommerce/password';
+
+.woocommerce, .woocommerce-page {
+	@import 'woocommerce/layout-global';
+	@import 'woocommerce/layout-product';
+	@import 'woocommerce/layout-product-loop';
+	@import 'woocommerce/layout-cart';
+	@import 'woocommerce/layout-cart-sidebar';
+	@import 'woocommerce/layout-forms';
+}	
+	@import 'woocommerce/layout-account';
+@media(max-width: 768px ){
+
+.woocommerce,
+.woocommerce-page {
+	@import 'woocommerce/small-table';
+	@import 'woocommerce/small-global';
+	@import 'woocommerce/small-product-loop';
+	@import 'woocommerce/small-product';
+	@import 'woocommerce/small-cart';
+	@import 'woocommerce/small-checkout';
+}
+@import 'woocommerce/small-account';
+}
+

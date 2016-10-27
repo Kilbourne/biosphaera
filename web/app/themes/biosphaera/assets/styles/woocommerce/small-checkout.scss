@@ -1,0 +1,25 @@
+/**
+ * Checkout
+ */
+&.woocommerce-checkout {
+	form.login {
+		.form-row {
+			width: 100%;
+			float: none;
+		}
+	}
+}
+
+#payment {
+	.terms {
+		text-align: left;
+		padding: 0;
+	}
+
+	#place_order {
+		float: none;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 1em;
+	}
+}

@@ -1,0 +1,56 @@
+/**
+ * Account page
+ */
+.woocommerce-account {
+    .woocommerce {
+        @include clearfix();
+    }
+
+    .addresses {
+        .title {
+            @include clearfix();
+
+            h3 {
+                float: left;
+            }
+
+            .edit {
+                float: right;
+            }
+        }
+    }
+
+    ol.commentlist.notes {
+        li.note {
+
+            p.meta {
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            .description {
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    ul.digital-downloads {
+        margin-left: 0;
+        padding-left: 0;
+
+        li {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+
+            &::before {
+                @include iconbefore( '\e00a' );
+            }
+
+            .count {
+                float: right;
+            }
+        }
+    }
+}

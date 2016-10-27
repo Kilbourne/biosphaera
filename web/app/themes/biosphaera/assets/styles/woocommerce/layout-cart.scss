@@ -1,0 +1,67 @@
+/**
+ * Cart page
+ */
+table.cart,
+#content table.cart {
+	img {
+		height: auto;
+	}
+
+	td.actions {
+		text-align: right;
+
+		.input-text {
+			width: 80px;
+		}
+
+		.coupon {
+			float: left;
+
+			label {
+				display: none;
+			}
+		}
+	}
+}
+
+.cart-collaterals {
+	@include clearfix();
+	width: 100%;
+
+	.related {
+		width: 30.75%;
+		float: left;
+	}
+
+	.cross-sells {
+		width: 48%;
+		float: left;
+
+		ul.products {
+			float: none;
+
+			li {
+				width: 48%;
+			}
+		}
+	}
+
+	.shipping_calculator {
+		width: 48%;
+		@include clearfix();
+		clear: right;
+		float: right;
+
+		.col2-set {
+			.col-1,
+			.col-2 {
+				width: 47%;
+			}
+		}
+	}
+
+	.cart_totals {
+		float: right;
+		width: 48%;
+	}
+}

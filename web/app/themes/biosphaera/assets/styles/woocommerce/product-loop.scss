@@ -1,0 +1,142 @@
+    /**
+     * Product loops
+     */
+    
+
+    .products ul,
+    ul.products {
+        margin: 0 0 1em;
+        padding: 0;
+        list-style: none outside;
+        clear: both;
+        @include clearfix();
+
+        li {
+            list-style: none outside;
+        }
+    }
+
+    ul.products {
+        li.product {
+            .onsale {
+                top: 0;
+                right: 0;
+                left: auto;
+                margin: -0.5em -0.5em 0 0;
+            }
+
+            h3,
+            .woocommerce-loop-product__title,
+            .woocommerce-loop-category__title {
+                padding: 0.5em 0;
+                margin: 0;
+                font-size: 1em;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 0 1em;
+                box-shadow: none;
+            }
+
+            strong {
+                display: block;
+            }
+
+            .star-rating {
+                font-size: 0.857em;
+            }
+
+            .button {
+                margin-top: 1em;
+            }
+
+            .price {
+                color: $highlight;
+                display: block;
+                font-weight: normal;
+                margin-bottom: 0.5em;
+                font-size: 0.857em;
+
+                del {
+                    color: inherit;
+                    opacity: 0.5;
+                    display: block;
+                }
+
+                ins {
+                    background: none;
+                    font-weight: 700;
+                }
+
+                .from {
+                    font-size: 0.67em;
+                    margin: -2px 0 0 0;
+                    text-transform: uppercase;
+                    color: rgba(desaturate($highlight, 75%), 0.5);
+                }
+            }
+        }
+    }
+
+    .woocommerce-result-count {
+        margin: 0 0 1em;
+    }
+
+    .woocommerce-ordering {
+        margin: 0 0 1em;
+
+        select {
+            vertical-align: top;
+        }
+    }
+
+    nav.woocommerce-pagination {
+        text-align: center;
+
+        ul {
+            display: inline-block;
+            white-space: nowrap;
+            padding: 0;
+            clear: both;
+            border: 1px solid darken( $secondary, 10% );
+            border-right: 0;
+            margin: 1px;
+
+            li {
+                border-right: 1px solid darken( $secondary, 10% );
+                padding: 0;
+                margin: 0;
+                float: left;
+                display: inline;
+                overflow: hidden;
+
+                a,
+                span {
+                    margin: 0;
+                    text-decoration: none;
+                    padding: 0;
+                    line-height: 1;
+                    font-size: 1em;
+                    font-weight: normal;
+                    padding: 0.5em;
+                    min-width: 1em;
+                    display: block;
+                }
+
+                span.current,
+                a:hover,
+                a:focus {
+                    background: $secondary;
+                    color: darken( $secondary, 40% );
+                }
+            }
+        }
+    }
+
