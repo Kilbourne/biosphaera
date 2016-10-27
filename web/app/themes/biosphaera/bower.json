@@ -7,6 +7,17 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4"
+    "inuit-defaults": "latest",
+    "inuit-responsive-settings": "latest",
+    "inuit-functions": "latest",
+    "inuit-mixins": "latest",
+    "inuit-responsive-tools": "latest",
+    "inuit-normalize.css": "latest",
+    "inuit-box-sizing": "latest",
+    "inuit-shared": "latest",
+    "inuit-print": "latest",
+    "jquery": "~1.11.3",
+    "font-awesome": "~4.5.0",
+    "fastclick": "~1.0.6"
   }
 }
