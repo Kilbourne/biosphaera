@@ -19,9 +19,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
+use Roots\Sage\Extras;
 ?>
-
+<?php   Extras\theme_breadcrumb(); ?>
 <?php
 	/**
 	 * woocommerce_before_single_product hook.

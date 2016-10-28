@@ -26,8 +26,10 @@ if ( ! $post->post_content ) {
 	return;
 }
 
+$color=Roots\Sage\Extras\get_product_color($post->ID);
+
 ?>
-<div class="entry-description first-col" itemprop="description" style="background-color:<?php echo get_field('color',$post->ID) ?>">
+<div class="entry-description first-col" itemprop="description" style="background-color:<?php echo $color; ?>">
 	<?php echo is_product()? apply_filters( 'woocommerce_short_description', $post->post_content ).woocommerce_template_single_sharing() : apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ; 	
 	?>	
 </div>

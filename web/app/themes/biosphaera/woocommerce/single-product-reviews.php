@@ -24,11 +24,12 @@ global $product;
 if ( ! comments_open() ) {
 	return;
 }
+$color=Roots\Sage\Extras\get_product_color($post->ID);
 
 ?>
 <div id="reviews" class="woocommerce-Reviews first-col">
 	<div id="comments">
-		<h2 class="woocommerce-Reviews-title"><?php
+		<h2 class="woocommerce-Reviews-title" style="background-color:<?php echo $color; ?>" ><?php
 				_e( 'Reviews', 'woocommerce' );
 		?></h2>
 
@@ -106,4 +107,5 @@ if ( ! comments_open() ) {
 	<?php endif; ?>
 
 	<div class="clear"></div>
+<?php do_action( 'after_comments' );	 ?>	
 </div>
