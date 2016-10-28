@@ -54,6 +54,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb',  20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 31 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_images', 5 );
 add_action( 'woocommerce_single_product_summary', __NAMESPACE__ . '\\woocommerce_open_price_container', 9 );
@@ -135,13 +136,12 @@ function area_terap_attribute_template($field){
 add_action( 'woocommerce_share', __NAMESPACE__ . '\\bios_social');
 
 function bios_social(){
-
-  echo '<div style="position: absolute; bottom: 0; left: 1rem;">
-<p style="text-align: left; width: 100%; white-space: nowrap;">Consiglialo ai tuoi amici</p>
-
-<div>
-<p style="text-align: left; width: 100%; white-space: nowrap; margin-bottom: 0;">DISPONIBILITA IMMEDIATA</p>
-<p style="text-align: left; width: 100%; white-space: nowrap; margin-top: 0;">Consegna Express 1-3 giorni</p>
+  echo '<div class="social-container"><div  >
+<p>Consiglialo ai tuoi amici</p>
+<div class="fb-share-button" data-href="'.get_permalink().'" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='.urlencode(get_permalink().'&src=sdkpreparse').'" >'.__('Condividi','sage').'</a></div></div>
+<div class="disponibilita">
+<p style="font-size:1rem;margin-bottom:0;">DISPONIBILITA IMMEDIATA</p>
+<p>Consegna Express 1-3 giorni</p>
 
 </div>
 </div>';
@@ -163,4 +163,39 @@ function filter_function_name( $atts, $item, $args ) {
     }
 
     return $atts;
+}
+function display_breadcrumb(){
+  global $post;
+  if(!in_array($post->post_type,  ['product','aree_terapeutiche'] )) return false;
+  return true;
+}
+
+function theme_breadcrumb(){
+  global $post;
+
+  $breadcrumbs_parts = [];
+  if($post->post_type === 'product' ){
+    $term = wp_get_post_terms( $post->ID, 'aree_terapeutiche' )[0];
+    $term_tax = wp_get_post_terms( $term->term_id, 'aree_terapeutice_tax' )[0];
+    
+    
+  }else{
+    $term_tax = wp_get_post_terms( $post->ID, 'aree_terapeutice_tax' )[0];
+  }
+  $breadcrumbs_parts[]=['label'=> strtoupper($term_tax->name) ];    
+    $breadcrumbs_parts[]=['label'=> $post->post_title];
+  $breadcrumb='<div class="breadcrumbs">  
+  <span> > '.__('sei in','sage').'</span>';
+  foreach ($breadcrumbs_parts as $key => $bread) {
+    if(isset($bread['link']))$breadcrumb.='<a href="'.$bread['link'].'">';
+      $breadcrumb.='<span>'.$bread['label'].'</span>';
+      if(isset($bread['link']))$breadcrumb.='</a>';
+      if($key !== count($breadcrumbs_parts)-1 ) $breadcrumb.='<span>/</span>';
+  }
+  $breadcrumb.= '</div>';
+  echo $breadcrumb; 
+}
+
+function get_product_color($post_id){
+  return get_field('color', 'aree_terapeutice_tax_'.wp_get_post_terms( wp_get_post_terms( $post_id, 'aree_terapeutiche', ['fields'=> 'ids'] )[0], 'aree_terapeutice_tax', ['fields'=> 'ids'] )[0]);
 }

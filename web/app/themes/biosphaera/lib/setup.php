@@ -101,6 +101,17 @@ function display_title() {
 
   return apply_filters('sage/display_title', $display);
 }
+function display_header_slider(){
+    static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_front_page(), is_product()
+  ]);
+
+  return apply_filters('sage/display_title', $display);
+}
 /**
  * Theme assets
  */
