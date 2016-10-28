@@ -130,3 +130,20 @@
 	}
   	.nav-primary{ display:none;}
 }
+
+
+.breadcrumbs {
+	padding: 0 3.5%;
+font-size: 0.75rem;
+line-height: 1.5;
+margin-bottom: .5rem;
+padding-top: 4px;
+	>span:first-child {
+    margin-right: 8px;
+	}
+	span:last-child {
+    font-weight: 500;
+	}
+	
+	a{ display: inline-block;}
+}
