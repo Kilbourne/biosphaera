@@ -14,8 +14,8 @@
 
         span.price,
         p.price {
-            color: $highlight;
-            font-size: 1.25em;
+            color: #000;
+            //font-size: 1.25em;
 
             ins {
                 background: inherit;
@@ -59,7 +59,7 @@
         }
 
         div.summary {
-            margin-bottom: 2em;
+            //margin-bottom: 2em;
         }
 
         div.social {
@@ -94,12 +94,12 @@
                 position: relative;
 
                 li {
-                    border: 1px solid darken( $secondary, 10% );
-                    background-color: $secondary;
-                    display: inline-block;
+                    //border: 1px solid darken( $secondary, 10% );
+                    //background-color: $secondary;
+                    //display: inline-block;
                     position: relative;
-                    z-index: 0;
-                    border-radius: 4px 4px 0 0;
+                    //z-index: 0;
+                    //border-radius: 4px 4px 0 0;
                     margin: 0 -5px;
                     padding: 0 1em;
 
@@ -119,7 +119,7 @@
                     &.active {
                         background: $contentbg;
                         z-index: 2;
-                        border-bottom-color: $contentbg;
+                        //border-bottom-color: $contentbg;
 
                         a {
                             color: inherit;
@@ -176,7 +176,7 @@
             }
 
             .panel {
-                margin: 0 0 2em;
+                //margin: 0 0 2em;
                 padding: 0;
             }
         }
@@ -187,7 +187,7 @@
         }
 
         form.cart {
-            margin-bottom: 2em;
+            //margin-bottom: 2em;
             @include clearfix();
 
             div.quantity {
