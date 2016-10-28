@@ -3,6 +3,7 @@ use Roots\Sage\Extras;
 ?>
 <div class="area-content">
 	<div class="area-img-wrapper"><?php the_post_thumbnail( 'full' ); ?></div>
+	<?php   Extras\theme_breadcrumb(); ?>
 	<div class="area-content-wrapper">
 	<div class="first-col">
 		<?php Extras\area_terap_attribute_template('cosa'); ?>		
