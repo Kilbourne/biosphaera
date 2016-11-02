@@ -1,9 +1,15 @@
 .et_divi_builder #et_builder_outer_content{
-	.et_pb_column_1,.et_pb_column_0{
-@media only screen and ( max-width: 767px ) {
- background-size: cover !important;
-}
-}
+
+
+  @include media-query(palm){
+  	.et_pb_row { flex-wrap:wrap;}
+    .et_pb_column.half-home{ width:100% !important;margin-right: 0 !important;background-size:contain !important;}
+    .et_pb_module p{ max-width:75%;}
+  }
+  @media(max-width: 375px){
+  	.et_pb_column.half-home{ background-size:0 !important;}	
+  	.et_pb_module p{ max-width:none;}
+  }
 } 
 
 
@@ -12,16 +18,17 @@
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
-	>.first-col{ width:53%;}
-	>.second-col{ width:40%;margin-bottom: 0;}
+	.product-content-image{@media(max-width: 35.1875em){ display:none;} }
+	>.first-col{ width:53%;@include media-query(palm){ width:100%;}}
+	>.second-col{ width:40%;margin-bottom: 0;@include media-query(palm){ width:100%;} }
 	>.entry-description{
 		display: flex;
 		flex-direction: column;
 		
 		position: relative;
-		margin-bottom:1rem;
+		margin-bottom:1rem;		
 	}
-	>.summary{ margin-bottom:1rem;}
+	>.summary{ margin-bottom:1rem;@include media-query(palm){ &,>.images{text-align:center;}} }
 	.initial-text h3{ font-weight: 300; .title-product{ font-weight: bold;}}
 	div.images{
 		width:auto;
@@ -33,6 +40,7 @@ padding-top: 11px;
 	}
 	.buy-wrapper{
 		display: inline-flex;
+		@media(max-width:400px){ flex-wrap:wrap;}
 	}
 	.price{
 		margin: 0;		
@@ -47,6 +55,8 @@ padding-top: 11px;
 	form.cart{
 		margin-bottom: 0;
 		margin-right: 1.5rem;
+		display:flex;
+		@media(max-width:25em){ margin-right: 0;}
 	}
 	.qty{
 		-moz-appearance: textfield;
@@ -72,19 +82,16 @@ padding-top: 11px;
 		ul.wc-tabs{
 			padding-left: 0;
 			display: flex;
+			flex-wrap:wrap;
 			margin-bottom:.5rem;
 			&::before{ border:none;}
 			li{
 				flex-grow: 1;
 				text-align: center;
-				margin-right: .5rem;
+				margin: 0 .25rem;
 				border: none;
-				border-radius: 0%;
-				margin-left: 0;			
+				border-radius: 0%;		
 				color:#000;
-				&:last-child{
-					margin-right: 0;
-				}
 				&:before,&:after{
 					content: none;
 				}
@@ -107,19 +114,23 @@ padding-top: 11px;
 					p{ margin:0;}
 				}}
 }
-.woocommerce #reviews #comments {
+.woocommerce #reviews {
+	@include media-query(palm){ margin-bottom:1rem;}
+	#comments {
+
 	ol.commentlist{
 		padding-left: 0;
 		li .comment-text{
 			margin-left: 0;
 			display: flex;
+			flex-wrap:wrap;
 			background-color:#efefef;
 			justify-content: space-between;
-			.description{ flex-grow: 1; }
+			.description{ flex-grow: 1;    margin-right: 1rem; }
 			.comment-rest{
 				display: flex;
 				flex-direction: column;
-				align-items: flex-end;
+				
 			}
 			.star-rating{ 
 				float:none;
@@ -132,14 +143,24 @@ padding-top: 11px;
 			}
 		}
 	} 
-}
-	
+}}
+	.divi-slider.header-slide,.area-img-wrapper{ 
+			@media(max-width:640px){ display:none;}
+	}
 .single-aree_terapeutiche{
-	.area-img-wrapper{ border-bottom: 3px solid #FFE800;}
+	.area-img-wrapper{ 
+		border-bottom: 3px solid #FFE800;
+		@include media-query(palm){ border-top: 3px solid #FFE800;}
+	
+	}
+	
 	.area-content{
 		overflow: hidden; 
 		margin-bottom:1.5rem;
-		.first-col,.second-col{ float:left;width:50%; }
+		.first-col,.second-col{ 
+			float:left;width:50%; 
+			@include media-query(palm){ float:none;width:100%; }
+		}
 	}	
 	.area_terap_attribute_title{
 		font-size: 1.5rem;
@@ -181,6 +202,7 @@ z-index: 9999;
 width: 100%;
 	font-size: 0.8rem;
 	font-weight: 500;
+	>div{ margin-bottom: 1rem;}
 	p{
 		width:100%;
 		white-space: nowrap;
@@ -225,18 +247,15 @@ width: 100%;
     }
 
   }
-  #commentform{
-  	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  .woocommerce #commentform{
+
 	font-size: 0.8rem;
-	.comment-form-rating{ order: 2; a{ color:#000; }}
-	.form-submit{ 
-		order: 3;
-		flex-basis: 50%;
+	.comment-form-rating{  a{ color:#000; }}
+	.form-submit{ 			
 		font-size: 1rem; 
 	}
-	#submit{background-color: #c8c8c8;}
+	p { display: block; }
+	input#submit{background-color: #C2C2C2;}
   }
 	
 	
@@ -269,6 +288,7 @@ width: 100%;
 		 .buy-wrapper{
 		 	justify-content:center;
 		 	width:100%;
+
 		 }
 	}
 	#reviews{

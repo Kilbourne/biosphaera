@@ -138,6 +138,7 @@
 }
 
 @include media-query( palm) {
+    .content-info >.container{ margin: .5rem 0; }
     .footer-section {
         width: 100%;
         margin-bottom:1rem;
@@ -155,6 +156,6 @@
         }
     }
     .footer-title {
-        margin-top: 0;
+        margin: 0 0 .5rem;
     }
 }
