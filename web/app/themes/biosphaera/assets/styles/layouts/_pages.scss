@@ -116,6 +116,7 @@ padding-top: 11px;
 }
 .woocommerce #reviews {
 	@include media-query(palm){ margin-bottom:1rem;}
+	@media(max-width:768px){ width:100%;}
 	#comments {
 
 	ol.commentlist{
@@ -202,7 +203,12 @@ z-index: 9999;
 width: 100%;
 	font-size: 0.8rem;
 	font-weight: 500;
-	>div{ margin-bottom: 1rem;}
+	@media(max-width: 35.1875em){ position:static;margin-top: 1.5rem;} 
+	>div{ margin-bottom: 1rem;
+		@media(max-width: 35.1875em){ display:inline-block;
+			&:first-child{ margin-right:1rem;}
+		} 
+	}
 	p{
 		width:100%;
 		white-space: nowrap;
@@ -211,15 +217,18 @@ width: 100%;
 		vertical-align: top;
 	}
 	.fb-share-button{ margin-bottom:1rem; }
-	.disponibilita::before{
+	.disponibilita{
+		span{ display:block;}
+		p{ display: inline-block;
+width: auto;}
+		&::before{
 		content:'';
 		display:inline-block;
 		background-image:url(../images/disponibilita.svg);
 		height: 36px;
 		width: 36px;
-		float: left;
-		clear: both;
 		margin-right: .5rem;
+		}
 	}
 }
 	
@@ -310,7 +319,6 @@ margin-bottom: 1rem;
 		}
 	}
 	.fb-share-button{ margin-bottom: 0;}
-	.disponibilita p{ padding-left: 3rem; }
 }
 	
 	}
