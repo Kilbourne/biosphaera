@@ -30,6 +30,10 @@ $color=Roots\Sage\Extras\get_product_color($post->ID);
 
 ?>
 <div class="entry-description first-col" itemprop="description" style="background-color:<?php echo $color; ?>">
-	<?php echo is_product()? apply_filters( 'woocommerce_short_description', $post->post_content ).woocommerce_template_single_sharing() : apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ; 	
+	<?php  if(is_product()){
+		echo apply_filters( 'woocommerce_short_description', $post->post_content );
+		woocommerce_template_single_sharing();
+	} else{ apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ;}
+
 	?>	
 </div>
