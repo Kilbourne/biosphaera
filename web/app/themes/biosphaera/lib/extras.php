@@ -140,7 +140,7 @@ function bios_social(){
 <p>Consiglialo ai tuoi amici</p>
 <div class="fb-share-button" data-href="'.get_permalink().'" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='.urlencode(get_permalink().'&src=sdkpreparse').'" >'.__('Condividi','sage').'</a></div></div>
 <div class="disponibilita">
-<p style="font-size:1rem;margin-bottom:0;"><span>DISPONIBILITA IMMEDIATA</span><p>Consegna Express 1-3 giorni</p></p>
+<p style="font-size:1rem;margin-bottom:0;"><span>DISPONIBILITA IMMEDIATA</span><span>Consegna Express 1-3 giorni</span></p>
 
 </div>
 </div>';
