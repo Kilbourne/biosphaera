@@ -19,7 +19,7 @@ function sk_wcmenucart() {
 
       $menu_item .= '<i class="fa fa-shopping-cart"></i> ';
 
-      $menu_item .= '<span class="wcmenucart-text">(' . $cart_contents_count . ') '.$viewing_cart;
+      $menu_item .= '<span class="wcmenucart-text">(<span class="cart-length">' . $cart_contents_count . '</span>) '.$viewing_cart;
       $menu_item .= '</span></a>';
     // Uncomment the line below to hide nav menu cart item when there are no items in the cart
       echo $menu_item;
