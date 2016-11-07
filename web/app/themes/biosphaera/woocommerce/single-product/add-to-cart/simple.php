@@ -51,16 +51,17 @@ if ( ! $product->is_purchasable() ) {
 	 				'input_value' => ( isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : 1 )
 	 			) );
 	 		}
-	 		$color=Roots\Sage\Extras\get_product_color($product->id);
 	 	?>
 
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
 
-	 	<button type="submit" class="single_add_to_cart_button button alt" style="background-color:<?php echo $color; ?>" ><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	 	<button type="submit" data-quantity="<?php echo esc_attr( isset( $quantity ) ? $quantity : 1 ); ?>" data-product_id="<?php echo esc_attr( $product->id ); ?>" data-product_sku="<?php echo esc_attr( $product->get_sku() ); ?>" class="single_add_to_cart_button button alt add_to_cart_button ajax_add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
-<?php endif; ?>
+<?php 
+
+endif; ?>
