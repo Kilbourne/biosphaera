@@ -1,335 +1,526 @@
-.et_divi_builder #et_builder_outer_content{
-
-
-  @include media-query(palm){
-  	.et_pb_row { flex-wrap:wrap;}
-    .et_pb_column.half-home{ width:100% !important;margin-right: 0 !important;background-size:contain !important;}
-    .et_pb_module p{ max-width:75%;}
-  }
-  @media(max-width: 375px){
-  	.et_pb_column.half-home{ background-size:0 !important;}	
-  	.et_pb_module p{ max-width:none;}
-  }
-} 
-
-
-.woocommerce  div.product{
-	padding:0 3.5%;
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
-	.product-content-image{@media(max-width: 35.1875em){ display:none;} }
-	>.first-col{ width:53%;@include media-query(palm){ width:100%;}}
-	>.second-col{ width:40%;margin-bottom: 0;@include media-query(palm){ width:100%;} }
-	>.entry-description{
-		display: flex;
-		flex-direction: column;
-		
-		position: relative;
-		margin-bottom:1rem;		
-	}
-	>.summary{ margin-bottom:1rem;@include media-query(palm){ &,>.images{text-align:center;}} }
-	.initial-text h3{ font-weight: 300; .title-product{ font-weight: bold;}}
-	div.images{
-		width:auto;
-		float:none;
-	margin-bottom: 15px;
-text-align: left;
-padding-top: 11px;
->.woocommerce-main-image{display: inline-block;}
-	}
-	.buy-wrapper{
-		display: inline-flex;
-		@media(max-width:400px){ flex-wrap:wrap;}
-	}
-	.price{
-		margin: 0;		
-		display: inline-block;
-		box-sizing: border-box;		
-		line-height: 48px;
-		height: 3rem;
-		padding: 0em 4px;
-		font-size: 1.35rem;
-		font-weight: 500;
-	}
-	form.cart{
-		margin-bottom: 0;
-		margin-right: 1.5rem;
-		display:flex;
-		@media(max-width:25em){ margin-right: 0;}
-	}
-	.qty{
-		-moz-appearance: textfield;
-		font-size: 1.18rem;
-		font-weight: 500;
-		border: 5px solid #e6e6e6;
-		width: 3rem;
-		height: 3rem;
-		text-align: center;
-		padding: 8px;
-		box-sizing: border-box;
-		&::-webkit-outer-spin-button,
-		&::-webkit-inner-spin-button {
-    		-webkit-appearance: none;
-		}
-	}
-	.single_add_to_cart_button{
-		height: 3rem;
-		font-size: 1.2rem;
-		text-transform: uppercase;
-	}
-	.woocommerce-tabs{		
-		ul.wc-tabs{
-			padding-left: 0;
-			display: flex;
-			flex-wrap:wrap;
-			margin-bottom:.5rem;
-			&::before{ border:none;}
-			li{
-				flex-grow: 1;
-				text-align: center;
-				margin: 0 .25rem;
-				border: none;
-				border-radius: 0%;		
-				color:#000;
-				&:before,&:after{
-					content: none;
-				}
-				&.active{
-					background-color: #ebe9eb !important;
-				}
-				a{ 
-					font-size: 1.125rem;
-					font-weight: 500;
-					text-transform: uppercase;
-					padding:4px 0;
-				}
-		
-			}
-		}
-		.panel{
-					padding: 1rem 3% 1.5rem;
-					background-color: #efefef;
-					line-height: 1.6;
-					p{ margin:0;}
-				}}
-}
-.woocommerce #reviews {
-	@include media-query(palm){ margin-bottom:1rem;}
-	@media(max-width:768px){ width:100%;}
-	#comments {
-
-	ol.commentlist{
-		padding-left: 0;
-		li .comment-text{
-			margin-left: 0;
-			display: flex;
-			flex-wrap:wrap;
-			background-color:#efefef;
-			justify-content: space-between;
-			.description{ flex-grow: 1;    margin-right: 1rem; }
-			.comment-rest{
-				display: flex;
-				flex-direction: column;
-				
-			}
-			.star-rating{ 
-				float:none;
-				margin-bottom: .75rem;
-				&::before{ position:static;}
-				span{ float:none;}
-				.meta{ text-align:right;
-					>strong{display:block;}
-				}
-			}
-		}
-	} 
-}}
-	.divi-slider.header-slide,.area-img-wrapper{ 
-			@media(max-width:640px){ display:none;}
-	}
-.single-aree_terapeutiche{
-	.area-img-wrapper{ 
-		border-bottom: 3px solid #FFE800;
-		@include media-query(palm){ border-top: 3px solid #FFE800;}
-	
-	}
-	
-	.area-content{
-		overflow: hidden; 
-		margin-bottom:1.5rem;
-		.first-col,.second-col{ 
-			float:left;width:50%; 
-			@include media-query(palm){ float:none;width:100%; }
-		}
-	}	
-	.area_terap_attribute_title{
-		font-size: 1.5rem;
-		font-weight: 300;
-		line-height: 1;
-		margin: 0;
-		background-color: #ffe801;
-		padding: .5rem 0;
-		padding-left: 1rem;
-	}
-	.area_terap_attribute_content{
-		padding: 0 4%;
-	}
-} 
-	
-.ok-list{
-	list-style:none;
-	margin-left:0;
-	padding-left: 0;
-	>li{
-		display:block;
-		padding:8px 0;
-
-		&::before{
-		  color:#8dba1f;
-		  margin-right: 4px;
-		}
-	}
-	
-}	
-.area-content-wrapper{ overflow:hidden;}
-
-.social-container{
-	text-align:left;
-	position: absolute;
-	bottom: 6px;
-padding: 0 3%;
-z-index: 9999;
-width: 100%;
-	font-size: 0.8rem;
-	font-weight: 500;
-	@media(max-width: 35.1875em){ position:static;margin-top: 1.5rem;} 
-	>div{ margin-bottom: 1rem;
-		@media(max-width: 35.1875em){ display:inline-block;
-			&:first-child{ margin-right:1rem;}
-		} 
-	}
-	p{
-		width:100%;
-		white-space: nowrap;
-		margin-top:0;
-		margin-bottom:0.5rem;
-		vertical-align: top;
-	}
-	.fb-share-button{ margin-bottom:1rem; }
-	.disponibilita{
-		span{ display:block;}
-		p{ display: inline-block;
-width: auto;}
-		&::before{
-		content:'';
-		display:inline-block;
-		background-image:url(../images/disponibilita.svg);
-		height: 36px;
-		width: 36px;
-		margin-right: .5rem;
-		}
-	}
-}
-	
-.woocommerce-Reviews-title{
-	padding: .25rem 3%;
-	font-size: 1.125rem;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin-bottom:.5rem;
-	margin-top:0;
+.content.row {
+    padding: 0 2%;
 }
 
-.woocommerce #reviews #comments ol.commentlist li+li,#review_form_wrapper{
-    margin-top:.25rem;
-  }
-  #review_form_wrapper{
-  	padding:0 3%;
-  	background-color:#efefef;
-    #reply-title{
-        padding: 8px 0;
-        
-        font-size: 0.8rem;
-		text-transform: uppercase;
-		cursor:pointer;
+.woocommerce,
+.home {
+    .content.row {
+        padding: 0;
     }
-
-  }
-  .woocommerce #commentform{
-
-	font-size: 0.8rem;
-	.comment-form-rating{  a{ color:#000; }}
-	.form-submit{ 			
-		font-size: 1rem; 
-	}
-	p { display: block; }
-	input#submit{background-color: #C2C2C2;}
-  }
-	
-	
-	
-	
-	
-	body.single-aree_terapeutiche{
-	&.woocommerce {
-		
-		
-	
-	 div.product{
-	 	border-top: 3px solid #FFE800;
-		padding:0 1rem;
-		display:block;
-		.initial-text h3:last-of-type{ margin-bottom:1rem !important;}
-		.initial-text+div{
-			position:static !important;
-		}
-		 >.first-col,>.second-col{
-			width:50%;
-		 }
-		 div.images{
-		 	text-align: center;
-		 
-			  img{
-			 	width:auto;
-			 }
-		}
-		 .buy-wrapper{
-		 	justify-content:center;
-		 	width:100%;
-
-		 }
-	}
-	#reviews{
-		overflow: hidden;
-margin-bottom: 1rem;
 }
-#review_form_wrapper{ margin-bottom: 1rem; }
-.social-container{
-	position:static;
-	padding: 0 2%;
-	width:auto;
-	overflow:hidden;
-	>div{
-		display: inline-block;
-		vertical-align: top;
-		margin-right: 1rem;
-		&:last-of-type{
-			margin-right: 0;
-		}
-	}
-	.fb-share-button{ margin-bottom: 0;}
+
+.et_divi_builder #et_builder_outer_content {
+    @include media-query(palm) {
+        .et_pb_row {
+            flex-wrap: wrap;
+        }
+        .et_pb_column.half-home {
+            width: 100% !important;
+            margin-right: 0 !important;
+            background-size: contain !important;
+        }
+        .et_pb_module p {
+            max-width: 75%;
+        }
+    }
+    @media(max-width: 375px) {
+        .et_pb_column.half-home {
+            background-size: 0 !important;
+        }
+        .et_pb_module p {
+            max-width: none;
+        }
+    }
 }
-	
-	}
+
+.woocommerce div.product {
+    padding: 0 3.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .product-content-image {
+        @media(max-width: 35.1875em) {
+            display: none;
+        }
+    }
+    >.first-col {
+        width: 53%;
+        @include media-query(palm) {
+            width: 100%;
+        }
+    }
+    >.second-col {
+        width: 40%;
+        margin-bottom: 0;
+        @include media-query(palm) {
+            width: 100%;
+        }
+    }
+    >.entry-description {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    >.summary {
+        margin-bottom: 1rem;
+        @include media-query(palm) {
+            &,
+            >.images {
+                text-align: center;
+            }
+        }
+    }
+    .initial-text h3 {
+        font-weight: 300;
+        .title-product {
+            font-weight: bold;
+        }
+    }
+    div.images {
+        width: auto;
+        float: none;
+        margin-bottom: 15px;
+        text-align: left;
+        padding-top: 11px;
+        >.woocommerce-main-image {
+            display: inline-block;
+        }
+    }
+    .buy-wrapper {
+        display: inline-flex;
+        @media(max-width: 400px) {
+            flex-wrap: wrap;
+        }
+    }
+    .price {
+        margin: 0;
+        display: inline-block;
+        box-sizing: border-box;
+        line-height: 48px;
+        height: 3rem;
+        padding: 0em 4px;
+        font-size: 1.35rem;
+        font-weight: 500;
+    }
+    form.cart {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+        display: flex;
+        @media(max-width: 25em) {
+            margin-right: 0;
+        }
+    }
+    .qty {
+        -moz-appearance: textfield;
+        font-size: 1.18rem;
+        font-weight: 500;
+        border: 5px solid #e6e6e6;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 8px;
+        box-sizing: border-box;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    .single_add_to_cart_button {
+        height: 3rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    .woocommerce-tabs {
+        ul.wc-tabs {
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: .5rem;
+            &::before {
+                border: none;
+            }
+            li {
+                flex-grow: 1;
+                text-align: center;
+                margin: 0 .25rem;
+                border: none;
+                border-radius: 0%;
+                color: #000;
+                &:before,
+                &:after {
+                    content: none;
+                }
+                &.active {
+                    background-color: #ebe9eb !important;
+                }
+                a {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    padding: 4px 0;
+                }
+            }
+        }
+        .panel {
+            padding: 1rem 3% 1.5rem;
+            background-color: #efefef;
+            line-height: 1.6;
+            p {
+                margin: 0;
+            }
+        }
+    }
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+.woocommerce #reviews {
+    @include media-query(palm) {
+        margin-bottom: 1rem;
+    }
+    @media(max-width:768px) {
+        width: 100%;
+    }
+    #comments {
+        ol.commentlist {
+            padding-left: 0;
+            li .comment-text {
+                margin-left: 0;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #efefef;
+                justify-content: space-between;
+                .description {
+                    flex-grow: 1;
+                    margin-right: 1rem;
+                }
+                .comment-rest {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .star-rating {
+                    float: none;
+                    margin-bottom: .75rem;
+                    &::before {
+                        position: static;
+                    }
+                    span {
+                        float: none;
+                    }
+                    .meta {
+                        text-align: right;
+                        >strong {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.divi-slider.header-slide,
+.area-img-wrapper {
+    @media(max-width: 640px) {
+        display: none;
+    }
+}
+
+.single-aree_terapeutiche {
+    .area-img-wrapper {
+        border-bottom: 3px solid #FFE800;
+        @include media-query(palm) {
+            border-top: 3px solid #FFE800;
+        }
+    }
+    .area-content {
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        .first-col,
+        .second-col {
+            float: left;
+            width: 50%;
+            @include media-query(palm) {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+    .area_terap_attribute_title {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1;
+        margin: 0;
+        background-color: #ffe801;
+        padding: .5rem 0;
+        padding-left: 1rem;
+    }
+    .area_terap_attribute_content {
+        padding: 0 4%;
+    }
+}
+
+.ok-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    >li {
+        display: block;
+        padding: 8px 0;
+        &::before {
+            color: #8dba1f;
+            margin-right: 4px;
+        }
+    }
+}
+
+.area-content-wrapper {
+    overflow: hidden;
+}
+
+.social-container {
+    text-align: left;
+    position: absolute;
+    bottom: 6px;
+    padding: 0 3%;
+    z-index: 9999;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    @media(max-width: 35.1875em) {
+        position: static;
+        margin-top: 1.5rem;
+    }
+    >div {
+        margin-bottom: 1rem;
+        @media(max-width: 35.1875em) {
+            display: inline-block;
+            &:first-child {
+                margin-right: 1rem;
+            }
+        }
+    }
+    p {
+        width: 100%;
+        white-space: nowrap;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        vertical-align: top;
+    }
+    .fb-share-button {
+        margin-bottom: 1rem;
+    }
+    .disponibilita {
+        span {
+            display: block;
+        }
+        p {
+            display: inline-block;
+            width: auto;
+        }
+        &::before {
+            content: '';
+            display: inline-block;
+            background-image: url(../images/disponibilita.svg);
+            height: 36px;
+            width: 36px;
+            margin-right: .5rem;
+        }
+    }
+}
+
+.woocommerce-Reviews-title {
+    padding: .25rem 3%;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.woocommerce #reviews #comments ol.commentlist li+li,
+#review_form_wrapper {
+    margin-top: .25rem;
+}
+
+#review_form_wrapper {
+    padding: 0 3%;
+    background-color: #efefef;
+    #reply-title {
+        padding: 8px 0;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.woocommerce #commentform {
+    font-size: 0.8rem;
+    .comment-form-rating {
+        a {
+            color: #000;
+        }
+    }
+    .form-submit {
+        font-size: 1rem;
+    }
+    p {
+        display: block;
+    }
+    input#submit {
+        background-color: #C2C2C2;
+    }
+}
+
+body.single-aree_terapeutiche {
+    &.woocommerce {
+        div.product {
+            border-top: 3px solid #FFE800;
+            padding: 0 1rem;
+            display: block;
+            .initial-text h3:last-of-type {
+                margin-bottom: 1rem !important;
+            }
+            .initial-text+div {
+                position: static !important;
+            }
+            >.first-col,
+            >.second-col {
+                width: 50%;
+            }
+            div.images {
+                text-align: center;
+                img {
+                    width: auto;
+                }
+            }
+            .buy-wrapper {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+        #reviews {
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        #review_form_wrapper {
+            margin-bottom: 1rem;
+        }
+        .social-container {
+            position: static;
+            padding: 0 2%;
+            width: auto;
+            overflow: hidden;
+            >div {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 1rem;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            .fb-share-button {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.woocommerce-cart .wc-proceed-to-checkout {
+    @include media-query(palm) {
+        padding-bottom: 0;
+    }
+}
+
+
+/****************CHECKOUT***************/
+
+.woocommerce-checkout .col2-set {
+    overflow: hidden;
+}
+
+.woocommerce form .form-row {
+    width: 100% !important;
+}
+
+.woocommerce-checkout #payment div.payment_box input.input-text,
+.woocommerce-checkout #payment div.payment_box textarea {
+    width: 100% !important;
+    padding: 8px;
+}
+
+.woocommerce #payment .form-row select,
+.woocommerce-page #payment .form-row select {
+    width: 100%;
+    height: 30px;
+}
+
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1,
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-2 {
+    float: left;
+    width: 100%;
+}
+
+
+/*
+.custom-checkout h3 {
+    background-color: #165f1c;
+
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: #FFF;
+    float: right;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    padding: .6180469716em;
+    background-color: #f2f2f2;
+    color: #43454b;
+    outline: 0;
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-weight: 400;
+    border: solid 2px #e4e4e4;
+}
+
+#wc_checkout_add_ons {
+    width: 45%;
+    float: right;
+    text-align: center;
+}
+*/
+
+@media screen and (min-width: 980px) {
+    .woocommerce-checkout {
+        overflow: hidden;
+    }
+    .woocommerce-shipping-fields h3,
+    .woocommerce-billing-fields h3 {
+        width: 100%;
+    }
+    .woocommerce .col2-set,
+    .woocommerce-page .col2-set {
+        width: 45%;
+        float: left;
+    }
+    .woocommerce-checkout-review-order {
+        width: 45%;
+        float: right;
+    }
+}
+
+
+/*
+@media screen and (max-width: 979px) {
+    .custom-checkout h3 {
+        width: 100%;
+    }
+}
+*/
