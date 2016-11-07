@@ -24,6 +24,18 @@
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },
+    'woocommerce':{
+      init: function(){
+        var quantity = $('.product .cart .qty');
+        if(quantity.length){
+          quantity.change(function(event) {
+            var button = $('.add_to_cart_button');
+            if(button.attr('data-quantity') !== undefined)
+              button.attr('data-quantity',quantity.val());
+          });
+        }
+      }
+    },
     // Home page
     'home': {
       init: function() {
