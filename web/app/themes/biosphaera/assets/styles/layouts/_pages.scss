@@ -524,3 +524,114 @@ body.single-aree_terapeutiche {
     }
 }
 */
+
+body.mission {
+    img {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+#mission {
+    display: flex;
+    .mission-col {
+        flex-basis: 50%;
+        display: inline-flex;
+    }
+    .mission-col1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        >h2 {
+            margin: 0;
+            background-color: #FAE917;
+            text-transform: uppercase;
+            font-size: 89px;
+            padding-left: 3%;
+            line-height: 1.2;
+            line-height: 150%;
+            height: 33.333%;
+            color: rgba(113, 112, 112, 0.2);
+            font-weight: 600;
+        }
+    }
+    .mission-text {
+        padding: 0 5% 0 3%;
+        line-height: 1.4;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+}
+
+#vision {
+    position: relative;
+    .vision-text {
+        position: absolute;
+        top: 0;
+        z-index: 11;
+        color: #fff;
+        max-width: 30%;
+        right: 2%;
+        text-align: right;
+        h2 {
+            margin: 1rem 0 0;
+            font-size: 50px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        div {
+            padding-left: 30%;
+        }
+    }
+}
+
+#valori {
+    h2 {
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 45px;
+        color: #c0c0bf;
+        font-weight: 600;
+    }
+    .valori-list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .valori-single {
+        text-align: center;
+        flex-basis: 33.333%;
+        &:first-of-type .valori-text h4 {
+            color: #FECB46;
+        }
+        &:nth-of-type(2) .valori-text h4 {
+            color: #75CAE6;
+        }
+        &:nth-of-type(3) .valori-text h4 {
+            color: #93C56A;
+        }
+    }
+    .valori-image img {
+        width: auto;
+        height: 50px;
+        border: 1px solid #969595;
+        border-radius: 50%;
+        padding: 4%;
+        box-sizing: content-box
+    }
+    .valori-text {
+        padding: 0 7%;
+        h4 {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0;
+        }
+        p {
+            padding: 0 7.5%;
+            margin: 1rem auto;
+        }
+    }
+}
