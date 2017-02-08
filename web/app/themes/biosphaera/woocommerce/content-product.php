@@ -28,7 +28,7 @@ if (empty($product) || !$product->is_visible()) {
 }
 
 ?>
-<li <?php post_class();?> style="background-color:<?php echo Extras\hex2rgba(Extras\get_product_color(get_the_ID()), 0.25); ?>;">
+<li <?php post_class();?> style="background-color:<?php echo Extras\hex2rgba(Extras\get_product_color($product->id), 0.25); ?>;">
   <?php
 /**
  * woocommerce_before_shop_loop_item hook.

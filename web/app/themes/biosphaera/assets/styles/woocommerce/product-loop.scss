@@ -4,7 +4,7 @@
       
       .products ul,
       ul.products {
-          margin: 0 0 1em;
+          margin: 1rem 0;
           padding: 0;
           list-style: none outside;
           clear: both;
@@ -34,6 +34,23 @@
                           img {
                               margin: 0;
                           }
+                      }
+                  }
+                  @media(max-width:600px) {
+                      flex-wrap: wrap;
+                      >.content,
+                      >.woocommerce-loop-image-wrapper {
+                          flex-basis: 100%;
+                          text-align: center;
+                      }
+                      >.content {
+                          margin-bottom: 1.5rem;
+                          .product-logo img {
+                              margin: 0 auto;
+                          }
+                      }
+                      >.woocommerce-loop-image-wrapper {
+                          padding: 0 3%;
                       }
                   }
               }

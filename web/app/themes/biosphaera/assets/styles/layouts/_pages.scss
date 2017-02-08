@@ -3,7 +3,8 @@
 }
 
 .woocommerce,
-.home {
+.home,
+.mission {
     .content.row {
         padding: 0;
     }
@@ -33,6 +34,22 @@
     }
 }
 
+.woocommerce ul.products,
+.woocommerce-page ul.products {
+    font-size: 0;
+    li.product {
+        display: inline-block;
+        font-size: 1rem;
+    }
+    .woocommerce-LoopProduct-link {
+        padding: 2.25rem 0 1.5rem;
+    }
+}
+
+.product-areat-wrapper {
+    overflow: hidden;
+}
+
 .woocommerce div.product {
     padding: 0 3.5%;
     display: flex;
@@ -45,14 +62,14 @@
     }
     >.first-col {
         width: 53%;
-        @include media-query(palm) {
+        @media(max-width: 900px) {
             width: 100%;
         }
     }
     >.second-col {
         width: 40%;
         margin-bottom: 0;
-        @include media-query(palm) {
+        @media(max-width: 900px) {
             width: 100%;
         }
     }
@@ -64,9 +81,8 @@
     }
     >.summary {
         margin-bottom: 1rem;
-        @include media-query(palm) {
-            &,
-            >.images {
+        @media(max-width: 900px) {
+            &, >.images {
                 text-align: center;
             }
         }
@@ -530,41 +546,80 @@ body.mission {
         margin: 0 auto;
         width: 100%;
     }
+    .azienda-header-image {
+        @media (min-width: 1020px) {
+            border-bottom: 4px solid #FAE917;
+        }
+    }
 }
 
 #mission {
     display: flex;
-    .mission-col {
-        flex-basis: 50%;
-        display: inline-flex;
-    }
+    position: relative;
+    padding-top: 1rem;
     .mission-col1 {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        >h2 {
-            margin: 0;
-            background-color: #FAE917;
-            text-transform: uppercase;
-            font-size: 89px;
-            padding-left: 3%;
-            line-height: 1.2;
-            line-height: 150%;
-            height: 33.333%;
-            color: rgba(113, 112, 112, 0.2);
-            font-weight: 600;
-        }
+        flex-shrink: 120;
     }
     .mission-text {
-        padding: 0 5% 0 3%;
         line-height: 1.4;
         font-weight: 500;
-        margin-bottom: 1.5rem;
+        margin-bottom: 32%;
+        flex-grow: 2;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding: 0 3% 1.5rem;
+    }
+    >img {
+        margin: 0 auto;
+        width: auto;
+    }
+    >h2 {
+        margin: 0;
+        background-color: #FAE917;
+        text-transform: uppercase;
+        font-size: 89px;
+        padding-left: 3%;
+        line-height: 150%;
+        height: 32%;
+        color: rgba(113, 112, 112, 0.2);
+        font-weight: 600;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    @media (max-width:1020px) {
+        flex-wrap: wrap;
+        padding: 0;
+        .mission-col {
+            order: 2;
+            padding: 1rem 3%;
+        }
+        >img {
+            order: 3;
+            padding: 0 3%;
+        }
+        .mission-col,
+        >img {
+            flex-basis: 100%;
+        }
+        >h2 {
+            order: 1;
+            text-align: center;
+            padding: 0 3%;
+            height: auto;
+            position: static;
+            line-height: 1.5;
+        }
     }
 }
 
 #vision {
     position: relative;
+    border-bottom: 16px solid #FAE917;
     .vision-text {
         position: absolute;
         top: 0;
@@ -586,6 +641,7 @@ body.mission {
 }
 
 #valori {
+    padding-top: 1rem;
     h2 {
         margin: 0;
         text-align: center;
@@ -600,10 +656,18 @@ body.mission {
         list-style: none;
         margin-left: 0;
         padding-left: 0;
+        @media(max-width: 900px) {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
     }
     .valori-single {
         text-align: center;
         flex-basis: 33.333%;
+        @media(max-width: 900px) {
+            flex-basis: 100%;
+            margin-bottom: 1.5rem;
+        }
         &:first-of-type .valori-text h4 {
             color: #FECB46;
         }

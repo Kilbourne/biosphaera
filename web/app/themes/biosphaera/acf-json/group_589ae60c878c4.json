@@ -1,0 +1,50 @@
+{
+    "key": "group_589ae60c878c4",
+    "title": "Prodotti to AreeTerapeutiche",
+    "fields": [
+        {
+            "key": "field_589ae614641c5",
+            "label": "Prodotti to AreeTerapeutiche Relation",
+            "name": "prodotti_to_areeterapeutiche",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "aree_terapeutiche"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1486551511
+}

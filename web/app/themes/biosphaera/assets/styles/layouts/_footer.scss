@@ -85,20 +85,15 @@
     }
 }
 
-#contact-form {
-    >p {
-        margin: 1.5rem 0px;
-        line-height: 1.6;
-    }
+.newsletter>.footer-content {
     label {
         width: 100%;
-        display: inline-block;
-        position: relative;
-        line-height: 24px;
         padding-left: 5px;
-        margin-bottom: 1.5rem;
     }
-    .submit {
+    .gform_footer.top_label {
+        overflow: hidden;
+    }
+    #gform_submit_button_1 {
         display: block;
         margin: 0;
         float: right;
@@ -109,13 +104,9 @@
         border: none;
         background-color: #89e872;
     }
-    .email-input {
+    #input_1_1 {
         width: 100%;
-        position: absolute;
-        left: 0px;
-        z-index: -1;
         padding: 3px;
-        top: 0px;
         line-height: 16px;
     }
 }
@@ -138,20 +129,22 @@
 }
 
 @include media-query( palm) {
-    .content-info >.container{ margin: .5rem 0; }
+    .content-info >.container {
+        margin: .5rem 0;
+    }
     .footer-section {
         width: 100%;
-        margin-bottom:1rem;
-        &:last-of-type{
-            margin-bottom:0;
+        margin-bottom: 1rem;
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
     .social {
         margin: 0 0 1rem;
     }
-    .content-info > .container{
+    .content-info > .container {
         margin: 1.5rem 6%;
-         > hr {
+        > hr {
             display: none;
         }
     }

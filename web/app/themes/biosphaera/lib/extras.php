@@ -222,8 +222,9 @@ function theme_breadcrumb()
 
     $breadcrumbs_parts = [];
     if ($post->post_type === 'product') {
-        $term     = wp_get_post_terms($post->ID, 'aree_terapeutiche')[0];
-        $term_tax = wp_get_post_terms($term->term_id, 'aree_terapeutice_tax')[0];
+        $term     = get_field('prodotti_to_areeterapeutiche')[0];
+
+        $term_tax = wp_get_post_terms($term->ID, 'aree_terapeutice_tax')[0];
 
     } else {
         $term_tax = wp_get_post_terms($post->ID, 'aree_terapeutice_tax')[0];
@@ -253,7 +254,13 @@ function theme_breadcrumb()
 
 function get_product_color($post_id)
 {
-    return get_field('color', 'aree_terapeutice_tax_' . wp_get_post_terms(wp_get_post_terms($post_id, 'aree_terapeutiche', ['fields' => 'ids'])[0], 'aree_terapeutice_tax', ['fields' => 'ids'])[0]);
+    $areas=get_field('prodotti_to_areeterapeutiche');
+    $results=[];
+    foreach ($areas as $key => $area) {
+     return get_field('color', 'aree_terapeutice_tax_' . wp_get_post_terms( $area->ID
+, 'aree_terapeutice_tax', ['fields' => 'ids'])[0]);
+    }
+
 }
 
 add_filter('loop_shop_columns', __NAMESPACE__ . '\\wc_product_columns_frontend');
@@ -314,3 +321,5 @@ function hex2rgba($color, $opacity = false)
     //Return rgb(a) color string
     return $output;
 }
+
+
