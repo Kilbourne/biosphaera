@@ -101,6 +101,44 @@
             "maxlength": "",
             "rows": "",
             "new_lines": "wpautop"
+        },
+        {
+            "key": "field_589c7e8cac2ff",
+            "label": "Formato",
+            "name": "formato",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_589c881a543fc",
+            "label": "Sale info",
+            "name": "sale_info",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -120,5 +158,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480952980
+    "modified": 1486653534
 }

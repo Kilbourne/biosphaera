@@ -62,6 +62,8 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_pr
 add_action('woocommerce_single_product_summary', 'woocommerce_show_product_images', 5);
 add_action('woocommerce_single_product_summary', __NAMESPACE__ . '\\woocommerce_open_price_container', 9);
 add_action('woocommerce_single_product_summary', __NAMESPACE__ . '\\woocommerce_close_price_container', 31);
+add_action('woocommerce_single_product_summary', __NAMESPACE__ . '\\woocommerce_formato', 8);
+add_action('woocommerce_single_product_summary', __NAMESPACE__ . '\\woocommerce_sale_info', 32);
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 add_action('woocommerce_after_single_product_summary', __NAMESPACE__ . '\\get_product_reviews', 5);
@@ -107,6 +109,18 @@ function get_tab_content($key, $tab)
 {
     global $product;
     echo get_field(sanitize_title($tab['title']), $product->id);
+}
+function woocommerce_formato(){
+    global $product;
+    echo '<div class="container-formato">
+        <p class="product-formato">'.get_field('formato',$product->id).'</p>
+    </div> ';
+}
+function woocommerce_sale_info(){
+    global $product;
+    echo '<div class="container-sale-info">
+        <p class="product-sale-info">'.get_field('sale_info',$product->id).'</p>
+    </div>';
 }
 function get_product_reviews()
 {
@@ -209,7 +223,7 @@ function filter_function_name($atts, $item, $args)
 function display_breadcrumb()
 {
     global $post;
-    if (!in_array($post->post_type, ['product', 'aree_terapeutiche'])) {
+    if ($post && !in_array($post->post_type, ['product', 'aree_terapeutiche'])) {
         return false;
     }
 

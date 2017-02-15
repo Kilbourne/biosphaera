@@ -81,6 +81,8 @@
     }
     >.summary {
         margin-bottom: 1rem;
+        padding: 0 3%;
+        text-align: center;
         @media(max-width: 900px) {
             &, >.images {
                 text-align: center;
@@ -108,6 +110,14 @@
         @media(max-width: 400px) {
             flex-wrap: wrap;
         }
+    }
+    .product-formato,
+    .product-sale-info {
+        margin: 1rem 0 0;
+        font-size: 1.05em;
+        hyphens: auto;
+        display: inline-block;
+        text-align: left;
     }
     .price {
         margin: 0;
@@ -541,7 +551,7 @@ body.single-aree_terapeutiche {
 }
 */
 
-body.mission {
+body.noi {
     img {
         margin: 0 auto;
         width: 100%;
