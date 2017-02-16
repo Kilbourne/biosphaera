@@ -179,13 +179,25 @@ function init_aree_terap_tax()
 // End cptui_register_my_taxes_producer()
 }
 
+function get_areat_color($areat_id){
+ return  get_field('color', 'aree_terapeutice_tax_' . wp_get_post_terms( $areat_id
+, 'aree_terapeutice_tax', ['fields' => 'ids'])[0]);
+}
+
 function area_terap_attribute_template($field)
 {
-    $field_obj = get_field_object($field);
+  $field_obj = get_field_object($field);
+
+  global $post;
+  $areat_id = $post->ID;
+  $area_color=get_areat_color($areat_id);
+
     echo '<div class="area_terap_attribute">
-  <h4 class="area_terap_attribute_title">' . $field_obj['label'] . '</h4>
+  <h4 class="area_terap_attribute_title" style="background-color:'.$area_color.'">' . $field_obj['label'] . '</h4>
   <div class="area_terap_attribute_content">' . $field_obj['value'] . '</div>
 </div> ';
+
+
 }
 
 add_action('woocommerce_share', __NAMESPACE__ . '\\bios_social');
@@ -206,7 +218,7 @@ add_filter('nav_menu_link_attributes', __NAMESPACE__ . '\\filter_function_name',
 
 function filter_function_name($atts, $item, $args)
 {
-
+  if($args->menu->name !== 'Menu') return $atts;
     if (in_array('no-title', $item->classes)) {
         unset($atts['href']);
     }
@@ -268,12 +280,8 @@ function theme_breadcrumb()
 
 function get_product_color($post_id)
 {
-    $areas=get_field('prodotti_to_areeterapeutiche');
-    $results=[];
-    foreach ($areas as $key => $area) {
-     return get_field('color', 'aree_terapeutice_tax_' . wp_get_post_terms( $area->ID
-, 'aree_terapeutice_tax', ['fields' => 'ids'])[0]);
-    }
+   return get_field('color', $post_id);
+
 
 }
 
@@ -336,4 +344,16 @@ function hex2rgba($color, $opacity = false)
     return $output;
 }
 
+add_action('before_responsive_menu_search',function(){
+  echo '<div class=" responsive_menu_pro_menu account-link">';
+                 if (is_user_logged_in()) {
+      echo '<li style="menu-item"><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a> | <a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a></li>';
+    }
+    elseif (!is_user_logged_in() ) {
+      echo '<li style="menu-item"><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a></div></li>';
+    } ?>
+       <div class="lang-switcher">IT | EN</div>
 
+       <?php
+       echo '</div>';
+});

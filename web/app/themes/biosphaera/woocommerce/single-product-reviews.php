@@ -24,6 +24,7 @@ global $product;
 if ( ! comments_open() ) {
 	return;
 }
+global $area_id;
 $color=Roots\Sage\Extras\get_product_color($post->ID);
 
 ?>
@@ -107,5 +108,5 @@ $color=Roots\Sage\Extras\get_product_color($post->ID);
 	<?php endif; ?>
 
 	<div class="clear"></div>
-<?php do_action( 'after_comments' );	 ?>	
+<?php do_action( 'after_comments' );	 ?>
 </div>

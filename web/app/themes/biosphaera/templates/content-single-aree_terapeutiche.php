@@ -1,8 +1,9 @@
 <?php
 use Roots\Sage\Extras;
+global $post;
 ?>
 <div class="area-content">
-  <div class="area-img-wrapper"><?php the_post_thumbnail('full');?></div>
+  <div class="area-img-wrapper" style="border-bottom: 3px solid <?php echo Extras\get_areat_color($post->ID)   ?>;"><?php the_post_thumbnail('full');?></div>
   <?php Extras\theme_breadcrumb();?>
   <div class="area-content-wrapper">
   <div class="first-col">
@@ -19,13 +20,16 @@ $query = get_field('prodotti_to_areeterapeutiche');;
 if ($query) {
     ?>
   <div id="content">
-  <?php foreach ($query as $key => $product_1) {
+
+  <?php
+  global $area_id;
+  $area_id=$post->ID;
+  foreach ($query as $key => $product_1) {
         global $product, $post;
         $post = $product_1;
         setup_postdata($post);
-        ?><div class="product-areat-wrapper">  <?php
-
-        get_template_part('woocommerce/content-areat-product');?>
+        ?><div class="product-areat-wrapper" style="border-top: 3px solid <?php echo Extras\get_product_color(get_the_ID())   ?>;">
+        <?php wc_get_template('content-areat-product.php',['area_id'=>$area_id],'woocommerce');?>
         </div>
     <?php }
     ?>

@@ -10,6 +10,27 @@
     }
 }
 
+.home {
+    .aree-bios-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .area-bios-wrap {
+        flex-grow: 2;
+        flex-basis: 33%;
+    }
+    .area-bios {
+        padding: 2rem;
+        h3 {
+            font-size: 3rem;
+            text-align: center;
+            color: #fff;
+            margin: 0;
+        }
+    }
+}
+
 .et_divi_builder #et_builder_outer_content {
     @include media-query(palm) {
         .et_pb_row {
@@ -292,7 +313,10 @@
     >li {
         display: block;
         padding: 8px 0;
+        font-family: DINNextLTPro;
+        font-weight: 300;
         &::before {
+            font: normal normal normal 14px/1 FontAwesome;
             color: #8dba1f;
             margin-right: 4px;
         }
@@ -301,6 +325,11 @@
 
 .area-content-wrapper {
     overflow: hidden;
+    ol,
+    ul {
+        margin-left: 0;
+        padding-left: 1.25rem;
+    }
 }
 
 .social-container {
@@ -399,19 +428,30 @@
 
 body.single-aree_terapeutiche {
     &.woocommerce {
+        #content {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .product-areat-wrapper {
+            flex-basis: 50%;
+            flex-grow: 2;
+        }
         div.product {
-            border-top: 3px solid #FFE800;
+            overflow: hidden;
             padding: 0 1rem;
-            display: block;
+            display: inline-block;
             .initial-text h3:last-of-type {
                 margin-bottom: 1rem !important;
             }
             .initial-text+div {
                 position: static !important;
             }
-            >.first-col,
-            >.second-col {
-                width: 50%;
+            >div.first-col,
+            >div.second-col {
+                width: auto;
+                float: none !important;
             }
             div.images {
                 text-align: center;
