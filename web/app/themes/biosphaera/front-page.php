@@ -1,4 +1,5 @@
 <?php
+use Roots\Sage\Extras;
 $aree= get_terms( array(
     'taxonomy' => 'aree_terapeutice_tax',
     'hide_empty'=> false,
@@ -12,7 +13,7 @@ if($aree){
     $areat_id=$area->term_id;
 
       ?>
-      <div class="area-bios-wrap" style="background-color:<?php   echo get_field('color', 'aree_terapeutice_tax_' . $areat_id) ?> ">
+      <div class="area-bios-wrap" style="background-color:<?php   echo get_field('color', 'aree_terapeutice_tax_' . $areat_id) ?>;color:<?php  echo Extras\lumdiff(Extras\hex2rgba(get_field('color', 'aree_terapeutice_tax_' . $areat_id),false,true));  ?> ; ">
          <div class="area-bios">
              <h3><?php  echo $area->name; ?></h3>
              <?php

@@ -76,15 +76,16 @@ add_action('woocommerce_shop_loop_item_title', function () {echo '<div class="co
 add_action('woocommerce_shop_loop_item_title', function () {
     $attachment_id = get_post_meta(get_the_ID(), 'logo', true);
 
-    echo '<div class="product-logo"><img src="' . wp_get_attachment_image_src($attachment_id)[0] . '" alt="' . get_post_meta($attachment_id, '_wp_attachment_image_alt', true) . '"></div>
-  <div class="product-loop-excerpt">' . get_post_meta(get_the_ID(), 'descrizione_pagina_prodotto', true) . '</div>';
+    echo
+    /*<div class="product-logo"><img src="' . wp_get_attachment_image_src($attachment_id)[0] . '" alt="' . get_post_meta($attachment_id, '_wp_attachment_image_alt', true) . '"></div>*/
+  '<div class="product-loop-excerpt">' . get_post_meta(get_the_ID(), 'descrizione_pagina_prodotto', true) . '</div>';
 }, 12);
 add_action('woocommerce_shop_loop_item_title', function () {echo '</div>';}, 13);
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 14);
 add_action('woocommerce_shop_loop_item_title', function () {echo '<div class="woocommerce-loop-image-wrapper">';}, 15);
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 16);
 add_action('woocommerce_shop_loop_item_title', function () {echo '</div>';}, 17);
-add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_add_to_cart', 16);
+//add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_add_to_cart', 16);
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 remove_all_actions('woocommerce_before_shop_loop');
 //add_action('woocommerce_shop_loop_item_title', function () {return '</div>';}, 16);
@@ -191,9 +192,9 @@ function area_terap_attribute_template($field)
   global $post;
   $areat_id = $post->ID;
   $area_color=get_areat_color($areat_id);
-
+$label = get_field('label_'.$field)?:$field_obj['label'];
     echo '<div class="area_terap_attribute">
-  <h4 class="area_terap_attribute_title" style="background-color:'.$area_color.'">' . $field_obj['label'] . '</h4>
+  <h4 class="area_terap_attribute_title" style="background-color:'.$area_color.'">' . $label . '</h4>
   <div class="area_terap_attribute_content">' . $field_obj['value'] . '</div>
 </div> ';
 
@@ -302,7 +303,7 @@ function wc_product_columns_frontend()
 
 }
 
-function hex2rgba($color, $opacity = false)
+function hex2rgba($color, $opacity = false, $return_arr=false)
 {
 
     $default = 'rgb(0,0,0)';
@@ -341,7 +342,7 @@ function hex2rgba($color, $opacity = false)
     }
 
     //Return rgb(a) color string
-    return $output;
+    return $return_arr? $rgb:$output;
 }
 
 add_action('before_responsive_menu_search',function(){
@@ -357,3 +358,8 @@ add_action('before_responsive_menu_search',function(){
        <?php
        echo '</div>';
 });
+
+function lumdiff($arr){
+  $red=$arr[0];$green=$arr[1];$blue=$arr[2];
+ return ($red*0.299 + $green*0.587 + $blue*0.114) > 186  ? '#444' : '#ffffff';
+}

@@ -1,37 +1,38 @@
 {
-  "dependencies": {
-    "main.js": {
-      "files": [
-        "scripts/main.js"
-      ],
-      "main": true
+    "dependencies": {
+        "main.js": {
+            "files": [
+                "scripts/add-to-cart.js",
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main.css": {
+            "files": [
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "woocommerce.css": {
+            "files": [
+                "styles/woocommerce.scss"
+            ]
+        },
+        "customizer.js": {
+            "files": [
+                "scripts/customizer.js"
+            ]
+        },
+        "jquery.js": {
+            "bower": ["jquery"]
+        },
+        "single-product.js": {
+            "files": [
+                "scripts/single-product.js"
+            ]
+        }
     },
-    "main.css": {
-      "files": [
-        "styles/main.scss"
-      ],
-      "main": true
-    },
-    "woocommerce.css":{
-      "files":[
-        "styles/woocommerce.scss"
-      ]
-    },
-    "customizer.js": {
-      "files": [
-        "scripts/customizer.js"
-      ]
-    },
-    "jquery.js": {
-      "bower": ["jquery"]
-    },
-    "single-product.js":{
-      "files": [
-        "scripts/single-product.js"
-      ]
+    "config": {
+        "devUrl": "http://example.dev"
     }
-  },
-  "config": {
-    "devUrl": "http://example.dev"
-  }
 }

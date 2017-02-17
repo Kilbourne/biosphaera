@@ -139,3 +139,217 @@ function assets()
     wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+$opts = [
+    "bundle" => ["wc-add-to-cart", ], "not_async" => [
+        'jquery',
+    ],
+    "css"    => [],
+    'head_scripts'=>['jquery']
+];
+new AssetBuilder($opts);
+class AssetBuilder
+{
+    public $bundle       = [];
+    public $not_async    = [];
+    public $head_scripts = [];
+    public $with_version = [];
+    public $head_to_do   = ['jquery'];
+    public $css          = [];
+
+    public function __construct($opts)
+    {
+        if (isset($opts['bundle'])) {
+            $this->bundle = $opts['bundle'];
+        }
+
+        if (isset($opts['not_async'])) {
+            $this->not_async = $opts['not_async'];
+        }
+
+        if (isset($opts['head_scripts'])) {
+            $this->head_scripts = $opts['head_scripts'];
+        }
+
+        if (isset($opts['with_version'])) {
+            $this->with_version = $opts['with_version'];
+        }
+
+        if (isset($opts['css'])) {
+            $this->css = $opts['css'];
+        }
+
+        $this->bind_hook();
+    }
+    public function remove_bundled_style($src, $handle)
+    {
+        if (is_admin() || did_action('login_head') || !isset($GLOBALS['wp_styles'])) {
+            return $src;
+        }
+        if (in_array($handle, $this->css)) {
+            return false;
+        }
+
+        return $src;
+    }
+    public function remove_bundled_script($src, $handle)
+    {
+        if (is_admin() || did_action('login_head') || !isset($GLOBALS['wp_scripts'])) {
+            return $src;
+        }
+
+        if (in_array($handle, $this->bundle)) {
+            return false;
+        }
+
+        return $src;
+    }
+
+    public function bind_hook()
+    {
+        //add_filter('print_scripts_array', array($this, 'filter_script'));
+        //add_filter('script_loader_tag', array($this, 'add_async_attr'), 999, 3);
+        add_action('body_open', array($this, 'open_body_ob'));
+        add_action('body_close', array($this, 'close_body_ob'));
+        add_filter('style_loader_src', array($this, 'remove_bundled_style'), 999, 2);
+        add_filter('script_loader_src', array($this, 'remove_bundled_script'), 999, 2);
+    }
+    public function filter_script($to_do)
+    {
+        if (is_admin() || did_action('login_head') || !isset($GLOBALS['wp_scripts'])) {
+            return $to_do;
+        }
+        $wp_scripts = &$GLOBALS['wp_scripts'];
+        foreach ($wp_scripts->to_do as $handle) {
+            if (!isset($wp_scripts->registered[$handle])) {
+                continue;
+            }
+
+            if (!in_array($handle, $this->with_version) && $wp_scripts->registered[$handle]->ver !== null) {
+                $wp_scripts->registered[$handle]->ver = null;
+            }
+
+            if (!in_array($handle, $this->head_scripts) && !in_array($handle, $wp_scripts->in_footer)) {
+                $wp_scripts->in_footer[] = $handle;
+            }
+
+        }
+
+        if (did_action('body_open') === 0) {
+            if ($wp_scripts->to_do) {
+                $this->head_to_do = array_unique(array_merge($this->head_to_do, $wp_scripts->to_do));
+                $to_do            = $this->head_scripts ? $this->head_scripts : [];
+            }
+        }
+        return $to_do;
+    }
+
+    public function open_body_ob()
+    {
+        ob_start();
+    }
+
+    public function close_body_ob()
+    {
+
+        $ob = ob_get_clean();
+        global $wp_scripts;
+
+        $aaa = 0;
+
+        $pos = strpos($ob, '<script');
+        if ($pos !== false) {
+            $matches = [];
+            $aaa     = preg_match_all("/<script(.|\n)*?\/script>/", $ob, $matches);
+            if (isset($matches[0]) && is_array($matches[0])) {
+                foreach ($matches[0] as $key => $match) {
+                    $ob = str_replace($match, "", $ob);
+                }
+            }
+        }
+        if ($aaa !== false) {
+            echo $ob;
+        }
+
+        $wp_scripts->do_items($this->head_to_do);
+        if ($aaa === false) {
+            echo $ob;
+        }
+
+        if (isset($matches[0]) && is_array($matches[0])) {
+            echo implode("", $matches[0]);
+        }
+
+    }
+
+    public function add_async_attr($tag, $handle)
+    {
+        if (is_admin() || did_action('login_head') || !isset($GLOBALS['wp_scripts'])) {
+            return $tag;
+        }
+        if (!in_array($handle, $this->not_async)) {
+            return str_replace(' src', ' async="async" src', $tag);
+        }
+
+        return $tag;
+    }
+
+    public function deps($handle)
+    {
+        global $wp_scripts;
+        return isset($wp_scripts->registered[$handle]) && $wp_scripts->registered[$handle]->deps ? $wp_scripts->registered[$handle]->deps : false;
+    }
+
+    public function recursive_deps($array)
+    {
+        if (is_array($array)) {
+            $new = [];
+            foreach ($array as $key => $value) {
+                $new[$value] = $this->recursive_deps($this->deps($value));
+            }
+        } else {
+            $new = false;
+        }
+        return $new;
+    }
+
+    public static function flat_deps($arr)
+    {
+        $total = [];
+        foreach (new \RecursiveIteratorIterator(new \RecursiveArrayIterator($arr), \RecursiveIteratorIterator::CHILD_FIRST) as $key => $value) {
+            if (!isset($total[$key])) {
+                $total[$key] = [];
+            }
+
+            if (is_array($value)) {
+                foreach ($value as $k => $v) {
+                    if (!in_array($key, $total[$k])) {
+                        $total[$k][] = $key;
+                    }
+
+                }
+            }
+        }
+        return $total;
+    }
+
+    public static function manifest($bundle, $css = false)
+    {
+        if ($css) {
+            global $wp_styles;
+            $global = $wp_styles;} else {
+            global $wp_scripts;
+            $global = $wp_scripts;}
+        $manifest    = [];
+        $manifest[0] = [];
+        $manifest[1] = [];
+        foreach ($bundle as $handle) {
+            if (isset($global->registered[$handle])) {
+                $manifest[0][] = $handle;
+                $manifest[1][] = $global->registered[$handle]->src;
+            }
+        }
+        return json_encode($manifest);
+    }
+
+}

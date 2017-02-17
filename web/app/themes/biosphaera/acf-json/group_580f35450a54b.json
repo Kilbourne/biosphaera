@@ -3,6 +3,25 @@
     "title": "Attrbuti area terapeutica",
     "fields": [
         {
+            "key": "field_58a6cfcfeadb8",
+            "label": "Label Che cos'\u00e8?",
+            "name": "label_cosa",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_580f3556482f0",
             "label": "Che cos'\u00e8?",
             "name": "cosa",
@@ -19,6 +38,25 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1
+        },
+        {
+            "key": "field_58a6cfe9eadb9",
+            "label": "Label Da cosa \u00e8 provocato?",
+            "name": "label_cause",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_580f355e482f3",
@@ -39,6 +77,25 @@
             "media_upload": 1
         },
         {
+            "key": "field_58a6d003eadba",
+            "label": "Label Come si manifesta?",
+            "name": "label_manifestazioni",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_580f355c482f2",
             "label": "Come si manifesta?",
             "name": "manifestazioni",
@@ -55,6 +112,25 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1
+        },
+        {
+            "key": "field_58a6d022eadbb",
+            "label": "Label Rimedi Naturali",
+            "name": "label_rimedi_naturali",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_580f355b482f1",
@@ -92,5 +168,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480952989
+    "modified": 1487327440
 }
