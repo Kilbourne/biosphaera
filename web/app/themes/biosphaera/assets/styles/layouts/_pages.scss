@@ -576,96 +576,29 @@ body.single-aree_terapeutiche {
 
 /****************CHECKOUT***************/
 
-.woocommerce-checkout .col2-set {
-    overflow: hidden;
-}
-
-.woocommerce form .form-row {
-    width: 100% !important;
-}
-
-.woocommerce-checkout #payment div.payment_box input.input-text,
-.woocommerce-checkout #payment div.payment_box textarea {
-    width: 100% !important;
-    padding: 8px;
-}
-
-.woocommerce #payment .form-row select,
-.woocommerce-page #payment .form-row select {
-    width: 100%;
-    height: 30px;
-}
-
-.woocommerce .col2-set .col-1,
-.woocommerce-page .col2-set .col-1,
-.woocommerce .col2-set .col-2,
-.woocommerce-page .col2-set .col-2 {
-    float: left;
-    width: 100%;
-}
-
-
-/*
-.custom-checkout h3 {
-    background-color: #165f1c;
-
-    width: 45%;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 50px;
-    color: #FFF;
-    float: right;
-}
-
-.woocommerce form .form-row input.input-text,
-.woocommerce form .form-row textarea {
-    padding: .6180469716em;
-    background-color: #f2f2f2;
-    color: #43454b;
-    outline: 0;
-    border: 0;
-    -webkit-appearance: none;
-    border-radius: 2px;
-    box-sizing: border-box;
-    font-weight: 400;
-    border: solid 2px #e4e4e4;
-}
-
-#wc_checkout_add_ons {
-    width: 45%;
-    float: right;
-    text-align: center;
-}
-*/
-
-@media screen and (min-width: 980px) {
-    .woocommerce-checkout {
-        overflow: hidden;
-    }
-    .woocommerce-shipping-fields h3,
-    .woocommerce-billing-fields h3 {
-        width: 100%;
-    }
-    .woocommerce .col2-set,
-    .woocommerce-page .col2-set {
-        width: 45%;
-        float: left;
-    }
-    .woocommerce-checkout-review-order {
-        width: 45%;
-        float: right;
+.woocommerce-checkout {
+    .col2-set {
+        .col-1,
+        .col-2 {
+            float: none;
+            width: auto;
+        }
     }
 }
 
-
-/*
-@media screen and (max-width: 979px) {
-    .custom-checkout h3 {
-        width: 100%;
+@media(max-width:600px) {
+    .woocommerce form .form-row-first,
+    .woocommerce form .form-row-last,
+    .woocommerce-page form .form-row-first,
+    .woocommerce-page form .form-row-last {
+        float: none;
+        width: auto;
+    }
+    .woocommerce form .form-row-last,
+    .woocommerce-page form .form-row-last {
+        float: none;
     }
 }
-*/
 
 body.noi {
     img {
@@ -855,7 +788,7 @@ footer.content-info {
             }
             input {
                 vertical-align: top;
-                margin-top: 3px;
+                //margin-top: 3px;
                 float: left;
                 margin-right: 4px;
             }
@@ -888,4 +821,88 @@ body.page-template-template-contacts #et_builder_outer_content {
     table.cart img {
         width: 50%;
     }
+}
+
+body.woocommerce-account {
+    .woocommerce {
+        padding: 1rem 0;
+    }
+    .woocommerce-MyAccount-navigation {
+        border-right: 1px solid #444;
+        ul {
+            list-style: none;
+            li {
+                padding: .5rem 0;
+                a {
+                    text-decoration: none;
+                    color: #444;
+                }
+            }
+        }
+    }
+    /*
+    ul.order_details {
+        @include clearfix;
+        list-style: none;
+        position: relative;
+        margin: ms(6) 0;
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -16px;
+            left: 0;
+            width: 100%;
+            height: 16px;
+            background-size: 0px 100%, 16px 16px, 16px 16px;
+        }
+        &:after {
+            top: auto;
+            bottom: -16px;
+            @include transform(rotate(180deg));
+        }
+        li {
+            padding: 1em ms(3);
+            font-size: .8em;
+            text-transform: uppercase;
+            &:first-child {
+                padding-top: ms(3);
+            }
+            &:last-child {
+                border: 0;
+                padding-bottom: ms(3);
+            }
+            strong {
+                display: block;
+                font-size: ms(2);
+                text-transform: none;
+            }
+        }
+    }
+    .my_account_orders,
+    .woocommerce-MyAccount-downloads {
+        .button {
+            padding: ms(-2) ms(-1);
+            font-size: ms(-1);
+            margin-right: .236em;
+        }
+    }
+    .woocommerce-MyAccount-content {
+        h2 {
+            font-size: 2em;
+            font-weight: 600;
+        }
+        #payment {
+            .payment_methods {
+                margin-bottom: ms(3) !important;
+                li {
+                    .payment_box {
+                        background-color: rgba(#000, .05);
+                    }
+                }
+            }
+        }
+    }
+    */
 }

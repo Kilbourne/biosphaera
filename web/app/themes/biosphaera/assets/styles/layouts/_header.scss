@@ -185,3 +185,23 @@
         display: inline-block;
     }
 }
+
+#responsive_menu_pro {
+    z-index: 99999;
+}
+
+#responsive_menu_pro .responsive_menu_pro_menu li.lang-sel a {
+    width: auto !important;
+    display: inline-block;
+}
+
+@media(max-width:782px) {
+    #responsive_menu_pro.responsive_menu_pro_admin_bar_showing {
+        padding-top: 46px;
+    }
+}
+
+label.inline {
+    display: inline !important;
+    margin-left: ms(1);
+}

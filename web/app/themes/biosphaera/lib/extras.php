@@ -69,7 +69,8 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_re
 add_action('woocommerce_after_single_product_summary', __NAMESPACE__ . '\\get_product_reviews', 5);
 remove_filter('woocommerce_product_tabs', 'woocommerce_default_product_tabs');
 remove_action('woocommerce_review_before', 'woocommerce_review_display_gravatar', 10);
-
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 50 );
 remove_all_actions('woocommerce_before_shop_loop_item_title');
 remove_all_actions('woocommerce_after_shop_loop_item_title');
 add_action('woocommerce_shop_loop_item_title', function () {echo '<div class="content">';}, 11);
@@ -362,4 +363,57 @@ add_action('before_responsive_menu_search',function(){
 function lumdiff($arr){
   $red=$arr[0];$green=$arr[1];$blue=$arr[2];
  return ($red*0.299 + $green*0.587 + $blue*0.114) > 186  ? '#444' : '#ffffff';
+}
+add_filter( 'wp_nav_menu_menu-mobile_items', function($items){
+    global $woocommerce;
+    $links=[
+
+is_user_logged_in()?'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a>',
+is_user_logged_in()?'<a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a>',
+['before'=>true,'text'=>'<a href="">IT</a><a href="">EN</a>'.($woocommerce->cart->cart_contents_count>0?sk_wcmenucart(false):''),'classes'=>'lang-sel'],
+    ];
+    foreach ($links as $link) {
+        $item= is_array($link)?'<li class="menu-item '.(isset($link['classes'])?$link['classes']:'').'">'.$link['text'].'</li>':'<li class="menu-item ">'.$link.'</li>';
+        $items=is_array($link) && $link['before'] ? $item.$items : $items.$item;
+    }
+    return $items;
+});
+
+function sk_wcmenucart($text=true) {
+
+  // Check if WooCommerce is active and add a new item to a menu assigned to Primary Navigation Menu location
+  if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )  )
+    return ;
+
+  ob_start();
+    global $woocommerce;
+    $viewing_cart = __('Carrello', 'sage');
+    $cart_url = $woocommerce->cart->get_cart_url();
+    $cart_contents_count = $woocommerce->cart->cart_contents_count;
+    $cart_contents = sprintf(_n('%d item', '%d items', $cart_contents_count, 'sage'), $cart_contents_count);
+    // Uncomment the line below to hide nav menu cart item when there are no items in the cart
+     if ( $cart_contents_count > 0 ) {
+
+        $menu_item = '<a '.($text?'class="wcmenucart-contents"':'').' href="'. $cart_url .'" title="'. ($text?$viewing_cart:'') .'">';
+
+
+      $menu_item .= '<i class="fa fa-shopping-cart"></i> ';
+
+      $menu_item .= '<span class="wcmenucart-text">(<span class="cart-length">' . $cart_contents_count . '</span>) '.($text?$viewing_cart:'');
+      $menu_item .= '</span></a>';
+    // Uncomment the line below to hide nav menu cart item when there are no items in the cart
+      echo $menu_item;
+     }
+
+  $social = ob_get_clean();
+  return $social;
+
+}
+function bios_wc_link(){
+     if (is_user_logged_in()) {
+      return '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a> | <a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a></div></div>';
+    }
+    elseif (!is_user_logged_in() ) {
+      return '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a></div></div>';
+    }
 }

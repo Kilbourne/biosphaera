@@ -27,7 +27,7 @@ use Roots\Sage\Wrapper;
               <div class="et_builder_outer_content" id="et_builder_outer_content">
         <div class="et_builder_inner_content et_pb_gutters3">
         '.do_shortcode(get_page_by_title('Header Slider')->post_content).'</div></div></div>  '; ?>
-        
+
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (false) : ?>
@@ -38,6 +38,7 @@ use Roots\Sage\Wrapper;
       </div><!-- /.content -->
     </div><!-- /.wrap -->
     <?php
+      echo do_shortcode('[responsive_menu_pro] ');
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();

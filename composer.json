@@ -71,45 +71,35 @@
     }, {
         "type": "vcs",
         "url": "https://github.com/pressjitsu/wp-transients-cleaner"
-    }, {
-        "type": "vcs",
-        "url": "https://github.com/inpsyde/translation-cache"
-    }, {
-        "type": "vcs",
-        "url": "https://github.com/kilbourne/composerpress"
     }],
     "require": {
         "php": ">=5.6",
         "composer/installers": "~1.0.12",
         "vlucas/phpdotenv": "^2.0.1",
-        "johnpbloch/wordpress": "4.6.1",
+        "johnpbloch/wordpress": "4.7.2",
         "oscarotero/env": "^1.0",
         "roots/wp-password-bcrypt": "1.0.0",
 
 
-
-        "wpackagist-plugin/woocommerce-ajax-add-to-cart-for-variable-products": "1.2.9",
-        "satispress/yith-woocommerce-catalog-mode-premium": "*",
+        "satispress/wooCommerce-dynamic-pricing": "*",
         "wpackagist-plugin/password-protected": "*",
-
+        "wpackagist-plugin/post-2-post-for-acf": "*",
         "satispress/divi-builder": "*",
         "wpackagist-plugin/tinywym-editor": "*",
-        "wpackagist-plugin/cpt-onomies": "*",
 
 
         "satispress/gravityforms": "*",
 
-
+        "wpackagist-plugin/menu-social-icons": "*",
         "wpackagist-plugin/plugin-organizer": "*",
         "satispress/xslt": "*",
         "satispress/global-meta-box-order": "*",
 
         "satispress/advanced-custom-fields-pro": "*",
-        "wpackagist-plugin/advanced-excerpt": "*",
         "wpackagist-plugin/wp-spamshield": "*",
         "satispress/searchwp": "*",
         "wpackagist-plugin/woocommerce": "*",
-        "satispress/sitepress-multilingual-cms": "3.5.3.1",
+        "satispress/sitepress-multilingual-cms": "*",
         "wpackagist-plugin/wp-email-template": "*",
         "wpackagist-plugin/disable-comments": "*",
         "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
@@ -120,7 +110,6 @@
         "wpackagist-plugin/term-management-tools": "*",
         "satispress/admin-columns-pro": "*",
         "satispress/cac-addon-acf": "*",
-        "wpackagist-plugin/safe-redirect-manager": "*",
         "satispress/responsive-menu-pro": "1.0.9",
 
         "satispress/updraftplus": "*",
@@ -130,34 +119,31 @@
         "wpackagist-plugin/transients-manager": "*",
         "wpackagist-plugin/ewww-image-optimizer": "*",
         "wpackagist-plugin/safe-svg": "1.3.0",
-        "wpackagist-plugin/above-the-fold-optimization": "*",
         "pressjitsu/wp-transients-cleaner": "dev-master",
         "wpackagist-plugin/remove-orphan-shortcodes": "*",
         "wpackagist-plugin/wp-widget-disable": "*",
-        "wpackagist-plugin/wp-sweep": "*",
         "wpackagist-plugin/error-log-monitor": "*",
-        "wpackagist-plugin/wp-retina-2x": "*",
         "wpackagist-plugin/imsanity": "*",
         "wpackagist-plugin/stops-core-theme-and-plugin-updates": "*",
 
-        "wpackagist-plugin/amp": "*",
+
         "wpackagist-plugin/autodescription": "*",
-        "wpackagist-plugin/dom-seo-image": "*",
+
         "wpackagist-plugin/facebook-open-graph-update": "*",
-        "wpackagist-plugin/fb-instant-articles": "*",
+
         "wpackagist-plugin/google-sitemap-generator": "*",
-        "wpackagist-plugin/pc-robotstxt": "*",
+
 
         "wpackagist-plugin/wp-edit": "*",
         "satispress/admin-menu-editor-pro": "*",
 
-        "wpackagist-plugin/admin-color-schemer": "*",
+
         "satispress/wp-toolbar-editor": "*",
-        "wpackagist-plugin/shortcode-ui": "*",
+
 
 
         "satispress/searchwp-exclude-ui-master": "*",
-        "satispress/searchwp-live-ajax-search": "*",
+
         "satispress/searchwp-term-priority": "*",
         "satispress/wpml-media": "*",
         "satispress/wpml-string-translation": "*",
@@ -168,52 +154,32 @@
         "satispress/woocommerce-multilingual": "*",
         "satispress/cac-addon-woocommerce": "*",
         "satispress/searchwp-woocommerce": "*",
-        "satispress/woocommerce-google-analytics-pro": "*",
-        "satispress/woocommerce-product-csv-import-suite": "*"
-
+        "satispress/woocommerce-google-analytics-pro": "*"
 
 
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5.1",
 
-        "szepeviktor/auto-login": "*",
-        "wpackagist-plugin/bulk-page-creator": "*",
-        "tomjn/composerpress": "dev-master",
-        "gitonomy/gitlib": "dev-master",
         "wpackagist-plugin/custom-post-type-ui": "*",
-        "wpackagist-plugin/members": "*",
+
         "wpackagist-plugin/regenerate-thumbnails": "*",
-        "satispress/wp-all-import-pro": "*",
-        "satispress/wpai-woocommerce-add-on": "*",
-        "satispress/wpai-user-add-on": "*",
-        "satispress/wpai-acf-add-on": "*",
-        "satispress/wp-all-export-pro": "*",
 
 
-        "wpackagist-plugin/user-switching": "*",
 
-        "satispress/wp-migrate-db-pro-cli": "*",
 
         "wpackagist-plugin/log-deprecated-notices": "*",
-        "wpackagist-plugin/piglatin": "*",
-
-        "wpackagist-plugin/google-pagespeed-insights": "*",
         "wpackagist-plugin/wp-crontrol": "*",
-        "wpackagist-plugin/bulk-delete": "*",
         "wpackagist-plugin/plugins-garbage-collector": "*",
         "wpackagist-plugin/options-inspector": "*",
-        "wpackagist-plugin/rewrite-rules-inspector": "*",
-        "wpackagist-plugin/debug-objects": "*",
-        "wpackagist-plugin/debug-this": "*",
         "wpackagist-plugin/debug-bar": "*",
         "wpackagist-plugin/query-monitor": "*",
 
         "wpackagist-plugin/p3-profiler": "*",
         "khromov/wp-performance-profiler": "*",
         "wpackagist-plugin/debug-bar-extender": "*",
-        "wpackagist-plugin/debug-bar-slow-actions": "*",
-        "wpackagist-plugin/theme-check": "*"
+        "wpackagist-plugin/debug-bar-slow-actions": "*"
+
     },
     "extra": {
         "installer-paths": {

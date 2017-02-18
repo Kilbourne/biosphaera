@@ -7,8 +7,8 @@
       <div class="footer-content"><span>Viale Luigi Majno, 18</span>
       <span>20129 Milano</span>
       <span>Tel: +39 02 76003400</span>
-      <a href="" class="parlaci">Parla con noi</a>
-      <a href="" class="faqs">FAQs</a> </div>
+      <a href="<?php echo get_the_permalink(get_page_by_title('Contatti')) ?> " class="parlaci">Parla con noi</a>
+      </div>
      </div>
      <div class="social footer-section">
       <h2 class="footer-title">Social</h2>
@@ -30,7 +30,7 @@ in contatto!</p>
      <a href="" class="last-line-link">Termini e condizioni</a> |
      <a href="" class="last-line-link">Privacy</a> |
      <a href="" class="last-line-link">Informazioni sui cookie</a> |
-     <a href="" class="last-line-link">Mappa del sito</a>
-     <a href="" class="last-line-link">Credits</a>
+
+     <!-- <a href="" class="last-line-link">Credits</a> -->
   </div>
 </footer>
