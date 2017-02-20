@@ -31,6 +31,6 @@ in contatto!</p>
      <a href="" class="last-line-link">Privacy</a> |
      <a href="" class="last-line-link">Informazioni sui cookie</a> |
 
-     <!-- <a href="" class="last-line-link">Credits</a> -->
+     <span class="last-line-link" ><span>Web agency</span><span style="margin-left: 6px;" ><a style="background-color: #fff;padding: 2px;" href="http://www.menthalia.com"><img src="<?php echo get_stylesheet_directory_uri().'/dist/images/logo-menthalia.png' ?>" alt="MENTHALIA LOGO" style="display: inline;vertical-align: middle;"></a></span></span>
   </div>
 </footer>
