@@ -1,39 +1,121 @@
+# Copyright (C) 2017 sage
+# This file is distributed under the same license as the sage package.
 msgid ""
 msgstr ""
+"Project-Id-Version: sage\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:4
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
-#: base.php:14
-msgid ""
-"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
-"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+#: base.php:16
+msgid "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience."
 msgstr ""
 
-#: functions.php:22
-msgid "Error locating %s for inclusion"
+#: custom-search.php:27
+msgid "Search Results for"
 msgstr ""
 
-#: index.php:5 search.php:5
+#: custom-search.php:32, index.php:5, search.php:5
 msgid "Sorry, no results were found."
 msgstr ""
 
-#: lib/extras.php:31
+#: functions.php:23
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: lib/extras.php:35
 msgid "Continued"
 msgstr ""
 
-#: lib/setup.php:30
+#: lib/extras.php:99
+msgid "How to use"
+msgstr ""
+
+#: lib/extras.php:99
+msgid "Ingredients"
+msgstr ""
+
+#: lib/extras.php:99
+msgid "Benefits"
+msgstr ""
+
+#: lib/extras.php:145, lib/extras.php:146, lib/extras.php:376
+msgid "Cart"
+msgstr ""
+
+#: lib/extras.php:159, lib/extras.php:164
+msgid "Categorie Aree Terapeutiche"
+msgstr ""
+
+#: lib/extras.php:160
+msgid "Categoria Aree Terapeutiche"
+msgstr ""
+
+#: lib/extras.php:210
+msgid "Recommend to your friends"
+msgstr ""
+
+#: lib/extras.php:211
+msgid "Share"
+msgstr ""
+
+#: lib/extras.php:213
+msgid "IMMEDIATE AVAILABILITY"
+msgstr ""
+
+#: lib/extras.php:213
+msgid " Express Delivery 1-3 days"
+msgstr ""
+
+#: lib/extras.php:263
+msgid "you are in"
+msgstr ""
+
+#: lib/extras.php:357, lib/extras.php:400
+msgid "Profile"
+msgstr ""
+
+#: lib/extras.php:357, lib/extras.php:403
+msgid "Login"
+msgstr ""
+
+#: lib/extras.php:358, lib/extras.php:400
+msgid "Logout"
+msgstr ""
+
+#: lib/extras.php:358, lib/extras.php:403
+msgid "Register"
+msgstr ""
+
+#: lib/extras.php:379
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/extras.php:410
+msgid "Search"
+msgstr ""
+
+#: lib/setup.php:31
 msgid "Primary Navigation"
 msgstr ""
 
-#: lib/setup.php:57
+#: lib/setup.php:60
 msgid "Primary"
 msgstr ""
 
-#: lib/setup.php:66
+#: lib/setup.php:69
 msgid "Footer"
 msgstr ""
 
@@ -68,36 +150,10 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: templates/content-page.php:2 templates/content-single.php:11
+#: templates/content-page.php:2, templates/content-single.php:11
 msgid "Pages:"
 msgstr ""
 
 #: templates/entry-meta.php:2
 msgid "By"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Sage Starter Theme"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://roots.io/sage/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Sage is a WordPress starter theme. <a href=\"https://github.com/roots/sage"
-"\">Contribute on GitHub</a>"
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Roots"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://roots.io/"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Custom Template"
 msgstr ""

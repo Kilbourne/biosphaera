@@ -188,6 +188,9 @@
 
 #responsive_menu_pro {
     z-index: 99999;
+    .fa-search {
+        display: none;
+    }
 }
 
 #responsive_menu_pro .responsive_menu_pro_menu li.lang-sel {

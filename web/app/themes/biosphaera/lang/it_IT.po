@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Leonardo Giacone <leonardo.giacone@gmail.com>\n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Spiacente, la pagina che stai cercando di visualizzare non esiste."
+
+#: base.php:16
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+"Stai usando un browser <strong>obsoleto</strong>. Per favore <a href="
+"\"\"\"http://browsehappy.com/\">aggiorna il tuo browser</a> per migliorare "
+"la \"\"navigazione."
+
+#: custom-search.php:27
+msgid "Search Results for"
+msgstr "Risultati di ricerca per"
+
+#: custom-search.php:32, index.php:5, search.php:5
+msgid "Sorry, no results were found."
+msgstr "Spiacente, la ricerca non ha prodotto nessun risultato."
+
+#: functions.php:23
+msgid "Error locating %s for inclusion"
+msgstr "Errore nell'inclusione di %s"
+
+#: lib/extras.php:35
+msgid "Continued"
+msgstr "Continua"
+
+#: lib/extras.php:99
+msgid "How to use"
+msgstr "Modalità d'uso"
+
+#: lib/extras.php:99
+msgid "Ingredients"
+msgstr "Ingredienti"
+
+#: lib/extras.php:99
+msgid "Benefits"
+msgstr "Benifici"
+
+#: lib/extras.php:145, lib/extras.php:146, lib/extras.php:376
+msgid "Cart"
+msgstr "Carrello"
+
+#: lib/extras.php:159, lib/extras.php:164
+msgid "Categorie Aree Terapeutiche"
+msgstr ""
+
+#: lib/extras.php:160
+msgid "Categoria Aree Terapeutiche"
+msgstr ""
+
+#: lib/extras.php:210
+msgid "Recommend to your friends"
+msgstr "Consiglialo ai tuoi amici"
+
+#: lib/extras.php:211
+msgid "Share"
+msgstr "Condividi"
+
+#: lib/extras.php:213
+msgid "IMMEDIATE AVAILABILITY"
+msgstr "DISPONIBILITA IMMEDIATA"
+
+#: lib/extras.php:213
+msgid " Express Delivery 1-3 days"
+msgstr "Consegna Express 1-3 giorni"
+
+#: lib/extras.php:263
+msgid "you are in"
+msgstr "sei in"
+
+#: lib/extras.php:357, lib/extras.php:400
+msgid "Profile"
+msgstr "Profilo"
+
+#: lib/extras.php:357, lib/extras.php:403
+msgid "Login"
+msgstr "Accedi"
+
+#: lib/extras.php:358, lib/extras.php:400
+msgid "Logout"
+msgstr "Scollegati"
+
+#: lib/extras.php:358, lib/extras.php:403
+msgid "Register"
+msgstr "Registrati"
+
+#: lib/extras.php:379
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d prodotto"
+msgstr[1] "%d prodotti"
+
+#: lib/extras.php:410
+msgid "Search"
+msgstr "Cerca"
+
+#: lib/setup.php:31
+msgid "Primary Navigation"
+msgstr "Primary Navigation"
+
+#: lib/setup.php:60
+msgid "Primary"
+msgstr "PrimarY"
+
+#: lib/setup.php:69
+msgid "Footer"
+msgstr "Footer"
+
+#: lib/titles.php:13
+msgid "Latest Posts"
+msgstr "Articoli pi&ugrave recenti"
+
+#: lib/titles.php:18
+msgid "Search Results for %s"
+msgstr "Risultati della ricerca per %s"
+
+#: lib/titles.php:20
+msgid "Not Found"
+msgstr "Non trovato"
+
+#: templates/comments.php:9
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] "Una risposta a &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s risposte a &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Commenti meno recenti"
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Commenti pi&ugrave recenti &rarr;"
+
+#: templates/comments.php:31
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: templates/content-page.php:2, templates/content-single.php:11
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: templates/entry-meta.php:2
+msgid "By"
+msgstr "Scritto da"
+
+#~ msgid "It looks like this was the result of either:"
+#~ msgstr "Questo potrebbe essere stato causato da:"
+
+#~ msgid "a mistyped address"
+#~ msgstr "l'indirizzo web non è stato digitato correttamente"
+
+#~ msgid "an out-of-date link"
+#~ msgstr "un link non pi&ugrave; funzionante"
+
+#~ msgid "&larr; Older posts"
+#~ msgstr "&larr; Articoli meno recenti"
+
+#~ msgid "Newer posts &rarr;"
+#~ msgstr "Articoli pi&ugrave; recenti &rarr;"
+
+#~ msgid "Theme Activation"
+#~ msgstr "Attivazione Tema"
+
+#~ msgid "%s Theme Activation"
+#~ msgstr "%s Attivazione Tema"
+
+#~ msgid ""
+#~ "These settings are optional and should usually be used only on a fresh "
+#~ "installation"
+#~ msgstr ""
+#~ "Queste impostazioni non sono obbligatorie e solitamente usate solo "
+#~ "durante la fase d'installazione del tema"
+
+#~ msgid "Create static front page?"
+#~ msgstr "Creare una front page statica?"
+
+#~ msgid "Yes"
+#~ msgstr "S&iacute;"
+
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "Create a page called Home and set it to be the static front page"
+#~ msgstr "Crea una pagina chiamata Home e impostala come front page statica"
+
+#~ msgid "Change permalink structure?"
+#~ msgstr "Modificare la struttura dei permalink?"
+
+#~ msgid "Update permalink structure?"
+#~ msgstr "Aggiornare la struttura dei permalink?"
+
+#~ msgid "Change permalink structure to /&#37;postname&#37;/"
+#~ msgstr "Modifica la struttura dei permalink in /&#37;postname&#37;/"
+
+#~ msgid "Create navigation menu?"
+#~ msgstr "Creare un men&ugrave; di navigazione?"
+
+#~ msgid "Create the Primary Navigation menu and set the location"
+#~ msgstr "Crea il Primary Navigation menu e imposta la sua posizione"
+
+#~ msgid "Add pages to menu?"
+#~ msgstr "Aggiungere pagine al menu?"
+
+#~ msgid "Add all current published pages to the Primary Navigation"
+#~ msgstr "Aggiungi tutte le pagine pubblicate al menu Primary Navigation"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Archivio del giorno: %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Archivio del mese: %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Archivio dell'anno: %s"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Archivio dell'autore: %s"
+
+#~ msgid "%1$s"
+#~ msgstr "%1$s"
+
+#~ msgid "(Edit)"
+#~ msgstr "(Modifica)"
+
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Il tuo commento &egrave; in attesa di moderazione."
+
+#~ msgid "One Response to &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Una risposta a &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s risposte a &ldquo;%2$s&rdquo;"
+
+#~ msgid "Leave a Reply"
+#~ msgstr "Lascia un commento"
+
+#~ msgid "Leave a Reply to %s"
+#~ msgstr "Lascia un commento a %s"
+
+#~ msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+#~ msgstr "Devi <a href=\"%s\">loggarti</a> per pubblicare un commento."
+
+#~ msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+#~ msgstr "Sei loggato come <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+#~ msgid "Log out of this account"
+#~ msgstr "Esci da questo account"
+
+#~ msgid "Log out &raquo;"
+#~ msgstr "Esci &raquo;"
+
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid " (required)"
+#~ msgstr " (richiesto)"
+
+#~ msgid "Email (will not be published)"
+#~ msgstr "Email (non sar&agrave pubblicata)"
+
+#~ msgid "Website"
+#~ msgstr "Sito Web\t"
+
+#~ msgid "Comment"
+#~ msgstr "Commento"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Invia il commento"
+
+#~ msgid "Search for:"
+#~ msgstr "Cerca:"
+
+#~ msgid "Roots Starter Theme"
+#~ msgstr "Roots Starter Theme"
+
+#~ msgid "http://roots.io/starter-theme/"
+#~ msgstr "http://roots.io/starter-theme/"
+
+#~ msgid ""
+#~ "Roots is a WordPress starter theme based on HTML5 Boilerplate & "
+#~ "Bootstrap. <a href=\"https://github.com/roots/roots/contributors"
+#~ "\">Contribute on GitHub</a>"
+#~ msgstr ""
+#~ "Roots &egrave un Tema WordPress starter basato su HTML5 Boilerplate e "
+#~ "Bootstrap. <a href=\"https://github.com/roots/roots/contributors"
+#~ "\">Contribuisci su GitHub</a>"
+
+#~ msgid "Roots"
+#~ msgstr "Roots"
+
+#~ msgid "http://roots.io/"
+#~ msgstr "http://roots.io/"
+
+#~ msgid "Custom Template"
+#~ msgstr "Template personalizzato"

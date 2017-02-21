@@ -96,7 +96,7 @@ add_filter('woocommerce_product_tabs', function ($tabs) {
         return [];
     }
 
-    $keys = [__('Modalità d\'uso', 'sage'), __('Ingredienti', 'sage'), __('Benefici', 'sage')];
+    $keys = [__('How to use', 'sage'), __('Ingredients', 'sage'), __('Benefits', 'sage')];
     foreach ($keys as $key => $value) {
         $tabs[] = [
             'title'    => $value,
@@ -142,8 +142,8 @@ function woocommerce_header_add_to_cart_fragment($fragments)
 {
     ob_start();
     ?>
-  <a class="wcmenucart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php __('Carrello', 'sage');?>"><i class="fa fa-shopping-cart"></i> <span class="wcmenucart-text">(<span class="cart-length">
-    <?php echo WC()->cart->get_cart_contents_count(); ?> </span>) <?php _e('Carrello', 'sage')?></span></a>
+  <a class="wcmenucart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php __('Cart', 'sage');?>"><i class="fa fa-shopping-cart"></i> <span class="wcmenucart-text">(<span class="cart-length">
+    <?php echo WC()->cart->get_cart_contents_count(); ?> </span>) <?php _e('Cart', 'sage')?></span></a>
 
   <?php
 
@@ -207,10 +207,10 @@ add_action('woocommerce_share', __NAMESPACE__ . '\\bios_social');
 function bios_social()
 {
     echo '<div class="social-container"><div  >
-  <p>Consiglialo ai tuoi amici</p>
-  <div class="fb-share-button" data-href="' . get_permalink() . '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink() . '&src=sdkpreparse') . '" >' . __('Condividi', 'sage') . '</a></div></div>
+  <p>'.__('Recommend to your friends','sage').'</p>
+  <div class="fb-share-button" data-href="' . get_permalink() . '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink() . '&src=sdkpreparse') . '" >' . __('Share', 'sage') . '</a></div></div>
   <div class="disponibilita">
-    <p style="font-size:1rem;margin-bottom:0;"><span>DISPONIBILITA IMMEDIATA</span><span>Consegna Express 1-3 giorni</span></p>
+    <p style="font-size:1rem;margin-bottom:0;"><span>'.__('IMMEDIATE AVAILABILITY','sage').'</span><span>'.__(' Express Delivery 1-3 days','sage').'</span></p>
 
   </div>
 </div>';
@@ -260,7 +260,7 @@ function theme_breadcrumb()
     $breadcrumbs_parts[] = ['label' => strtoupper($term_tax->name)];
     $breadcrumbs_parts[] = ['label' => $post->post_title];
     $breadcrumb          = '<div class="breadcrumbs">
-  <span> > ' . __('sei in', 'sage') . '</span>';
+  <span> > ' . __('you are in', 'sage') . '</span>';
     foreach ($breadcrumbs_parts as $key => $bread) {
         if (isset($bread['link'])) {
             $breadcrumb .= '<a href="' . $bread['link'] . '">';
@@ -346,20 +346,6 @@ function hex2rgba($color, $opacity = false, $return_arr=false)
     return $return_arr? $rgb:$output;
 }
 
-add_action('before_responsive_menu_search',function(){
-  echo '<div class=" responsive_menu_pro_menu account-link">';
-                 if (is_user_logged_in()) {
-      echo '<li style="menu-item"><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a> | <a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a></li>';
-    }
-    elseif (!is_user_logged_in() ) {
-      echo '<li style="menu-item"><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a></div></li>';
-    } ?>
-       <div class="lang-switcher">IT | EN</div>
-
-       <?php
-       echo '</div>';
-});
-
 function lumdiff($arr){
   $red=$arr[0];$green=$arr[1];$blue=$arr[2];
  return ($red*0.299 + $green*0.587 + $blue*0.114) > 186  ? '#444' : '#ffffff';
@@ -368,8 +354,8 @@ add_filter( 'wp_nav_menu_menu-mobile_items', function($items){
     global $woocommerce;
     $links=[
 
-is_user_logged_in()?'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a>',
-is_user_logged_in()?'<a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a>',
+is_user_logged_in()?'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profile', 'sage' ).' </a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Login', 'sage' ).' </a>',
+is_user_logged_in()?'<a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Logout', 'sage' ).'</a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Register', 'sage' ).' </a>',
 ['before'=>true,'text'=>'<a href="">IT</a><a href="">EN</a>'.($woocommerce->cart->cart_contents_count>0?sk_wcmenucart(false):''),'classes'=>'lang-sel'],
     ];
     foreach ($links as $link) {
@@ -387,7 +373,7 @@ function sk_wcmenucart($text=true) {
 
   ob_start();
     global $woocommerce;
-    $viewing_cart = __('Carrello', 'sage');
+    $viewing_cart = __('Cart', 'sage');
     $cart_url = $woocommerce->cart->get_cart_url();
     $cart_contents_count = $woocommerce->cart->cart_contents_count;
     $cart_contents = sprintf(_n('%d item', '%d items', $cart_contents_count, 'sage'), $cart_contents_count);
@@ -411,9 +397,19 @@ function sk_wcmenucart($text=true) {
 }
 function bios_wc_link(){
      if (is_user_logged_in()) {
-      return '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a> | <a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a></div></div>';
+      return '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profile', 'sage' ).' </a> | <a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Logout', 'sage' ).'</a></div></div>';
     }
     elseif (!is_user_logged_in() ) {
-      return '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a></div></div>';
+      return '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Login', 'sage' ).' </a> | <a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Register', 'sage' ).' </a></div></div>';
     }
 }
+
+function bios_search(){
+  echo '<form action="'. get_permalink( get_page_by_title('Risultati ricerca' ))   .' " id="responsive_menu_pro_search" method="get" role="search">
+     <i class="fa fa-search"></i>
+            <input type="search" name="swpquery" value="" placeholder="'.  __( 'Search', 'sage' )  .'" id="responsive_menu_pro_search_input">
+        </form>';
+}
+
+add_action( 'before_responsive_menu_search',__NAMESPACE__ . '\\bios_search' );
+

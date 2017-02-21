@@ -60,7 +60,9 @@ use Roots\Sage\Extras;
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
 			//do_action( 'woocommerce_single_product_summary' );
+      echo '<a href="'.get_the_permalink().'">';
       woocommerce_show_product_images();
+      echo '</a>';
 		?>
 
 	</div><!-- .summary -->
