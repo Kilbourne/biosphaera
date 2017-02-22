@@ -220,11 +220,11 @@ add_filter('nav_menu_link_attributes', __NAMESPACE__ . '\\filter_function_name',
 
 function filter_function_name($atts, $item, $args)
 {
-  if($args->menu->name !== 'Menu') return $atts;
+
     if (in_array('no-title', $item->classes)) {
         unset($atts['href']);
     }
-
+if($args->menu->name !== 'Menu') return $atts;
     if ($item->object === 'aree_terapeutice_tax') {
         $atts['style'] = 'background-color:' . get_field('color', $item->object . '_' . $item->object_id) . ';';
     } elseif ($item->object === 'aree_terapeutiche' && $item->object_id > 0) {

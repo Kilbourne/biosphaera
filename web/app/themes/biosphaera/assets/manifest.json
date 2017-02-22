@@ -1,13 +1,46 @@
 {
     "dependencies": {
         "main.js": {
+            "vendor": [
+                "../../plugins/responsive-menu-pro/public/js/touch.js",
+                "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
+                "../../plugins/wp-spamshield/js/jscripts-ftr2-min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.fitvids.js",
+                "../../plugins/divi-builder/includes/builder/scripts/waypoints.min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.magnific-popup.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.mobile.custom.min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-scripts.js",
+                "../../plugins/woocommerce-multilingual/res/js/cart_widget.js"
+
+
+            ],
             "files": [
-                "scripts/add-to-cart.js",
                 "scripts/main.js"
             ],
             "main": true
         },
+        "woocommerce.js": {
+            "vendor": [
+                "../../plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js",
+                "../../plugins/woocommerce/assets/js/frontend/woocommerce.js",
+                "../../plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
+                "../../plugins/woocommerce/assets/js/frontend/cart-fragments.js"
+            ],
+            "files": [
+                "scripts/single-product.js", "scripts/add-to-cart.js"
+            ]
+        },
         "main.css": {
+            "vendor": [
+                "../../plugins/divi-builder/includes/builder/styles/frontend-builder-plugin-style.css",
+                "../../plugins/divi-builder/includes/builder/styles/magnific_popup.css",
+                "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
+                "../../plugins/gravityforms/css/formreset.css",
+                "../../plugins/gravityforms/css/formsmain.css",
+                "../../plugins/gravityforms/css/readyclass.css",
+                "../../plugins/gravityforms/css/browsers.css"
+            ],
             "files": [
                 "styles/main.scss"
             ],
@@ -24,13 +57,13 @@
             ]
         },
         "jquery.js": {
+            "vendor": [
+                "../../plugins/gravityforms/js/jquery.json.js",
+                "../../plugins/gravityforms/js/gravityforms.js"
+            ],
             "bower": ["jquery"]
-        },
-        "single-product.js": {
-            "files": [
-                "scripts/single-product.js"
-            ]
         }
+
     },
     "config": {
         "devUrl": "http://example.dev"

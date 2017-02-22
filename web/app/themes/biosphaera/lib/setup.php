@@ -14,7 +14,7 @@ function setup()
     add_theme_support('soil-clean-up');
     //add_theme_support('soil-nav-walker');
     add_theme_support('soil-nice-search');
-    add_theme_support('soil-jquery-cdn');
+    //add_theme_support('soil-jquery-cdn');
     add_theme_support('soil-relative-urls');
 
     // Make theme available for translation
@@ -117,44 +117,81 @@ function display_header_slider()
 
     return apply_filters('sage/display_title', $display);
 }
+
+function is_divi(){
+  static $display;
+   isset($display) || $display = in_array(true, [
+        // The sidebar will NOT be displayed if ANY of the following return true.
+        // @link https://codex.wordpress.org/Conditional_Tags
+        is_front_page(), is_page( 'contatti' ) ,
+    ]);
+  return $display;
+}
 /**
  * Theme assets
  */
+
 function assets()
 {
     wp_deregister_style('woocommerce-layout');
     wp_deregister_style('woocommerce-general');
     wp_deregister_style('woocommerce-smallscreen');
+    wp_deregister_script('jquery');
+    wp_deregister_script( 'google-maps-api');
+wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key()), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
     wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
 
-    wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+    wp_enqueue_style('sage_css', Assets\asset_path('styles/main.css'), false, null);
 
-    if (is_single() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
-    if (is_product() || is_singular('aree_terapeutiche')) {
-        wp_deregister_script('wc-single-product');
-        wp_enqueue_script('wc-single-product', Assets\asset_path('scripts/single-product.js'), ['jquery']);
-    }
-    wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), array(), null, true);
+     wp_enqueue_script('sage_js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+     wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/woocommerce.js'), ['jquery'], null, true);
+   /*  if(is_divi()){
+      wp_enqueue_style('divi_bios', Assets\asset_path('styles/divi.css'), false, null);
+wp_enqueue_script('divi_bios', Assets\asset_path('scripts/divi.js'), ['jquery'], null, true);
+     }*/
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
+/**
+ * Theme assets
+ */
+
 $opts = [
-    "bundle" => ["wc-add-to-cart", ], "not_async" => [
-        'jquery',
+    "bundle"    => [
+       'et-builder-modules-global-functions-script','divi-fitvids','waypoints','magnific-popup','et-jquery-touch-mobile','et-builder-modules-script',
+       "touch","responsive-menu-pro","wpss-jscripts-ftr","gform_json","gform_gravityforms",
+       "cart-widget","wpml-legacy-dropdown-0","sitepress",
+       "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product"
     ],
-    "css"    => [],
-    'head_scripts'=>['jquery']
+    "not_async" => [
+        'jquery','google-maps-api'
+    ],
+    "css"       => [
+"wcml_admin",
+"responsive-menu-pro",
+"wpml-legacy-dropdown-0",
+"et-builder-modules-style",
+"magnific-popup",
+"gforms_reset_css",
+"gforms_formsmain_css",
+"gforms_ready_class_css",
+"gforms_browsers_css",
+    ],
 ];
+if(!(is_admin() || is_user_logged_in())) $opts['css'][]="dashicons";
 new AssetBuilder($opts);
+
+
+
+
 class AssetBuilder
 {
     public $bundle       = [];
     public $not_async    = [];
     public $head_scripts = [];
     public $with_version = [];
-    public $head_to_do   = ['jquery'];
+    public $head_to_do   = [];
     public $css          = [];
 
     public function __construct($opts)
@@ -183,8 +220,8 @@ class AssetBuilder
     }
     public function remove_bundled_style($src, $handle)
     {
-        if (is_admin() || did_action('login_head') || !isset($GLOBALS['wp_styles'])) {
-            return $src;
+        if (is_admin() || did_action('login_head') || !isset($GLOBALS['wp_scripts'])) {
+            ;
         }
         if (in_array($handle, $this->css)) {
             return false;
@@ -207,8 +244,8 @@ class AssetBuilder
 
     public function bind_hook()
     {
-        //add_filter('print_scripts_array', array($this, 'filter_script'));
-        //add_filter('script_loader_tag', array($this, 'add_async_attr'), 999, 3);
+        add_filter('print_scripts_array', array($this, 'filter_script'));
+        add_filter('script_loader_tag', array($this, 'add_async_attr'), 999, 3);
         add_action('body_open', array($this, 'open_body_ob'));
         add_action('body_close', array($this, 'close_body_ob'));
         add_filter('style_loader_src', array($this, 'remove_bundled_style'), 999, 2);
@@ -238,7 +275,7 @@ class AssetBuilder
         if (did_action('body_open') === 0) {
             if ($wp_scripts->to_do) {
                 $this->head_to_do = array_unique(array_merge($this->head_to_do, $wp_scripts->to_do));
-                $to_do            = $this->head_scripts ? $this->head_scripts : [];
+                $to_do            = [];
             }
         }
         return $to_do;
@@ -251,33 +288,33 @@ class AssetBuilder
 
     public function close_body_ob()
     {
-
         $ob = ob_get_clean();
         global $wp_scripts;
-
-        $aaa = 0;
-
         $pos = strpos($ob, '<script');
         if ($pos !== false) {
             $matches = [];
+            $aaa     = true;
             $aaa     = preg_match_all("/<script(.|\n)*?\/script>/", $ob, $matches);
             if (isset($matches[0]) && is_array($matches[0])) {
                 foreach ($matches[0] as $key => $match) {
                     $ob = str_replace($match, "", $ob);
                 }
             }
-        }
-        if ($aaa !== false) {
-            echo $ob;
-        }
+            if ($aaa !== false) {
+                echo $ob;
+            }
 
-        $wp_scripts->do_items($this->head_to_do);
-        if ($aaa === false) {
-            echo $ob;
-        }
+            $wp_scripts->do_items($this->head_to_do);
+            if ($aaa === true) {
+                echo $ob;
+            }
 
-        if (isset($matches[0]) && is_array($matches[0])) {
-            echo implode("", $matches[0]);
+            if (isset($matches[0]) && is_array($matches[0])) {
+                echo implode("", $matches[0]);
+            }
+
+        } else {
+            echo $ob;
         }
 
     }
@@ -316,7 +353,7 @@ class AssetBuilder
     public static function flat_deps($arr)
     {
         $total = [];
-        foreach (new \RecursiveIteratorIterator(new \RecursiveArrayIterator($arr), \RecursiveIteratorIterator::CHILD_FIRST) as $key => $value) {
+        foreach (new \RecursiveIteratorIterator(new \RecursiveArrayIterator($arr), RecursiveIteratorIterator::CHILD_FIRST) as $key => $value) {
             if (!isset($total[$key])) {
                 $total[$key] = [];
             }
