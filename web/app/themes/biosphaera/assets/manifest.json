@@ -5,12 +5,6 @@
                 "../../plugins/responsive-menu-pro/public/js/touch.js",
                 "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
                 "../../plugins/wp-spamshield/js/jscripts-ftr2-min.js",
-                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js",
-                "../../plugins/divi-builder/includes/builder/scripts/jquery.fitvids.js",
-                "../../plugins/divi-builder/includes/builder/scripts/waypoints.min.js",
-                "../../plugins/divi-builder/includes/builder/scripts/jquery.magnific-popup.js",
-                "../../plugins/divi-builder/includes/builder/scripts/jquery.mobile.custom.min.js",
-                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-scripts.js",
                 "../../plugins/woocommerce-multilingual/res/js/cart_widget.js"
 
 
@@ -31,10 +25,24 @@
                 "scripts/single-product.js", "scripts/add-to-cart.js"
             ]
         },
-        "main.css": {
+        "divi.js": {
+            "vendor": [
+                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.fitvids.js",
+                "../../plugins/divi-builder/includes/builder/scripts/waypoints.min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.magnific-popup.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.mobile.custom.min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-scripts.js"
+            ]
+        },
+        "divi.css": {
             "vendor": [
                 "../../plugins/divi-builder/includes/builder/styles/frontend-builder-plugin-style.css",
-                "../../plugins/divi-builder/includes/builder/styles/magnific_popup.css",
+                "../../plugins/divi-builder/includes/builder/styles/magnific_popup.css"
+            ]
+        },
+        "main.css": {
+            "vendor": [
                 "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
                 "../../plugins/gravityforms/css/formreset.css",
                 "../../plugins/gravityforms/css/formsmain.css",

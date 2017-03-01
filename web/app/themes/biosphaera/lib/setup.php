@@ -133,23 +133,27 @@ function is_divi(){
 
 function assets()
 {
-    wp_deregister_style('woocommerce-layout');
-    wp_deregister_style('woocommerce-general');
-    wp_deregister_style('woocommerce-smallscreen');
-    wp_deregister_script('jquery');
-    wp_deregister_script( 'google-maps-api');
-wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key()), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
-    wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
+  $deregistered_styles=['woocommerce-layout',
+'woocommerce-general',
+'woocommerce-smallscreen',];
+  $deregistered_scripts=['jquery',
+'google-maps-api'];
+array_map('wp_deregister_style',$deregistered_styles);
+array_map('wp_deregister_script', $deregistered_scripts);
 
-    wp_enqueue_style('sage_css', Assets\asset_path('styles/main.css'), false, null);
+wp_enqueue_style('sage_css', Assets\asset_path('styles/main.css'), false, null);
+wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), array(), null, true);
+wp_enqueue_script('sage_js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
+wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/woocommerce.js'), ['jquery'], null, true);
 
-    wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), array(), null, true);
-     wp_enqueue_script('sage_js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
-     wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/woocommerce.js'), ['jquery'], null, true);
-   /*  if(is_divi()){
-      wp_enqueue_style('divi_bios', Assets\asset_path('styles/divi.css'), false, null);
-wp_enqueue_script('divi_bios', Assets\asset_path('scripts/divi.js'), ['jquery'], null, true);
-     }*/
+       $is_contatti=is_page('Contatti');
+       if(is_front_page() || is_product() || $is_contatti){
+        wp_enqueue_style('divi_css', Assets\asset_path('styles/divi.css'), false, null);
+  wp_enqueue_script('divi_js', Assets\asset_path('scripts/divi.js'), ['jquery'], null, true);
+  if($is_contatti) wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key()), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
+    }
+
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 

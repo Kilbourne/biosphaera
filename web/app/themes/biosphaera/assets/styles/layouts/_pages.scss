@@ -525,20 +525,18 @@
 
 body.single-aree_terapeutiche {
     &.woocommerce {
-        #content {
+        .product-areat-wrapper {
             display: flex;
-            justify-content: center;
             text-align: center;
             flex-wrap: wrap;
-        }
-        .product-areat-wrapper {
-            flex-basis: 50%;
-            flex-grow: 2;
         }
         div.product {
             overflow: hidden;
             padding: 0 1rem;
             display: inline-block;
+            @media(min-width: 767px) {
+                flex-basis: 50%;
+            }
             .initial-text h3:last-of-type {
                 margin-bottom: 1rem !important;
             }

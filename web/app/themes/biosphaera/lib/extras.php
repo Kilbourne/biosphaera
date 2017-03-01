@@ -413,3 +413,39 @@ function bios_search(){
 
 add_action( 'before_responsive_menu_search',__NAMESPACE__ . '\\bios_search' );
 
+
+
+add_action( 'init', function() {
+
+    /**
+     * Post Type: Aree terapeutiche.
+     */
+
+    $labels = array(
+        "name" => __( 'Aree terapeutiche', 'sage' ),
+        "singular_name" => __( 'Aree terapeutica', 'sage' ),
+    );
+
+    $args = array(
+        "label" => __( 'Aree terapeutiche', 'sage' ),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => false,
+        "rest_base" => "",
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "aree_terapeutiche", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "editor", "thumbnail" ),
+        "taxonomies" => array( "aree_terapeutice_tax" ),
+    );
+
+    register_post_type( "aree_terapeutiche", $args );
+} );

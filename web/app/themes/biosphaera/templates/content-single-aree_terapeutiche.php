@@ -16,11 +16,11 @@ global $post;
   </div>
   </div>
   <?php
-$query = get_field('prodotti_to_areeterapeutiche');;
+$query = get_field('prodotti_to_areeterapeutiche');
+
 if ($query) {
     ?>
-  <div id="content">
-
+ <div class="product-areat-wrapper" style="border-top: 3px solid <?php echo Extras\get_areat_color($post->ID)   ?>;">
   <?php
   global $area_id;
   $area_id=$post->ID;
@@ -28,9 +28,9 @@ if ($query) {
         global $product, $post;
         $post = $product_1;
         setup_postdata($post);
-        ?><div class="product-areat-wrapper" style="border-top: 3px solid <?php echo Extras\get_product_color(get_the_ID())   ?>;">
+        ?>
         <?php wc_get_template('content-areat-product.php',['area_id'=>$area_id],'woocommerce');?>
-        </div>
+
     <?php }
     ?>
     </div> <?php
