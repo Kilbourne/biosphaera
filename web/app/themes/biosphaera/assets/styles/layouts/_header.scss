@@ -145,6 +145,10 @@
                 display: block;
             }
         }
+        &.current-menu-item a {
+            color: #7a7575;
+            font-weight: 600;
+        }
     }
     .left-menu-item {
         float: left;

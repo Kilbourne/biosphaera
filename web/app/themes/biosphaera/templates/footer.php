@@ -31,6 +31,8 @@ in contatto!</p>
      <a href="" class="last-line-link">Privacy</a> |
      <a href="" class="last-line-link">Informazioni sui cookie</a> |
 
-     <span class="last-line-link" style="min-width: 171px;"><span>Web agency</span><span style="margin-left: 6px;" ><a style="background-color: #fff;padding: 2px;" href="http://www.menthalia.com"><img src="<?php echo get_stylesheet_directory_uri().'/dist/images/menthalia-logo.svg' ?>" alt="MENTHALIA LOGO" style="display: inline;vertical-align: middle;width: 50%;"></a></span></span>
+     <span class="last-line-link" ><span style="display: inline-block;
+vertical-align: middle;">Web agency</span><span style="display: inline-block;
+vertical-align: middle;margin-left: 6px;" ><a  href="http://www.menthalia.com"><img src="<?php echo get_stylesheet_directory_uri().'/dist/images/menthalia-logo.png' ?>" alt="MENTHALIA LOGO" style="display: inline;vertical-align: middle;max-width: 118px;"></a></span></span>
   </div>
 </footer>

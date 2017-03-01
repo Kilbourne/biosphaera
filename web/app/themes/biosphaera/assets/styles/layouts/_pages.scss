@@ -17,7 +17,8 @@
     }
 }
 
-.home {
+.home,
+.page-template-aree_tera_category-archive {
     .aree-bios-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -60,6 +61,23 @@
         &:hover .aree_tera_list_link {
             opacity: 1;
         }
+    }
+}
+
+.page-template-aree_tera_category-archive {
+    .content.row {
+        padding: 0;
+    }
+    .area-bios-wrap {
+        flex-basis: 100%;
+    }
+    .area-bios .aree_tera_list_link {
+        opacity: 1;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+    .area-bios h3 {
+        color: inherit;
     }
 }
 
