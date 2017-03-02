@@ -16,6 +16,7 @@ function setup()
     add_theme_support('soil-nice-search');
     //add_theme_support('soil-jquery-cdn');
     add_theme_support('soil-relative-urls');
+    add_theme_support('soil-disable-trackbacks');
 
     // Make theme available for translation
     // Community translations can be found at https://github.com/roots/sage-translations
@@ -169,7 +170,7 @@ $opts = [
        "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product"
     ],
     "not_async" => [
-        'jquery','google-maps-api'
+        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe'
     ],
     "css"       => [
 "wcml_admin",

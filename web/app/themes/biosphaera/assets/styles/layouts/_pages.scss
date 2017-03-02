@@ -29,17 +29,42 @@
         flex-basis: 33%;
     }
     .area-bios {
-        padding: 2rem 1.5rem;
+        padding: 2rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
         h3 {
             font-size: 3rem;
             text-align: center;
             color: #fff;
             margin: 0 auto 1.5rem;
+            flex-basis: 100%;
             @media(max-width: 300px) {
                 font-size: 2.2rem;
             }
         }
+        .aree_tera_list,
+        .area-bios-img-wrapper {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .area-bios-img-wrapper {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            max-width: 29%;
+            @media(max-width: 900px) {
+                display: none;
+            }
+        }
+        .area-bios-content-wrapper {
+            @media(min-width: 900px) {
+                padding-left: 10%;
+            }
+        }
         .aree_tera_list {
+            width: 100%;
             list-style: none;
             text-align: center;
             margin: 0;
@@ -144,6 +169,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     color: inherit !important;
+    text-align: center;
 }
 
 .product-areat-wrapper {

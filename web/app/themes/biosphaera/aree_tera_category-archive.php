@@ -34,8 +34,11 @@ if($terms){
 ?>
       <div class="area-bios-wrap" style="background-color:<?php   echo get_field('color', 'aree_terapeutice_tax_' . $term_id) ?>;color:<?php  echo Extras\lumdiff(Extras\hex2rgba(get_field('color', 'aree_terapeutice_tax_' . $term_id),false,true));  ?> ; ">
     <div class="area-bios">
-             <h3><?php  echo $term->name; ?></h3>
+
              <?php
+
+             echo '<div class="area-bios-img-wrapper">'.wp_get_attachment_image( get_field('immagine','term_'.$term_id), 'full' ).'</div><div class="area-bios-content-wrapper"> <h3>'. $term->name.'</h3>';
+
     if($posts){
           echo '<ul class="aree_tera_list">';
       foreach ($posts as $key => $larea) { ?>
@@ -44,7 +47,9 @@ if($terms){
     }
        echo'</ul>';
     }
+
     ?>
+    </div>
         </div>
        </div>
        <?php

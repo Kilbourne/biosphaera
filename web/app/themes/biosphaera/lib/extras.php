@@ -73,7 +73,7 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 50 );
 remove_all_actions('woocommerce_before_shop_loop_item_title');
 remove_all_actions('woocommerce_after_shop_loop_item_title');
-add_action('woocommerce_shop_loop_item_title', function () {echo '<div class="content">';}, 11);
+//add_action('woocommerce_shop_loop_item_title', function () {echo '<div class="content">';}, 11);
 add_action('woocommerce_shop_loop_item_title', function () {
     $attachment_id = get_post_meta(get_the_ID(), 'logo', true);
 
@@ -81,7 +81,7 @@ add_action('woocommerce_shop_loop_item_title', function () {
     /*<div class="product-logo"><img src="' . wp_get_attachment_image_src($attachment_id)[0] . '" alt="' . get_post_meta($attachment_id, '_wp_attachment_image_alt', true) . '"></div>*/
   '<div class="product-loop-excerpt">' . get_post_meta(get_the_ID(), 'descrizione_pagina_prodotto', true) . '</div>';
 }, 12);
-add_action('woocommerce_shop_loop_item_title', function () {echo '</div>';}, 13);
+//add_action('woocommerce_shop_loop_item_title', function () {echo '</div>';}, 18);
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 14);
 add_action('woocommerce_shop_loop_item_title', function () {echo '<div class="woocommerce-loop-image-wrapper">';}, 15);
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 16);
