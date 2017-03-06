@@ -107,6 +107,8 @@ add_filter('woocommerce_product_tabs', function ($tabs) {
     return $tabs;
 });
 
+add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
+
 function get_tab_content($key, $tab)
 {
     global $product;
@@ -450,3 +452,12 @@ add_action( 'init', function() {
 
     register_post_type( "aree_terapeutiche", $args );
 } );
+
+
+add_action('admin_init',function(){
+    $role = get_role('shop_manager');
+    // remove full access in case it was added previously
+    $role->remove_cap('gform_full_access');
+    $role->add_cap('gravityforms_view_entries');
+    $role->add_cap('gravityforms_edit_entries');
+});

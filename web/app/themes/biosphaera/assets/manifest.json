@@ -25,6 +25,18 @@
                 "scripts/single-product.js", "scripts/add-to-cart.js"
             ]
         },
+        "checkout.js": {
+            "vendor": [
+                "../../plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js",
+                "../../plugins/woocommerce/assets/js/frontend/woocommerce.js",
+                "../../plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
+                "../../plugins/woocommerce/assets/js/frontend/cart-fragments.js",
+                "../../plugins/woocommerce/assets/js/frontend/checkout.js"
+            ],
+            "files": [
+                "scripts/single-product.js", "scripts/add-to-cart.js"
+            ]
+        },
         "divi.js": {
             "vendor": [
                 "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js",

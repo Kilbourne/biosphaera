@@ -141,12 +141,19 @@ function assets()
 'google-maps-api'];
 array_map('wp_deregister_style',$deregistered_styles);
 array_map('wp_deregister_script', $deregistered_scripts);
+//wp_register_script( 'wc-checkout', Assets\asset_path('scripts/checkout.js'), array( 'jquery', 'woocommerce', 'wc-country-select', 'wc-address-i18n','woocommerce_bios' ), false, true );
+
 
 wp_enqueue_style('sage_css', Assets\asset_path('styles/main.css'), false, null);
 wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), array(), null, true);
 wp_enqueue_script('sage_js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
+if(is_checkout()){
+wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/checkout.js'), ['jquery'], null, true);
+}else{
 wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/woocommerce.js'), ['jquery'], null, true);
+}
+
 
        $is_contatti=is_page('Contatti');
        if(is_front_page() || is_product() || $is_contatti){
@@ -166,11 +173,11 @@ $opts = [
     "bundle"    => [
        'et-builder-modules-global-functions-script','divi-fitvids','waypoints','magnific-popup','et-jquery-touch-mobile','et-builder-modules-script',
        "touch","responsive-menu-pro","wpss-jscripts-ftr","gform_json","gform_gravityforms",
-       "cart-widget","wpml-legacy-dropdown-0","sitepress",
+       "cart-widget","wpml-legacy-dropdown-0","sitepress",'wc-checkout',
        "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product"
     ],
     "not_async" => [
-        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe'
+        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe',
     ],
     "css"       => [
 "wcml_admin",

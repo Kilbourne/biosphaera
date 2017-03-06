@@ -328,7 +328,7 @@
         .panel {
             padding: 1rem 3% 1.5rem;
             background-color: #efefef;
-            line-height: 1.6;
+            line-height: 1.3;
             p {
                 margin: 0;
             }
@@ -464,6 +464,7 @@
     width: 100%;
     font-size: 0.8rem;
     font-weight: 500;
+    max-width: 282px;
     @media(max-width: 35.1875em) {
         position: static;
         margin-top: 1.5rem;
@@ -479,7 +480,6 @@
     }
     p {
         width: 100%;
-        white-space: nowrap;
         margin-top: 0;
         margin-bottom: 0.5rem;
         vertical-align: top;
@@ -555,6 +555,12 @@ body.single-aree_terapeutiche {
             display: flex;
             text-align: center;
             flex-wrap: wrap;
+        }
+        .area-title {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
         }
         div.product {
             overflow: hidden;
@@ -759,6 +765,28 @@ body.noi {
         }
         div {
             padding-left: 30%;
+        }
+    }
+    @media(max-width: 780px) {
+        display: flex;
+        flex-wrap: wrap;
+        >img {
+            order: 2;
+        }
+        .vision-text {
+            order: 1;
+            text-align: center;
+            width: 100%;
+            position: static;
+            color: #000;
+            max-width: none;
+            >div {
+                display: block;
+                margin: 0 auto 1rem;
+                font-weight: 600;
+                max-width: 400px;
+                padding-left: 0;
+            }
         }
     }
 }

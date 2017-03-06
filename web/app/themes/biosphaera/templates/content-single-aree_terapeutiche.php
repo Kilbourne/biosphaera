@@ -5,6 +5,7 @@ global $post;
 <div class="area-content">
   <div class="area-img-wrapper" style="border-bottom: 3px solid <?php echo Extras\get_areat_color($post->ID)   ?>;"><?php the_post_thumbnail('full');?></div>
   <?php Extras\theme_breadcrumb();?>
+  <h1 class="area-title"><?php the_title() ?></h1>
   <div class="area-content-wrapper">
   <div class="first-col">
     <?php Extras\area_terap_attribute_template('cosa');?>
