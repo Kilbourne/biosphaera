@@ -208,7 +208,8 @@ function bios_social()
 {
     echo '<div class="social-container"><div  >
   <p>'.__('Recommend to your friends','sage').'</p>
-  <div class="fb-share-button" data-href="' . get_permalink() . '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink() . '&src=sdkpreparse') . '" >' . __('Share', 'sage') . '</a></div></div>
+  <div class="fb-share frame"><iframe data-ce-src="" class="ce-iframe" ></iframe>
+  <div class="fb-share-button" data-href="' . get_permalink() . '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink() . '&src=sdkpreparse') . '" >' . __('Share', 'sage') . '</a></div></div></div>
   <div class="disponibilita">
     <p style="font-size:1rem;margin-bottom:0;"><span>'.__('IMMEDIATE AVAILABILITY','sage').'</span><span>'.__(' Express Delivery 1-3 days','sage').'</span></p>
 

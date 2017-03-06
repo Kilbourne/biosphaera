@@ -18,6 +18,7 @@
     "inuit-print": "latest",
     "jquery": "~1.11.3",
     "font-awesome": "~4.5.0",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "cookies-enabler": "^0.1.4"
   }
 }

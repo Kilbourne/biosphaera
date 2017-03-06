@@ -80,6 +80,7 @@
         "oscarotero/env": "^1.0",
         "roots/wp-password-bcrypt": "1.0.0",
 
+        "wpackagist-plugin/woo-codice-fiscale": "*",
         "wpackagist-plugin/woocommerce-gateway-stripe": "*",
         "satispress/wooCommerce-dynamic-pricing": "*",
         "wpackagist-plugin/password-protected": "*",

@@ -618,6 +618,25 @@ body.single-aree_terapeutiche {
     }
 }
 
+.fb-share {
+    > iframe {
+        display: none !important;
+    }
+    &.frame {
+        .fb-share-button a {
+            display: none;
+        }
+    }
+    &.ok {
+        .fb-share-button a {
+            display: inline-block;
+        }
+    }
+    .ce-accept {
+        color: #000;
+    }
+}
+
 
 /****************CHECKOUT***************/
 

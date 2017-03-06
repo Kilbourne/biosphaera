@@ -36,6 +36,26 @@
                 }
             }
         },
+        'single_product': {
+            init: function() {
+                function get_first_uri_part() {
+                    var first = $(location).attr('pathname');
+
+                    first.indexOf(1);
+
+                    first.toLowerCase();
+
+                    first = first.split("/")[1];
+                    return first;
+                }
+                var cookie_opts = { wildcardDomain: true, onEnable: function() { $('.fb-share').toggleClass('frame ok'); } };
+                if (get_first_uri_part() !== 'en') { cookie_opts['iframesPlaceholderHTML'] = '<p><span>Condividi su Facebook - </span> Per vedere questo contenuto è necessario ' + '<a href="#" class="ce-accept">accetare un cookie di terze parti</a>' + '</p>' } else {
+                    cookie_opts['iframesPlaceholderHTML'] = '<p><span>Share on Facebook - </span> To view this content you need to' + '<a href="#" class="ce-accept">Enable Cookies</a>' + '</p>';
+                }
+                COOKIES_ENABLER.init(cookie_opts);
+
+            }
+        },
         // Home page
         'home': {
             init: function() {
