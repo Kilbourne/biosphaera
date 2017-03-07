@@ -174,10 +174,10 @@ $opts = [
        'et-builder-modules-global-functions-script','divi-fitvids','waypoints','magnific-popup','et-jquery-touch-mobile','et-builder-modules-script',
        "touch","responsive-menu-pro","wpss-jscripts-ftr","gform_json","gform_gravityforms",
        "cart-widget","wpml-legacy-dropdown-0","sitepress",'wc-checkout',
-       "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product"
+       "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product",'wc-address-i18n' ,'wc-country-select'
     ],
     "not_async" => [
-        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe',
+        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe','password-strength-meter','wc-password-strength-meter','zxcvbn-async',
     ],
     "css"       => [
 "wcml_admin",
@@ -191,6 +191,8 @@ $opts = [
 "gforms_browsers_css",
     ],
 ];
+
+
 if(!(is_admin() || is_user_logged_in())) $opts['css'][]="dashicons";
 new AssetBuilder($opts);
 
