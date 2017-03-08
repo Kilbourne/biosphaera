@@ -95,13 +95,14 @@ add_filter('woocommerce_product_tabs', function ($tabs) {
     if (is_singular('aree_terapeutiche')) {
         return [];
     }
-
+    $values=['modalita-duso','ingredienti','benefici'];
     $keys = [__('How to use', 'sage'), __('Ingredients', 'sage'), __('Benefits', 'sage')];
     foreach ($keys as $key => $value) {
         $tabs[] = [
-            'title'    => $value,
+            'title'    => __($value,'sage'),
             'callback' => __NAMESPACE__ . '\\get_tab_content',
             'priority' => 10 * $key,
+            'custom_val'=>$values[$key],
         ];
     }
     return $tabs;
@@ -112,7 +113,7 @@ add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
 function get_tab_content($key, $tab)
 {
     global $product;
-    echo get_field(sanitize_title($tab['title']), $product->id);
+    echo get_field($tab['custom_val'], $product->id);
 }
 function woocommerce_formato(){
     global $product;
@@ -353,20 +354,24 @@ function lumdiff($arr){
   $red=$arr[0];$green=$arr[1];$blue=$arr[2];
  return ($red*0.299 + $green*0.587 + $blue*0.114) > 186  ? '#444' : '#ffffff';
 }
-add_filter( 'wp_nav_menu_menu-mobile_items', function($items){
+function bios_mobile_account_links($items){
     global $woocommerce;
+    $text='<div class="lang-wrap">'.bios_lang_sel('',false).'</div>'.($woocommerce->cart->cart_contents_count>0?sk_wcmenucart(false):'');
+
     $links=[
 
 is_user_logged_in()?'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profile', 'sage' ).' </a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Login', 'sage' ).' </a>',
 is_user_logged_in()?'<a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Logout', 'sage' ).'</a>':'<a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Register', 'sage' ).' </a>',
-['before'=>true,'text'=>'<a href="">IT</a><a href="">EN</a>'.($woocommerce->cart->cart_contents_count>0?sk_wcmenucart(false):''),'classes'=>'lang-sel'],
+['before'=>true,'text'=>$text,'classes'=>'lang-sel'],
     ];
     foreach ($links as $link) {
         $item= is_array($link)?'<li class="menu-item '.(isset($link['classes'])?$link['classes']:'').'">'.$link['text'].'</li>':'<li class="menu-item ">'.$link.'</li>';
         $items=is_array($link) && $link['before'] ? $item.$items : $items.$item;
     }
     return $items;
-});
+}
+add_filter( 'wp_nav_menu_menu-mobile_items',  __NAMESPACE__ . '\\bios_mobile_account_links');
+add_filter( 'wp_nav_menu_menu-mobile-inglese_items',  __NAMESPACE__ . '\\bios_mobile_account_links');
 
 function sk_wcmenucart($text=true) {
 
@@ -408,7 +413,10 @@ function bios_wc_link(){
 }
 
 function bios_search(){
-  echo '<form action="'. get_permalink( get_page_by_title('Risultati ricerca' ))   .' " id="responsive_menu_pro_search" method="get" role="search">
+     $page_id=get_page_by_title('Risultati ricerca')->ID;
+            $lang_id=apply_filters( 'wpml_object_id', $page_id, 'page', false, ICL_LANGUAGE_CODE );
+
+  echo '<form action="'. get_permalink( get_page($lang_id))   .' " id="responsive_menu_pro_search" method="get" role="search">
      <i class="fa fa-search"></i>
             <input type="search" name="swpquery" value="" placeholder="'.  __( 'Search', 'sage' )  .'" id="responsive_menu_pro_search_input">
         </form>';
@@ -461,3 +469,561 @@ add_action('admin_init',function(){
     $role->add_cap('gravityforms_view_entries');
     $role->add_cap('gravityforms_edit_entries');
 });
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+    'key' => 'group_58b7faa48a5aa',
+    'title' => 'Biosphaera aree',
+    'fields' => array (
+        array (
+            'return_format' => 'id',
+            'preview_size' => 'full',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+            'key' => 'field_58b7fac5757c9',
+            'label' => 'Immagine',
+            'name' => 'immagine',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'taxonomy',
+                'operator' => '==',
+                'value' => 'aree_terapeutice_tax',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+acf_add_local_field_group(array (
+    'key' => 'group_589aeb2b080e2',
+    'title' => 'AreeTerapeutiche to Prodotti',
+    'fields' => array (
+        array (
+            'post_type' => array (
+                0 => 'product',
+            ),
+            'taxonomy' => array (
+            ),
+            'min' => '',
+            'max' => '',
+            'filters' => array (
+                0 => 'search',
+                1 => 'taxonomy',
+            ),
+            'elements' => '',
+            'return_format' => 'object',
+            'key' => 'field_589aeb3f1b438',
+            'label' => 'Prodotti to AreeTerapeutiche Relation',
+            'name' => 'prodotti_to_areeterapeutiche',
+            'type' => 'relationship',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'aree_terapeutiche',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+acf_add_local_field_group(array (
+    'key' => 'group_589ae60c878c4',
+    'title' => 'Prodotti to AreeTerapeutiche',
+    'fields' => array (
+        array (
+            'post_type' => array (
+                0 => 'aree_terapeutiche',
+            ),
+            'taxonomy' => array (
+            ),
+            'min' => '',
+            'max' => '',
+            'filters' => array (
+                0 => 'search',
+                1 => 'taxonomy',
+            ),
+            'elements' => '',
+            'return_format' => 'object',
+            'key' => 'field_589ae614641c5',
+            'label' => 'Prodotti to AreeTerapeutiche Relation',
+            'name' => 'prodotti_to_areeterapeutiche',
+            'type' => 'relationship',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'product',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+acf_add_local_field_group(array (
+    'key' => 'group_580f35450a54b',
+    'title' => 'Attrbuti area terapeutica',
+    'fields' => array (
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_58a6cfcfeadb8',
+            'label' => 'Label Che cos\'è?',
+            'name' => 'label_cosa',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'tabs' => 'all',
+            'toolbar' => 'full',
+            'media_upload' => 1,
+            'default_value' => '',
+            'delay' => 0,
+            'key' => 'field_580f3556482f0',
+            'label' => 'Che cos\'è?',
+            'name' => 'cosa',
+            'type' => 'wysiwyg',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_58a6cfe9eadb9',
+            'label' => 'Label Da cosa è provocato?',
+            'name' => 'label_cause',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'tabs' => 'all',
+            'toolbar' => 'full',
+            'media_upload' => 1,
+            'default_value' => '',
+            'delay' => 0,
+            'key' => 'field_580f355e482f3',
+            'label' => 'Da cosa è provocato?',
+            'name' => 'cause',
+            'type' => 'wysiwyg',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_58a6d003eadba',
+            'label' => 'Label Come si manifesta?',
+            'name' => 'label_manifestazioni',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'tabs' => 'all',
+            'toolbar' => 'full',
+            'media_upload' => 1,
+            'default_value' => '',
+            'delay' => 0,
+            'key' => 'field_580f355c482f2',
+            'label' => 'Come si manifesta?',
+            'name' => 'manifestazioni',
+            'type' => 'wysiwyg',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_58a6d022eadbb',
+            'label' => 'Label Rimedi Naturali',
+            'name' => 'label_rimedi_naturali',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'tabs' => 'all',
+            'toolbar' => 'full',
+            'media_upload' => 1,
+            'default_value' => '',
+            'delay' => 0,
+            'key' => 'field_580f355b482f1',
+            'label' => 'Rimedi Naturali',
+            'name' => 'rimedi_naturali',
+            'type' => 'wysiwyg',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'aree_terapeutiche',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+acf_add_local_field_group(array (
+    'key' => 'group_580f14c52049c',
+    'title' => 'Custom Attributes',
+    'fields' => array (
+        array (
+            'return_format' => 'url',
+            'preview_size' => 'full',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+            'key' => 'field_5824791ce42a6',
+            'label' => 'Logo',
+            'name' => 'logo',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'new_lines' => 'wpautop',
+            'maxlength' => '',
+            'placeholder' => '',
+            'rows' => '',
+            'key' => 'field_580f14d1707a2',
+            'label' => 'Modalità d\'uso',
+            'name' => 'modalita-duso',
+            'type' => 'textarea',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'new_lines' => 'wpautop',
+            'maxlength' => '',
+            'placeholder' => '',
+            'rows' => '',
+            'key' => 'field_580f14ef707a3',
+            'label' => 'Ingredienti',
+            'name' => 'ingredienti',
+            'type' => 'textarea',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'new_lines' => 'wpautop',
+            'maxlength' => '',
+            'placeholder' => '',
+            'rows' => '',
+            'key' => 'field_580f14f1707a4',
+            'label' => 'Benefici',
+            'name' => 'benefici',
+            'type' => 'textarea',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'new_lines' => 'wpautop',
+            'maxlength' => '',
+            'placeholder' => '',
+            'rows' => '',
+            'key' => 'field_582486386fd56',
+            'label' => 'Descrizione Pagina Prodotto',
+            'name' => 'descrizione_pagina_prodotto',
+            'type' => 'textarea',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_589c7e8cac2ff',
+            'label' => 'Formato',
+            'name' => 'formato',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_589c881a543fc',
+            'label' => 'Sale info',
+            'name' => 'sale_info',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'product',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+acf_add_local_field_group(array (
+    'key' => 'group_57e39beea402d',
+    'title' => 'Custom product fields',
+    'fields' => array (
+        array (
+            'default_value' => '',
+            'key' => 'field_57e39c0351265',
+            'label' => 'Color',
+            'name' => 'color',
+            'type' => 'color_picker',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'taxonomy',
+                'operator' => '==',
+                'value' => 'aree_terapeutice_tax',
+            ),
+        ),
+        array (
+            array (
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'product',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+endif;
+
+function bios_lang_sel($div='',$echo=false){
+  $languages = icl_get_languages('skip_missing=1');
+  if(1 < count($languages)){
+    foreach($languages as $l){
+
+      if(!$l['active']) {$langs[] = '<a href="'.$l['url'].'" data-lang="' . $l['language_code'] . '">'.strtoupper($l['code']).'</a>';}
+      else{ $langs[]='<span class="active" >'.strtoupper($l['code']).'</span>';}
+    }
+    $result=join($div, $langs);
+    if($echo) {echo $result;}
+    else{return $result;}
+  }
+}
+
+function bios_footer_link($el){
+     $page_id=get_page_by_title($el)->ID;
+            $lang_id=apply_filters( 'wpml_object_id', $page_id, 'page', true, ICL_LANGUAGE_CODE );
+    echo '<a href="'.get_permalink( $lang_id)  .'" class="last-line-link">'.get_the_title($lang_id).'</a> | ';
+}

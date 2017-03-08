@@ -24,10 +24,13 @@ use Roots\Sage\Wrapper;
     <div class="wrap container" role="document">
       <div class="content row">
         <main class="main">
-          <?php   if(Setup\display_header_slider()) echo '   <div class="divi-slider header-slide">
-              <div class="et_builder_outer_content" id="et_builder_outer_content">
-        <div class="et_builder_inner_content et_pb_gutters3">
-        '.do_shortcode(get_page_by_title('Header Slider')->post_content).'</div></div></div>  '; ?>
+          <?php   if(Setup\display_header_slider()) {
+            $page_id=get_page_by_title('Header Slider')->ID;
+            $lang_id=apply_filters( 'wpml_object_id', $page_id, 'page', false, ICL_LANGUAGE_CODE );
+            echo '   <div class="divi-slider header-slide">
+                        <div class="et_builder_outer_content" id="et_builder_outer_content">
+                  <div class="et_builder_inner_content et_pb_gutters3">
+                  '.do_shortcode(get_page($lang_id)->post_content).'</div></div></div>  ';} ?>
 
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->

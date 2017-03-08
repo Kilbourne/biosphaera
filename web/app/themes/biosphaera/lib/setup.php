@@ -30,6 +30,7 @@ function setup()
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'menu_mobile' => __('Menu mobile', 'sage'),
     ]);
 
     // Enable post thumbnails
@@ -118,13 +119,21 @@ function display_header_slider()
 
     return apply_filters('sage/display_title', $display);
 }
-
+function is_contatti(){
+    static $is_contatti;
+    if(!isset($is_contatti)){
+        $page_id=get_page_by_title('contatti')->ID;
+            $lang_id=apply_filters( 'wpml_object_id', $page_id, 'page', false, ICL_LANGUAGE_CODE );
+        $is_contatti = is_page($lang_id);
+    }
+    return $is_contatti;
+}
 function is_divi(){
   static $display;
    isset($display) || $display = in_array(true, [
         // The sidebar will NOT be displayed if ANY of the following return true.
         // @link https://codex.wordpress.org/Conditional_Tags
-        is_front_page(), is_page( 'contatti' ) ,
+        is_front_page(), is_contatti() ,
     ]);
   return $display;
 }
@@ -155,11 +164,11 @@ wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/woocommerce.js'
 }
 
 
-       $is_contatti=is_page('Contatti');
-       if(is_front_page() || is_product() || $is_contatti){
+
+       if(is_front_page() || is_product() || is_contatti()){
         wp_enqueue_style('divi_css', Assets\asset_path('styles/divi.css'), false, null);
   wp_enqueue_script('divi_js', Assets\asset_path('scripts/divi.js'), ['jquery'], null, true);
-  if($is_contatti) wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key()), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
+  if(is_contatti()) wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key()), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
     }
 
 }
@@ -177,7 +186,8 @@ $opts = [
        "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product",'wc-address-i18n' ,'wc-country-select'
     ],
     "not_async" => [
-        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe','password-strength-meter','wc-password-strength-meter','zxcvbn-async',
+        'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe','password-strength-meter','wc-password-strength-meter','zxcvbn-async','jquery-ui-widget','wp-pointer'
+,'jquery-ui-position'
     ],
     "css"       => [
 "wcml_admin",

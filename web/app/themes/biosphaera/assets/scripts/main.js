@@ -18,7 +18,13 @@
         // All pages
         'common': {
             init: function() {
-                // JavaScript to be fired on all pages
+                $('.lang-switcher a,.lang-sel a').click(function(e) {
+                    $.cookie("bios_current_language", $(this).data("lang"), {
+                        expires: 365,
+                        path: "/",
+                        domain: document.location.host
+                    });
+                });
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -50,7 +56,7 @@
                 }
                 var cookie_opts = { wildcardDomain: true, onEnable: function() { $('.fb-share').toggleClass('frame ok'); } };
                 if (get_first_uri_part() !== 'en') { cookie_opts['iframesPlaceholderHTML'] = '<p><span>Condividi su Facebook - </span> Per vedere questo contenuto è necessario ' + '<a href="#" class="ce-accept">accetare un cookie di terze parti</a>' + '</p>' } else {
-                    cookie_opts['iframesPlaceholderHTML'] = '<p><span>Share on Facebook - </span> To view this content you need to' + '<a href="#" class="ce-accept">Enable Cookies</a>' + '</p>';
+                    cookie_opts['iframesPlaceholderHTML'] = '<p><span>Share on Facebook - </span> To view this content you need to' + '<a href="#" class="ce-accept"> enable cookies</a>' + '</p>';
                 }
                 COOKIES_ENABLER.init(cookie_opts);
 

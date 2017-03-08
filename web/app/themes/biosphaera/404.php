@@ -1,13 +1,16 @@
 <?php get_template_part('templates/page', 'header'); ?>
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-<?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<div class="alert alert-warning">
+  <?php _e('Sorry, but the page you were trying to view does not exist.', 'sage'); ?>
+</div>
+
+<form role="search" method="get" class="search-form" action="<?php echo get_the_permalink(apply_filters( 'wpml_object_id', get_page_by_title('Search Results')->ID, 'page', false, ICL_LANGUAGE_CODE)); ?>">
+      <?php echo '<label>
+                    <span class="screen-reader-text">' . _x('Search for:', 'label') . '</span>
+                    <input type="search" class="search-field" placeholder="' . esc_attr_x('Search &hellip;', 'placeholder') . '" value="' . get_search_query() . '" name="swpquery" />
+                </label>
+                <input type="submit" class="search-submit" value="' . esc_attr_x('Search', 'submit button') . '" />
+            </form>';
+
+?>

@@ -203,6 +203,21 @@
         width: auto !important;
         display: inline-block;
         border-top: none;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        margin: 8px 0 8px 5%;
+        padding: 4px;
+    }
+    .active {
+        display: inline-block;
+        vertical-align: top;
+        margin: 12px 0 12px 5%;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 600;
     }
 }
 
@@ -215,4 +230,8 @@
 label.inline {
     display: inline !important;
     margin-left: ms(1);
+}
+
+.lang-switcher > .active {
+    font-weight: 600;
 }

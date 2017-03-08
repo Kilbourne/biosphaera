@@ -1,3 +1,4 @@
+<?php use Roots\Sage\Extras; ?>
 <footer class="content-info">
   <div class="container">
     <?php //dynamic_sidebar('sidebar-footer'); ?>
@@ -19,18 +20,20 @@
      <div class="newsletter footer-section">
       <h2 class="footer-title">Newsletter</h2>
       <div class="footer-content">
-        <p>Scopri nuovi prodotti e le offerte
-speciali prima degli altri! Restiamo
-in contatto!</p>
+        <p><?php  _e('Discover new products and offerings
+Special before the others! We remain
+in contact!','sage'); ?> </p>
     <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?>
      </div>
   </div>
   </div>
+
   <div class="last-line-container">
     <span>© 2016 Biosphaera</span> |
-     <a href="" class="last-line-link">Termini e condizioni</a> |
-     <a href="" class="last-line-link">Privacy</a> |
-     <a href="" class="last-line-link">Informazioni sui cookie</a> |
+ <?php
+  array_map('Roots\Sage\Extras\bios_footer_link', ['Termini e condizioni', 'Privacy', 'Informativa sui cookie']);
+  echo '<a href="http://ec.europa.eu/consumers/odr/" class="last-line-link"> ODR </a> | ';
+  ?>
 
      <span class="last-line-link" ><span style="display: inline-block;
 vertical-align: middle;">Web agency</span><span style="display: inline-block;

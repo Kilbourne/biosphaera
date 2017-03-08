@@ -864,6 +864,10 @@ body.page-template-custom-search {
             color: #444;
             text-decoration: none;
         }
+        .entry-summary {
+            text-align: center;
+            padding: 0 5%;
+        }
     }
 }
 
@@ -912,6 +916,16 @@ body.page-template-template-contacts #et_builder_outer_content {
 .woocommerce-cart {
     table.cart img {
         width: 50%;
+    }
+}
+
+body.error404 {
+    main {
+        text-align: center;
+    }
+    .alert-warning,
+    .search-form {
+        padding: 1rem 0;
     }
 }
 

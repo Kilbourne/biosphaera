@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:4
+#: 404.php:5
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr "Spiacente, la pagina che stai cercando di visualizzare non esiste."
 
@@ -53,73 +53,89 @@ msgstr "Ingredienti"
 msgid "Benefits"
 msgstr "Benefici"
 
-#: lib/extras.php:145, lib/extras.php:146, lib/extras.php:376
+#: lib/extras.php:102
+msgid "$value"
+msgstr ""
+
+#: lib/extras.php:148, lib/extras.php:149, lib/extras.php:384
 msgid "Cart"
 msgstr "Carrello"
 
-#: lib/extras.php:159, lib/extras.php:164
+#: lib/extras.php:162, lib/extras.php:167
 msgid "Categorie Aree Terapeutiche"
 msgstr ""
 
-#: lib/extras.php:160
+#: lib/extras.php:163
 msgid "Categoria Aree Terapeutiche"
 msgstr ""
 
-#: lib/extras.php:210
+#: lib/extras.php:213
 msgid "Recommend to your friends"
 msgstr "Consiglialo ai tuoi amici"
 
-#: lib/extras.php:211
+#: lib/extras.php:215
 msgid "Share"
 msgstr "Condividi"
 
-#: lib/extras.php:213
+#: lib/extras.php:217
 msgid "IMMEDIATE AVAILABILITY"
 msgstr "DISPONIBILITA IMMEDIATA"
 
-#: lib/extras.php:213
+#: lib/extras.php:217
 msgid " Express Delivery 1-3 days"
 msgstr "Consegna Express 1-3 giorni"
 
-#: lib/extras.php:263
+#: lib/extras.php:267
 msgid "you are in"
 msgstr "sei in"
 
-#: lib/extras.php:357, lib/extras.php:400
+#: lib/extras.php:363, lib/extras.php:408
 msgid "Profile"
 msgstr "Profilo"
 
-#: lib/extras.php:357, lib/extras.php:403
+#: lib/extras.php:363, lib/extras.php:411
 msgid "Login"
 msgstr "Accedi"
 
-#: lib/extras.php:358, lib/extras.php:400
+#: lib/extras.php:364, lib/extras.php:408
 msgid "Logout"
 msgstr "Scollegati"
 
-#: lib/extras.php:358, lib/extras.php:403
+#: lib/extras.php:364, lib/extras.php:411
 msgid "Register"
 msgstr "Registrati"
 
-#: lib/extras.php:379
+#: lib/extras.php:387
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d prodotto"
 msgstr[1] "%d prodotti"
 
-#: lib/extras.php:410
+#: lib/extras.php:421
 msgid "Search"
 msgstr "Cerca"
 
-#: lib/setup.php:31
+#: lib/extras.php:436, lib/extras.php:441
+msgid "Aree terapeutiche"
+msgstr ""
+
+#: lib/extras.php:437
+msgid "Aree terapeutica"
+msgstr ""
+
+#: lib/setup.php:32
 msgid "Primary Navigation"
 msgstr "Primary Navigation"
 
-#: lib/setup.php:60
+#: lib/setup.php:33
+msgid "Menu mobile"
+msgstr ""
+
+#: lib/setup.php:62
 msgid "Primary"
 msgstr "PrimarY"
 
-#: lib/setup.php:69
+#: lib/setup.php:71
 msgid "Footer"
 msgstr "Footer"
 
@@ -161,6 +177,16 @@ msgstr "Pagine:"
 #: templates/entry-meta.php:2
 msgid "By"
 msgstr "Scritto da"
+
+#: templates/footer.php:22
+msgid ""
+"Discover new products and offerings\n"
+"Special before the others! We remain\n"
+"in contact!"
+msgstr ""
+"Scopri nuovi prodotti e le offerte\n"
+"speciali prima degli altri! Restiamo\n"
+"in contatto!"
 
 #~ msgid "It looks like this was the result of either:"
 #~ msgstr "Questo potrebbe essere stato causato da:"
