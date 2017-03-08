@@ -10,7 +10,7 @@ use Roots\Sage\Extras;
 
 
          <?php echo Extras\bios_wc_link(); ?>
-       <div class="lang-switcher">IT | EN</div>
+       <div class="lang-switcher"><?php Extras\bios_lang_sel(' | ',true) ?></div>
      </div>
 
 

@@ -692,13 +692,15 @@ body.noi {
     }
     .mission-text {
         line-height: 1.4;
-        font-weight: 500;
-        margin-bottom: 32%;
+        font-weight: 300;
         flex-grow: 2;
         display: flex;
         align-content: center;
         align-items: center;
         padding: 0 3% 1.5rem;
+        @media(min-width: 1021px) {
+            height: 67%;
+        }
     }
     >img {
         margin: 0 auto;

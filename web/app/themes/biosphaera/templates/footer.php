@@ -29,7 +29,7 @@ in contact!','sage'); ?> </p>
   </div>
 
   <div class="last-line-container">
-    <span>© 2016 Biosphaera</span> |
+    <span>© 2017 Biosphaera</span> |
  <?php
   array_map('Roots\Sage\Extras\bios_footer_link', ['Termini e condizioni', 'Privacy', 'Informativa sui cookie']);
   echo '<a href="http://ec.europa.eu/consumers/odr/" class="last-line-link"> ODR </a> | ';
