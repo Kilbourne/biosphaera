@@ -47,7 +47,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/footer');
       do_action('body_close');
       wp_footer();
-      if(Extras\display_breadcrumb()){
+      if(is_product()){
     ?>
 <div id="fb-root"></div>
 <script type="text/plain" class="ce-script" >(function(d, s, id) {

@@ -241,17 +241,20 @@ if($args->menu->name !== 'Menu') return $atts;
 function display_breadcrumb()
 {
     global $post;
+    /*
     if ($post && !in_array($post->post_type, ['product', 'aree_terapeutiche'])) {
         return false;
     }
 
     return true;
+    */
+     return false;
 }
 
 function theme_breadcrumb()
 {
+    if(!display_breadcrumb())return'';
     global $post;
-
     $breadcrumbs_parts = [];
     if ($post->post_type === 'product') {
         $term     = get_field('prodotti_to_areeterapeutiche')[0];

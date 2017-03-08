@@ -2,7 +2,7 @@
 use Roots\Sage\Extras;
 $aree= get_terms( array(
     'taxonomy' => 'aree_terapeutice_tax',
-    'hide_empty'=> false,
+    //'hide_empty'=> false,
 ) );
 if($aree){
 ?>
