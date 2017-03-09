@@ -53,7 +53,7 @@ msgstr ""
 msgid "$value"
 msgstr ""
 
-#: lib/extras.php:148, lib/extras.php:149, lib/extras.php:384
+#: lib/extras.php:148, lib/extras.php:149, lib/extras.php:387
 msgid "Cart"
 msgstr ""
 
@@ -81,41 +81,41 @@ msgstr ""
 msgid " Express Delivery 1-3 days"
 msgstr ""
 
-#: lib/extras.php:267
+#: lib/extras.php:270
 msgid "you are in"
 msgstr ""
 
-#: lib/extras.php:363, lib/extras.php:408
+#: lib/extras.php:366, lib/extras.php:411
 msgid "Profile"
 msgstr ""
 
-#: lib/extras.php:363, lib/extras.php:411
+#: lib/extras.php:366, lib/extras.php:414
 msgid "Login"
 msgstr ""
 
-#: lib/extras.php:364, lib/extras.php:408
+#: lib/extras.php:367, lib/extras.php:411
 msgid "Logout"
 msgstr ""
 
-#: lib/extras.php:364, lib/extras.php:411
+#: lib/extras.php:367, lib/extras.php:414
 msgid "Register"
 msgstr ""
 
-#: lib/extras.php:387
+#: lib/extras.php:390
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/extras.php:421
+#: lib/extras.php:424
 msgid "Search"
 msgstr ""
 
-#: lib/extras.php:436, lib/extras.php:441
+#: lib/extras.php:439, lib/extras.php:444
 msgid "Aree terapeutiche"
 msgstr ""
 
-#: lib/extras.php:437
+#: lib/extras.php:440
 msgid "Aree terapeutica"
 msgstr ""
 
@@ -174,7 +174,15 @@ msgstr ""
 msgid "By"
 msgstr ""
 
-#: templates/footer.php:22
+#: templates/footer.php:7
+msgid "Contacts"
+msgstr ""
+
+#: templates/footer.php:11
+msgid "Talk to us"
+msgstr ""
+
+#: templates/footer.php:23
 msgid ""
 "Discover new products and offerings\n"
 "Special before the others! We remain\n"

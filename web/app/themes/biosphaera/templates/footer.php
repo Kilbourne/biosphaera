@@ -4,11 +4,11 @@
     <?php //dynamic_sidebar('sidebar-footer'); ?>
     <hr>
     <div class="contatti footer-section">
-    <h2 class="footer-title">Contatti</h2>
+    <h2 class="footer-title"><?php _e('Contacts','sage'); ?></h2>
       <div class="footer-content"><span>Viale Luigi Majno, 18</span>
       <span>20129 Milano</span>
       <span>Tel: +39 02 76003400</span>
-      <a href="<?php echo get_the_permalink(get_page_by_title('Contatti')) ?> " class="parlaci">Parla con noi</a>
+      <a href="<?php echo get_the_permalink(get_page_by_title('Contatti')) ?> " class="parlaci"><?php _e('Talk to us','sage'); ?></a>
         <span style="max-width: 117px;display: inline-block;margin-top: 2rem;"><img src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/feder-salus.png" alt="Logo federsalus"></span>
       </div>
      </div>
