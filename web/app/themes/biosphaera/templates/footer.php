@@ -14,7 +14,7 @@
      </div>
      <div class="social footer-section">
       <h2 class="footer-title">Social</h2>
-      <div class="footer-content"><a href="" class="fb"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/facebook.png" alt="Facebook"></a><a href="" class="yt"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/youtube.png" alt="YouTube"></a>
+      <div class="footer-content"><a href="https://www.facebook.com/Biosphaera-Pharma-247748668968187/" class="fb"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/facebook.png" alt="Facebook"></a><a href="https://www.linkedin.com" class="linkedin"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/linkedin.png" alt="Linkedin"></a><a href="https://www.instagram.com/biosphaerapharma/" class="instagram"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/Instagram.png" alt="instagram"></a>
     </div>
      </div>
      <div class="newsletter footer-section">

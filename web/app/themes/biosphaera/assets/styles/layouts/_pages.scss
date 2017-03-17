@@ -106,6 +106,13 @@
     }
 }
 
+@media(max-width:768px) {
+    .divi-slider.header-slide,
+    .area-img-wrapper {
+        display: none;
+    }
+}
+
 .et_divi_builder #et_builder_outer_content {
     @include media-query(palm) {
         .et_pb_row {
@@ -117,7 +124,7 @@
             background-size: contain !important;
         }
         .et_pb_module p {
-            max-width: 75%;
+            //max-width: 75%;
         }
     }
     @media(max-width: 375px) {
@@ -388,11 +395,13 @@
     }
 }
 
-.divi-slider.header-slide,
-.area-img-wrapper {
-    @media(max-width: 640px) {
-        display: none;
-    }
+.et_divi_builder #et_builder_outer_content .et_pb_slider .et_pb_slide {
+    background-size: contain !important;
+}
+
+.et_divi_builder #et_builder_outer_content .et_pb_slider .et_pb_slide.et_pb_slide_0 {
+    background-size: cover !important;
+    background-position: top right !important;
 }
 
 .single-aree_terapeutiche {

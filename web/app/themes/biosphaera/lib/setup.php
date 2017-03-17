@@ -187,7 +187,7 @@ $opts = [
     ],
     "not_async" => [
         'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe','password-strength-meter','wc-password-strength-meter','zxcvbn-async','jquery-ui-widget','wp-pointer'
-,'jquery-ui-position'
+,'jquery-ui-position','select2'
     ],
     "css"       => [
 "wcml_admin",
