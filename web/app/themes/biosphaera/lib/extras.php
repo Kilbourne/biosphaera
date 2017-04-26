@@ -212,12 +212,12 @@ function bios_social()
     echo '<div class="social-container"><div  >
   <p>'.__('Recommend to your friends','sage').'</p>
   <div class="fb-share frame"><iframe data-ce-src="" class="ce-iframe" ></iframe>
-  <div class="fb-share-button" data-href="' . get_permalink() . '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink() . '&src=sdkpreparse') . '" >' . __('Share', 'sage') . '</a></div></div></div>
-  <div class="disponibilita">
+  <div class="fb-share-button" data-href="' . get_permalink() . '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink() . '&src=sdkpreparse') . '" >' . __('Share', 'sage') . '</a></div></div></div></div>';
+  /* <div class="disponibilita">
     <p style="font-size:1rem;margin-bottom:0;"><span>'.__('IMMEDIATE AVAILABILITY','sage').'</span><span>'.__(' Express Delivery 1-3 days','sage').'</span></p>
 
-  </div>
-</div>';
+  </div>-->*/
+
 }
 
 add_filter('nav_menu_link_attributes', __NAMESPACE__ . '\\filter_function_name', 10, 3);
@@ -455,7 +455,7 @@ add_action( 'init', function() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => array( "slug" => "aree_terapeutiche", "with_front" => true ),
+        "rewrite" => array( "slug" => _x( 'aree_terapeutiche', 'URL slug', 'sage' ), "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "editor", "thumbnail" ),
         "taxonomies" => array( "aree_terapeutice_tax" ),
@@ -1027,6 +1027,11 @@ function bios_lang_sel($div='',$echo=false){
 
 function bios_footer_link($el){
      $page_id=get_page_by_title($el)->ID;
+
             $lang_id=apply_filters( 'wpml_object_id', $page_id, 'page', true, ICL_LANGUAGE_CODE );
     echo '<a href="'.get_permalink( $lang_id)  .'" class="last-line-link">'.get_the_title($lang_id).'</a> | ';
 }
+
+
+
+

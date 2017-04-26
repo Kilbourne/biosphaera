@@ -99,10 +99,10 @@ function display_title()
 {
     static $display;
 
-    isset($display) || $display = !in_array(true, [
+    isset($display) || $display = in_array(true, [
         // The sidebar will NOT be displayed if ANY of the following return true.
         // @link https://codex.wordpress.org/Conditional_Tags
-        true,
+        is_page_template('with_title.php')
     ]);
 
     return apply_filters('sage/display_title', $display);
@@ -193,7 +193,7 @@ $opts = [
 "wcml_admin",
 "responsive-menu-pro",
 "wpml-legacy-dropdown-0",
-"et-builder-modules-style",
+//"et-builder-modules-style",
 "magnific-popup",
 "gforms_reset_css",
 "gforms_formsmain_css",

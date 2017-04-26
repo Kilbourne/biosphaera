@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "01fcde50d79451612f338acbe64d88b6",
-    "content-hash": "ebb8efe87add22f561bfcdae3cd25cc7",
+    "hash": "9b74215f19affdbcdb675913a186ee81",
+    "content-hash": "69d8d127aba2e05ac01a424053cd7cff",
     "packages": [
         {
             "name": "composer/installers",
@@ -109,16 +109,16 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.6.1",
+            "version": "4.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "aca8da84b4a699b16b8bcc96d2bc794a4c7b5ae3"
+                "reference": "ac7b1792641d1fb61cb2901db292903b31694057"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/aca8da84b4a699b16b8bcc96d2bc794a4c7b5ae3",
-                "reference": "aca8da84b4a699b16b8bcc96d2bc794a4c7b5ae3",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ac7b1792641d1fb61cb2901db292903b31694057",
+                "reference": "ac7b1792641d1fb61cb2901db292903b31694057",
                 "shasum": ""
             },
             "require": {
@@ -142,7 +142,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2016-09-07 15:01:47"
+            "time": "2017-01-26 18:32:19"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -235,6 +235,75 @@
             "time": "2016-05-08 17:14:32"
         },
         {
+            "name": "pressjitsu/wp-transients-cleaner",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pressjitsu/wp-transients-cleaner.git",
+                "reference": "35ee63a729068dcc1a8a6942288e49cadb0ecfc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pressjitsu/wp-transients-cleaner/zipball/35ee63a729068dcc1a8a6942288e49cadb0ecfc2",
+                "reference": "35ee63a729068dcc1a8a6942288e49cadb0ecfc2",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-muplugin",
+            "support": {
+                "source": "https://github.com/pressjitsu/wp-transients-cleaner/tree/master",
+                "issues": "https://github.com/pressjitsu/wp-transients-cleaner/issues"
+            },
+            "time": "2016-09-10 12:46:03"
+        },
+        {
+            "name": "roots/soil",
+            "version": "3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2016-08-30 18:15:45"
+        },
+        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -292,6 +361,642 @@
             "time": "2016-03-01 16:27:06"
         },
         {
+            "name": "satispress/admin-columns-pro",
+            "version": "3.8.8",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/admin-columns-pro/3.8.8",
+                "reference": null,
+                "shasum": "47b907d32e988db9d37d266537f2ed7426bd31de"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "AdminColumns.com",
+                    "homepage": "https://www.admincolumns.com"
+                }
+            ],
+            "description": "Customize columns on the administration screens for post(types), users and other content. Filter and sort content, and edit posts directly from the posts overview. All via an intuitive, easy-to-use drag-and-drop interface.",
+            "homepage": "https://www.admincolumns.com"
+        },
+        {
+            "name": "satispress/admin-menu-editor-pro",
+            "version": "2.4.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/admin-menu-editor-pro/2.4.2",
+                "reference": null,
+                "shasum": "6fda84e0879923e4c73a5e45a73699874e556914"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Janis Elsts",
+                    "homepage": "http://w-shadow.com/"
+                }
+            ],
+            "description": "Lets you directly edit the WordPress admin menu. You can re-order, hide or rename existing menus, add custom menus and more.",
+            "homepage": "http://adminmenueditor.com/"
+        },
+        {
+            "name": "satispress/advanced-custom-fields-pro",
+            "version": "5.5.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/advanced-custom-fields-pro/5.5.1",
+                "reference": null,
+                "shasum": "99d8e1a7c2e2ab3a9c7f4b890e09ef3b69c04cc4"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Elliot Condon",
+                    "homepage": "http://www.elliotcondon.com/"
+                }
+            ],
+            "description": "Customise WordPress with powerful, professional and intuitive fields",
+            "homepage": "https://www.advancedcustomfields.com/"
+        },
+        {
+            "name": "satispress/cac-addon-acf",
+            "version": "1.3.5.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/cac-addon-acf/1.3.5.2",
+                "reference": null,
+                "shasum": "ef105455a281e30473aa0c0a951fae109e92eaad"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Codepress",
+                    "homepage": "https://admincolumns.com"
+                }
+            ],
+            "description": "Show Advanced Custom Fields fields in your admin post overviews and edit them inline! ACF integration Add-on for Admin Columns."
+        },
+        {
+            "name": "satispress/cac-addon-woocommerce",
+            "version": "1.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/cac-addon-woocommerce/1.4",
+                "reference": null,
+                "shasum": "0ffc0202e05e23f259d0ff6bbb8bf0ad9b3dc08f"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Codepress",
+                    "homepage": "https://admincolumns.com"
+                }
+            ],
+            "description": "Enhance your product and order overviews with new columns, and edit products directly from the overview page. WooCommerce integration Add-on for Admin Columns Pro."
+        },
+        {
+            "name": "satispress/divi-builder",
+            "version": "1.3.10",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/divi-builder/1.3.10",
+                "reference": null,
+                "shasum": "6b028b4ca30e49489617266af0e87f49be057abe"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Elegant Themes",
+                    "homepage": "http://elegantthemes.com"
+                }
+            ],
+            "description": "A drag and drop page builder for any WordPress theme.",
+            "homepage": "http://elegantthemes.com"
+        },
+        {
+            "name": "satispress/enhanced-media-library-pro",
+            "version": "2.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/enhanced-media-library-pro/2.3",
+                "reference": null,
+                "shasum": "d9d5f3a478bda9667df9493ddbcb0932cccf66b3"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "wpUXsolutions",
+                    "homepage": "http://wpUXsolutions.com"
+                }
+            ],
+            "description": "This plugin will be handy for those who need to manage a lot of media files.",
+            "homepage": "http://wpUXsolutions.com"
+        },
+        {
+            "name": "satispress/global-meta-box-order",
+            "version": "1.0.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/global-meta-box-order/1.0.3",
+                "reference": null,
+                "shasum": "3309ef6894c2f12a895a4cb9a8875a1ec86212d4"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "nosurs",
+                    "homepage": "https://github.com/pontycode"
+                }
+            ],
+            "description": "Harmonize column layout and meta box positions across all backend users of your WordPress installation.",
+            "homepage": "https://github.com/pontycode/wordpress-custom-metabox-order/"
+        },
+        {
+            "name": "satispress/gravityforms",
+            "version": "2.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/gravityforms/2.1.1",
+                "reference": null,
+                "shasum": "3eed8676501917b12066f43b91ddedf25d0ee667"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "rocketgenius",
+                    "homepage": "http://www.rocketgenius.com"
+                }
+            ],
+            "description": "Easily create web forms and manage form entries within the WordPress admin.",
+            "homepage": "http://www.gravityforms.com"
+        },
+        {
+            "name": "satispress/gravityforms-multilingual",
+            "version": "1.3.13",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/gravityforms-multilingual/1.3.13",
+                "reference": null,
+                "shasum": "9cbb49c4990adc96e67c20373d1c5a36b3b1751b"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Add multilingual support for Gravity Forms | Documentation | WPML 1.3.13 release notes",
+            "homepage": "http://wpml.org/documentation/related-projects/gravity-forms-multilingual/"
+        },
+        {
+            "name": "satispress/gravityformsmailchimp",
+            "version": "3.7.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/gravityformsmailchimp/3.7.3",
+                "reference": null,
+                "shasum": "67498734dee5b01057ff3b3693f52e68e8dba3e8"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "rocketgenius",
+                    "homepage": "http://www.rocketgenius.com"
+                }
+            ],
+            "description": "Integrates Gravity Forms with MailChimp allowing form submissions to be automatically sent to your MailChimp account",
+            "homepage": "http://www.gravityforms.com"
+        },
+        {
+            "name": "satispress/responsive-menu-pro",
+            "version": "1.0.9",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/responsive-menu-pro/1.0.9",
+                "reference": null,
+                "shasum": "1b1d5e02df6665057f5b6c72d910ce9b791453a5"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Responsive Menu",
+                    "homepage": "http://responsive.menu"
+                }
+            ],
+            "description": "Responsive Menu Pro",
+            "homepage": "http://responsive.menu"
+        },
+        {
+            "name": "satispress/searchwp",
+            "version": "2.8.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp/2.8.4",
+                "reference": null,
+                "shasum": "9fdbb885daa8a2811784733f82f6d078aac7c133"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "SearchWP, LLC",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "The best WordPress search you can find",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-exclude-ui-master",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-exclude-ui-master/1.0.1",
+                "reference": null,
+                "shasum": "9dc3276043202b235e08fb79da4e9821f7deff61"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Add a checkbox to edit screens to add an \"Exclude from search\" checkbox",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-term-priority",
+            "version": "1.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-term-priority/1.1.2",
+                "reference": null,
+                "shasum": "9428e97a339687658d3298d868ebcc65870d8e13"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Bubbles term archive pages to the top of search results for supplemental search engines",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-woocommerce",
+            "version": "1.1.10",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-woocommerce/1.1.10",
+                "reference": null,
+                "shasum": "95861493699afb205edf084217368d19ee4a5f61"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "SearchWP, LLC",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Integrate SearchWP with WooCommerce searches and Layered Navigation",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-wpml",
+            "version": "1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-wpml/1.2.1",
+                "reference": null,
+                "shasum": "48a9ed46e3ba497275aa1159acf87aee675d4bd9"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Integrate SearchWP with WPML",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/sitepress-multilingual-cms",
+            "version": "3.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/sitepress-multilingual-cms/3.6.1",
+                "reference": null,
+                "shasum": "b0d1556a24240ac20e67dc85987dee39cd0759bd"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "WPML Multilingual CMS | Documentation | WPML 3.6.1 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/updraftplus",
+            "version": "2.12.6.22",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/updraftplus/2.12.6.22",
+                "reference": null,
+                "shasum": "3fd3003b77b3d6c7bcc4e375824ce1adca8b1bfd"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "UpdraftPlus.Com, DavidAnderson",
+                    "homepage": "https://updraftplus.com"
+                }
+            ],
+            "description": "Backup and restore: take backups locally, or backup to Amazon S3, Dropbox, Google Drive, Rackspace, (S)FTP, WebDAV & email, on automatic schedules.",
+            "homepage": "https://updraftplus.com"
+        },
+        {
+            "name": "satispress/woocommerce-dynamic-pricing",
+            "version": "2.12.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/woocommerce-dynamic-pricing/2.12.2",
+                "reference": null,
+                "shasum": "ed851acb1181b162e96118940e68b23ad98d8461"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Lucas Stark",
+                    "homepage": "http://lucasstark.com"
+                }
+            ],
+            "description": "WooCommerce Dynamic Pricing lets you configure dynamic pricing rules for products, categories and members. For WooCommerce 1.4+",
+            "homepage": "http://www.woothemes.com/woocommerce"
+        },
+        {
+            "name": "satispress/woocommerce-google-analytics-pro",
+            "version": "1.1.5",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/woocommerce-google-analytics-pro/1.1.5",
+                "reference": null,
+                "shasum": "1c7abd70ea7d2d8abe222f4a54c6a6e052235266"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "WooThemes / SkyVerge",
+                    "homepage": "http://www.skyverge.com"
+                }
+            ],
+            "description": "Supercharge your Google Analytics tracking with enhanced eCommerce tracking and custom event tracking",
+            "homepage": "http://www.woothemes.com/products/woocommerce-google-analytics-pro/"
+        },
+        {
+            "name": "satispress/woocommerce-multilingual",
+            "version": "3.9.5",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/woocommerce-multilingual/3.9.5",
+                "reference": null,
+                "shasum": "62f109d2bb0081ce7d9d6160cbbd9f39b35181aa"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Allows running fully multilingual e-Commerce sites with WooCommerce and WPML. Documentation.",
+            "homepage": "http://wpml.org/documentation/related-projects/woocommerce-multilingual/"
+        },
+        {
+            "name": "satispress/wp-migrate-db-pro",
+            "version": "1.7",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/wp-migrate-db-pro/1.7",
+                "reference": null,
+                "shasum": "4be9598eec84f374ab184ae5a1f34fc99bb1bd3b"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Delicious Brains",
+                    "homepage": "http://deliciousbrains.com"
+                }
+            ],
+            "description": "Export, push, and pull to migrate your WordPress databases.",
+            "homepage": "http://deliciousbrains.com/wp-migrate-db-pro/"
+        },
+        {
+            "name": "satispress/wp-migrate-db-pro-media-files",
+            "version": "1.4.6",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/wp-migrate-db-pro-media-files/1.4.6",
+                "reference": null,
+                "shasum": "75e46c088f79ae2c37b78f167c2ffb15ba58963e"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Delicious Brains",
+                    "homepage": "http://deliciousbrains.com"
+                }
+            ],
+            "description": "An extension to WP Migrate DB Pro, allows the migration of media files.",
+            "homepage": "http://deliciousbrains.com/wp-migrate-db-pro/"
+        },
+        {
+            "name": "satispress/wp-toolbar-editor",
+            "version": "1.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/wp-toolbar-editor/1.2",
+                "reference": null,
+                "shasum": "45b393df755df1773f9af56cc2404caaf349af98"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Janis Elsts",
+                    "homepage": "http://w-shadow.com/"
+                }
+            ],
+            "description": "Lets you edit the WordPress Toolbar (a.k.a. Admin Bar) - the horizontal menu at the top of your page that shows up when you're logged in. You can hide, move, rename and edit existing items, as well as create new menu items. Requires Admin Menu Editor Pro.",
+            "homepage": "http://adminmenueditor.com/"
+        },
+        {
+            "name": "satispress/wpml-media",
+            "version": "2.1.23",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/wpml-media/2.1.23",
+                "reference": null,
+                "shasum": "d664dfc0ad369116d59db8e4183cf953423fa95d"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Add multilingual support for Media files | Documentation | WPML 3.5.2 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/wpml-string-translation",
+            "version": "2.5.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/wpml-string-translation/2.5.0",
+                "reference": null,
+                "shasum": "af8a5af1a1d909140af1e08157428269b2941a62"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Adds theme and plugins localization capabilities to WPML | Documentation | WPML 2.5.0 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/wpml-translation-management",
+            "version": "2.2.5",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/wpml-translation-management/2.2.5",
+                "reference": null,
+                "shasum": "2bbec4649dfe1225377375794ae52108600f2ef4"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Add a complete translation process for WPML | Documentation | WPML 2.2.5 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/xslt",
+            "version": "1.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.menthalia.com/premiumpress/satispress/xslt/1.1.0",
+                "reference": null,
+                "shasum": "3247cd46f17563232ba00d5f7dd323eefe8d59d6"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Waterloo Plugins",
+                    "homepage": ""
+                }
+            ],
+            "description": "Make your RSS feeds look better! Your RSS feed is at http://yoursite.com/?feed=rss2",
+            "homepage": "http://wordpress.org/plugins/xslt/"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -342,36 +1047,16 @@
             "time": "2016-09-01 10:05:43"
         },
         {
-            "name": "wpackagist-plugin/auto-terms-of-service-and-privacy-policy",
-            "version": "1.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/auto-terms-of-service-and-privacy-policy/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/auto-terms-of-service-and-privacy-policy.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/auto-terms-of-service-and-privacy-policy/"
-        },
-        {
             "name": "wpackagist-plugin/autodescription",
-            "version": "2.7.0",
+            "version": "2.8.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/autodescription/",
-                "reference": "trunk"
+                "reference": "tags/2.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autodescription.zip",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.2.8.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -382,116 +1067,16 @@
             "homepage": "https://wordpress.org/plugins/autodescription/"
         },
         {
-            "name": "wpackagist-plugin/better-analytics",
-            "version": "1.1.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/better-analytics/",
-                "reference": "tags/1.1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-analytics.1.1.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/better-analytics/"
-        },
-        {
-            "name": "wpackagist-plugin/broken-link-checker",
-            "version": "1.11.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/broken-link-checker/",
-                "reference": "tags/1.11.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/broken-link-checker/"
-        },
-        {
-            "name": "wpackagist-plugin/cpt-onomies",
-            "version": "1.3.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/cpt-onomies/",
-                "reference": "tags/1.3.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cpt-onomies.1.3.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/cpt-onomies/"
-        },
-        {
-            "name": "wpackagist-plugin/debug-objects",
-            "version": "2.3.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/debug-objects/",
-                "reference": "tags/2.3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-objects.2.3.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/debug-objects/"
-        },
-        {
-            "name": "wpackagist-plugin/debug-this",
-            "version": "0.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/debug-this/",
-                "reference": "tags/0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-this.0.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/debug-this/"
-        },
-        {
             "name": "wpackagist-plugin/disable-comments",
-            "version": "1.5.2",
+            "version": "2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/disable-comments/",
-                "reference": "tags/1.5.2"
+                "reference": "tags/2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-comments.1.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.2.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -502,36 +1087,16 @@
             "homepage": "https://wordpress.org/plugins/disable-comments/"
         },
         {
-            "name": "wpackagist-plugin/dom-seo-image",
-            "version": "1.0.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/dom-seo-image/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/dom-seo-image.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/dom-seo-image/"
-        },
-        {
             "name": "wpackagist-plugin/duplicate-post",
-            "version": "3.0.3",
+            "version": "3.1.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/duplicate-post/",
-                "reference": "tags/3.0.3"
+                "reference": "tags/3.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.0.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -542,16 +1107,36 @@
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
         },
         {
-            "name": "wpackagist-plugin/error-log-monitor",
-            "version": "1.5",
+            "name": "wpackagist-plugin/enable-media-replace",
+            "version": "3.0.6",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/error-log-monitor/",
-                "reference": "tags/1.5"
+                "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
+                "reference": "tags/3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/error-log-monitor.1.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/enable-media-replace/"
+        },
+        {
+            "name": "wpackagist-plugin/error-log-monitor",
+            "version": "1.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/error-log-monitor/",
+                "reference": "tags/1.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/error-log-monitor.1.5.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -562,8 +1147,48 @@
             "homepage": "https://wordpress.org/plugins/error-log-monitor/"
         },
         {
+            "name": "wpackagist-plugin/ewww-image-optimizer",
+            "version": "3.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ewww-image-optimizer/",
+                "reference": "tags/3.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.3.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ewww-image-optimizer/"
+        },
+        {
+            "name": "wpackagist-plugin/facebook-open-graph-update",
+            "version": "1.6.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/facebook-open-graph-update/",
+                "reference": "tags/1.6.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/facebook-open-graph-update.1.6.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/facebook-open-graph-update/"
+        },
+        {
             "name": "wpackagist-plugin/favicon-by-realfavicongenerator",
-            "version": "1.3.8",
+            "version": "1.3.10",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/favicon-by-realfavicongenerator/",
@@ -582,16 +1207,16 @@
             "homepage": "https://wordpress.org/plugins/favicon-by-realfavicongenerator/"
         },
         {
-            "name": "wpackagist-plugin/global-meta-box-order",
-            "version": "1.0.3",
+            "name": "wpackagist-plugin/google-sitemap-generator",
+            "version": "4.0.8",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/global-meta-box-order/",
-                "reference": "trunk"
+                "url": "https://plugins.svn.wordpress.org/google-sitemap-generator/",
+                "reference": "tags/4.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/global-meta-box-order.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-sitemap-generator.4.0.8.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -599,19 +1224,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/global-meta-box-order/"
+            "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
         },
         {
-            "name": "wpackagist-plugin/kint-debugger",
-            "version": "1.0",
+            "name": "wpackagist-plugin/imsanity",
+            "version": "2.3.8",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/kint-debugger/",
-                "reference": "trunk"
+                "url": "https://plugins.svn.wordpress.org/imsanity/",
+                "reference": "tags/2.3.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/kint-debugger.zip",
+                "url": "https://downloads.wordpress.org/plugin/imsanity.2.3.8.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -619,19 +1244,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/kint-debugger/"
+            "homepage": "https://wordpress.org/plugins/imsanity/"
         },
         {
-            "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.0.7",
+            "name": "wpackagist-plugin/menu-social-icons",
+            "version": "1.3.10",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.0.7"
+                "url": "https://plugins.svn.wordpress.org/menu-social-icons/",
+                "reference": "tags/1.3.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.0.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/menu-social-icons.1.3.10.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -639,19 +1264,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/mailchimp-for-wp/"
+            "homepage": "https://wordpress.org/plugins/menu-social-icons/"
         },
         {
-            "name": "wpackagist-plugin/plugin-groups",
-            "version": "1.1.0",
+            "name": "wpackagist-plugin/password-protected",
+            "version": "2.0.3",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/plugin-groups/",
-                "reference": "trunk"
+                "url": "https://plugins.svn.wordpress.org/password-protected/",
+                "reference": "tags/2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/plugin-groups.zip",
+                "url": "https://downloads.wordpress.org/plugin/password-protected.2.0.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -659,19 +1284,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/plugin-groups/"
+            "homepage": "https://wordpress.org/plugins/password-protected/"
         },
         {
             "name": "wpackagist-plugin/plugin-organizer",
-            "version": "7.2",
+            "version": "8.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/plugin-organizer/",
-                "reference": "tags/7.2"
+                "reference": "tags/8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/plugin-organizer.7.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/plugin-organizer.8.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -682,16 +1307,16 @@
             "homepage": "https://wordpress.org/plugins/plugin-organizer/"
         },
         {
-            "name": "wpackagist-plugin/query-monitor",
-            "version": "2.13.1",
+            "name": "wpackagist-plugin/post-2-post-for-acf",
+            "version": "1.2.5",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/2.13.1"
+                "url": "https://plugins.svn.wordpress.org/post-2-post-for-acf/",
+                "reference": "tags/1.2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.13.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/post-2-post-for-acf.1.2.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -699,19 +1324,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/query-monitor/"
+            "homepage": "https://wordpress.org/plugins/post-2-post-for-acf/"
         },
         {
-            "name": "wpackagist-plugin/seo-image-optimizer",
-            "version": "1.0.2",
+            "name": "wpackagist-plugin/post-types-order",
+            "version": "1.9",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/seo-image-optimizer/",
-                "reference": "tags/1.0.2"
+                "url": "https://plugins.svn.wordpress.org/post-types-order/",
+                "reference": "tags/1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/seo-image-optimizer.1.0.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/post-types-order.1.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -719,19 +1344,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/seo-image-optimizer/"
+            "homepage": "https://wordpress.org/plugins/post-types-order/"
         },
         {
-            "name": "wpackagist-plugin/shortcode-ui",
-            "version": "0.6.2",
+            "name": "wpackagist-plugin/remove-orphan-shortcodes",
+            "version": "1.1",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/shortcode-ui/",
-                "reference": "tags/0.6.2"
+                "url": "https://plugins.svn.wordpress.org/remove-orphan-shortcodes/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/shortcode-ui.0.6.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/remove-orphan-shortcodes.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -739,19 +1364,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/shortcode-ui/"
+            "homepage": "https://wordpress.org/plugins/remove-orphan-shortcodes/"
         },
         {
-            "name": "wpackagist-plugin/sitecondor-seo",
-            "version": "1.3.4",
+            "name": "wpackagist-plugin/safe-svg",
+            "version": "1.3.0",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/sitecondor-seo/",
-                "reference": "tags/1.3.4"
+                "url": "https://plugins.svn.wordpress.org/safe-svg/",
+                "reference": "tags/1.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/sitecondor-seo.1.3.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.1.3.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -759,19 +1384,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/sitecondor-seo/"
+            "homepage": "https://wordpress.org/plugins/safe-svg/"
         },
         {
-            "name": "wpackagist-plugin/stream",
-            "version": "3.1.1",
+            "name": "wpackagist-plugin/stops-core-theme-and-plugin-updates",
+            "version": "6.2.11",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/stream/",
-                "reference": "tags/3.1.1"
+                "url": "https://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/",
+                "reference": "tags/6.2.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.3.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/stops-core-theme-and-plugin-updates.6.2.11.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -779,7 +1404,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/stream/"
+            "homepage": "https://wordpress.org/plugins/stops-core-theme-and-plugin-updates/"
         },
         {
             "name": "wpackagist-plugin/term-management-tools",
@@ -803,7 +1428,7 @@
         },
         {
             "name": "wpackagist-plugin/tinywym-editor",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/tinywym-editor/",
@@ -842,36 +1467,16 @@
             "homepage": "https://wordpress.org/plugins/transients-manager/"
         },
         {
-            "name": "wpackagist-plugin/validated",
-            "version": "2.1.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/validated/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/validated.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/validated/"
-        },
-        {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "2.6.7",
+            "version": "2.6.14",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/2.6.7"
+                "reference": "tags/2.6.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.2.6.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.2.6.14.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -882,16 +1487,16 @@
             "homepage": "https://wordpress.org/plugins/woocommerce/"
         },
         {
-            "name": "wpackagist-plugin/woocommerce-remove-all-products",
-            "version": "1.0.4",
+            "name": "wpackagist-plugin/woocommerce-gateway-stripe",
+            "version": "3.0.7",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/woocommerce-remove-all-products/",
-                "reference": "trunk"
+                "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
+                "reference": "tags/3.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-remove-all-products.zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.3.0.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -899,27 +1504,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-remove-all-products/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-crontrol",
-            "version": "1.3.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-crontrol/",
-                "reference": "tags/1.3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.3.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-crontrol/"
+            "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         },
         {
             "name": "wpackagist-plugin/wp-edit",
@@ -942,16 +1527,16 @@
             "homepage": "https://wordpress.org/plugins/wp-edit/"
         },
         {
-            "name": "wpackagist-plugin/wp-editor",
-            "version": "1.2.6.3",
+            "name": "wpackagist-plugin/wp-email-template",
+            "version": "2.1.0",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-editor/",
+                "url": "https://plugins.svn.wordpress.org/wp-email-template/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-editor.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-email-template.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -959,39 +1544,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-editor/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-retina-2x",
-            "version": "4.6.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-retina-2x/",
-                "reference": "tags/4.6.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-retina-2x.4.6.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-retina-2x/"
+            "homepage": "https://wordpress.org/plugins/wp-email-template/"
         },
         {
             "name": "wpackagist-plugin/wp-spamshield",
-            "version": "1.9.9.4",
+            "version": "1.9.9.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-spamshield/",
-                "reference": "tags/1.9.9.4"
+                "reference": "tags/1.9.9.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-spamshield.1.9.9.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-spamshield.1.9.9.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1002,16 +1567,16 @@
             "homepage": "https://wordpress.org/plugins/wp-spamshield/"
         },
         {
-            "name": "wpackagist-plugin/wp-sweep",
-            "version": "1.0.8",
+            "name": "wpackagist-plugin/wp-widget-disable",
+            "version": "1.7.0",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-sweep/",
-                "reference": "tags/1.0.8"
+                "url": "https://plugins.svn.wordpress.org/wp-widget-disable/",
+                "reference": "tags/1.7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-sweep.1.0.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-widget-disable.1.7.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1019,62 +1584,41 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-sweep/"
-        },
-        {
-            "name": "wpackagist-plugin/xml-sitemap-feed",
-            "version": "4.7.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/xml-sitemap-feed/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/xml-sitemap-feed.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/xml-sitemap-feed/"
-        },
-        {
-            "name": "wpackagist-plugin/xslt",
-            "version": "1.1.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/xslt/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/xslt.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/xslt/"
+            "homepage": "https://wordpress.org/plugins/wp-widget-disable/"
         }
     ],
     "packages-dev": [
         {
-            "name": "squizlabs/php_codesniffer",
-            "version": "2.7.0",
+            "name": "khromov/wp-performance-profiler",
+            "version": "0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "571e27b6348e5b3a637b2abc82ac0d01e6d7bbed"
+                "url": "https://github.com/khromov/wp-performance-profiler.git",
+                "reference": "dev-master"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/571e27b6348e5b3a637b2abc82ac0d01e6d7bbed",
-                "reference": "571e27b6348e5b3a637b2abc82ac0d01e6d7bbed",
+                "url": "https://github.com/khromov/wp-performance-profiler/archive/0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0.12"
+            },
+            "type": "wordpress-muplugin"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "86dd55a522238211f9f3631e3361703578941d9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/86dd55a522238211f9f3631e3361703578941d9a",
+                "reference": "86dd55a522238211f9f3631e3361703578941d9a",
                 "shasum": ""
             },
             "require": {
@@ -1139,12 +1683,234 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-09-01 23:53:02"
+            "time": "2017-02-02 03:30:00"
+        },
+        {
+            "name": "wpackagist-plugin/custom-post-type-ui",
+            "version": "1.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
+                "reference": "tags/1.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar",
+            "version": "0.8.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar/",
+                "reference": "tags/0.8.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.0.8.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar-extender",
+            "version": "0.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar-extender/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar-extender.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar-extender/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar-slow-actions",
+            "version": "0.8.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar-slow-actions/",
+                "reference": "tags/0.8.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar-slow-actions.0.8.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar-slow-actions/"
+        },
+        {
+            "name": "wpackagist-plugin/log-deprecated-notices",
+            "version": "0.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/log-deprecated-notices/",
+                "reference": "tags/0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/log-deprecated-notices.0.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/log-deprecated-notices/"
+        },
+        {
+            "name": "wpackagist-plugin/options-inspector",
+            "version": "2.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/options-inspector/",
+                "reference": "tags/2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/options-inspector.2.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/options-inspector/"
+        },
+        {
+            "name": "wpackagist-plugin/p3-profiler",
+            "version": "1.5.3.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/p3-profiler/",
+                "reference": "tags/1.5.3.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/p3-profiler.1.5.3.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/p3-profiler/"
+        },
+        {
+            "name": "wpackagist-plugin/plugins-garbage-collector",
+            "version": "0.10.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/plugins-garbage-collector/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/plugins-garbage-collector.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/plugins-garbage-collector/"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "2.13.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/2.13.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.13.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "2.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/2.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-crontrol",
+            "version": "1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-crontrol/",
+                "reference": "tags/1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-crontrol/"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "pressjitsu/wp-transients-cleaner": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

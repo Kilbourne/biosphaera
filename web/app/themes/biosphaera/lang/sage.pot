@@ -73,14 +73,6 @@ msgstr ""
 msgid "Share"
 msgstr ""
 
-#: lib/extras.php:217
-msgid "IMMEDIATE AVAILABILITY"
-msgstr ""
-
-#: lib/extras.php:217
-msgid " Express Delivery 1-3 days"
-msgstr ""
-
 #: lib/extras.php:270
 msgid "you are in"
 msgstr ""
@@ -117,6 +109,11 @@ msgstr ""
 
 #: lib/extras.php:440
 msgid "Aree terapeutica"
+msgstr ""
+
+#: lib/extras.php:458
+msgctxt "URL slug"
+msgid "aree_terapeutiche"
 msgstr ""
 
 #: lib/setup.php:32

@@ -63,11 +63,11 @@ msgstr "Carrello"
 
 #: lib/extras.php:162, lib/extras.php:167
 msgid "Categorie Aree Terapeutiche"
-msgstr ""
+msgstr "Therapeutic Areas Categories"
 
 #: lib/extras.php:163
 msgid "Categoria Aree Terapeutiche"
-msgstr ""
+msgstr "Therapeutic Areas Category"
 
 #: lib/extras.php:213
 msgid "Recommend to your friends"
@@ -76,14 +76,6 @@ msgstr "Consiglialo ai tuoi amici"
 #: lib/extras.php:215
 msgid "Share"
 msgstr "Condividi"
-
-#: lib/extras.php:217
-msgid "IMMEDIATE AVAILABILITY"
-msgstr "DISPONIBILITA IMMEDIATA"
-
-#: lib/extras.php:217
-msgid " Express Delivery 1-3 days"
-msgstr "Consegna Express 1-3 giorni"
 
 #: lib/extras.php:270
 msgid "you are in"
@@ -117,11 +109,16 @@ msgstr "Cerca"
 
 #: lib/extras.php:439, lib/extras.php:444
 msgid "Aree terapeutiche"
-msgstr ""
+msgstr "Therapeutic Areas"
 
 #: lib/extras.php:440
 msgid "Aree terapeutica"
-msgstr ""
+msgstr "Therapeutic Area"
+
+#: lib/extras.php:458
+msgctxt "URL slug"
+msgid "aree_terapeutiche"
+msgstr "therapeutic_areas"
 
 #: lib/setup.php:32
 msgid "Primary Navigation"
@@ -195,6 +192,12 @@ msgstr ""
 "Scopri nuovi prodotti e le offerte\n"
 "speciali prima degli altri! Restiamo\n"
 "in contatto!"
+
+#~ msgid "IMMEDIATE AVAILABILITY"
+#~ msgstr "DISPONIBILITA IMMEDIATA"
+
+#~ msgid " Express Delivery 1-3 days"
+#~ msgstr "Consegna Express 1-3 giorni"
 
 #~ msgid "It looks like this was the result of either:"
 #~ msgstr "Questo potrebbe essere stato causato da:"

@@ -14,7 +14,7 @@
      </div>
      <div class="social footer-section">
       <h2 class="footer-title">Social</h2>
-      <div class="footer-content"><a href="https://www.facebook.com/Biosphaera-Pharma-247748668968187/" class="fb"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/facebook.png" alt="Facebook"></a><a href="https://www.linkedin.com" class="linkedin"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/linkedin.png" alt="Linkedin"></a><a href="https://www.instagram.com/biosphaerapharma/" class="instagram"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/Instagram.png" alt="instagram"></a>
+      <div class="footer-content"><a href="https://www.facebook.com/Biosphaera-Pharma-247748668968187/" class="fb"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/facebook.png" alt="Facebook"></a><a href="https://www.linkedin.com/company-beta/11073339/?pathWildcard=11073339" class="linkedin"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/linkedin.png" alt="Linkedin"></a><a href="https://www.instagram.com/biosphaerapharma/" class="instagram"><img src="<?=esc_url(get_stylesheet_directory_uri());?>/dist/images/Instagram.png" alt="instagram"></a>
     </div>
      </div>
      <div class="newsletter footer-section">
@@ -31,8 +31,8 @@ in contact!','sage'); ?> </p>
   <div class="last-line-container">
     <span>© 2017 Biosphaera</span> |
  <?php
-  array_map('Roots\Sage\Extras\bios_footer_link', ['Termini e condizioni', 'Privacy', 'Informativa sui cookie']);
-  echo '<a href="http://ec.europa.eu/consumers/odr/" class="last-line-link"> ODR </a> | ';
+  array_map('Roots\Sage\Extras\bios_footer_link', ['Termini e condizioni', 'Politica di Privacy', 'Informativa sui cookie']);
+  //echo '<a href="http://ec.europa.eu/consumers/odr/" class="last-line-link"> ODR </a> | ';
   ?>
 
      <span class="last-line-link" ><span style="display: inline-block;

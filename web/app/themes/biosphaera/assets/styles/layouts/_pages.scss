@@ -18,7 +18,8 @@
 }
 
 .home,
-.page-template-aree_tera_category-archive {
+.page-template-aree_tera_category-archive,
+.post-type-archive-aree_terapeutiche {
     .aree-bios-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -679,7 +680,8 @@ body.single-aree_terapeutiche {
     }
 }
 
-body.noi {
+body.chi-siamo,
+body.about-us {
     img {
         margin: 0 auto;
         width: 100%;
@@ -1028,4 +1030,13 @@ body.single-product {
     div.product {
         padding-top: 10px;
     }
+}
+
+.buy-wrapper,
+.container-sale-info {
+    display: none !important;
+}
+
+.page-header h1 {
+    text-align: center;
 }
