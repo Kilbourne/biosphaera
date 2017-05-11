@@ -159,6 +159,7 @@ wp_enqueue_script('sage_js', Assets\asset_path('scripts/main.js'), ['jquery'], n
 wp_enqueue_style('woocommerce', Assets\asset_path('styles/woocommerce.css'), false, null);
 if(is_checkout()){
 wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/checkout.js'), ['jquery'], null, true);
+wp_enqueue_script('bios_cfields', Assets\asset_path('scripts/cfields.js'), ['jquery'], null, true);
 }else{
 wp_enqueue_script('woocommerce_bios', Assets\asset_path('scripts/woocommerce.js'), ['jquery'], null, true);
 }
@@ -183,7 +184,7 @@ $opts = [
        'et-builder-modules-global-functions-script','divi-fitvids','waypoints','magnific-popup','et-jquery-touch-mobile','et-builder-modules-script',
        "touch","responsive-menu-pro","wpss-jscripts-ftr","gform_json","gform_gravityforms",
        "cart-widget","wpml-legacy-dropdown-0","sitepress",'wc-checkout',
-       "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product",'wc-address-i18n' ,'wc-country-select'
+       "wc-add-to-cart","jquery-blockui","woocommerce","jquery-cookie","wc-cart-fragments","wc-single-product",'wc-address-i18n' ,'wc-country-select','jquery-ui-core','jquery-ui-datepicker',' wc-checkout-editor-frontend'
     ],
     "not_async" => [
         'jquery','google-maps-api','jquery-payment','stripe','woocommerce_stripe','password-strength-meter','wc-password-strength-meter','zxcvbn-async','jquery-ui-widget','wp-pointer'

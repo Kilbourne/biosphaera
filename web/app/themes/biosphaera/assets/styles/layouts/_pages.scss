@@ -1034,9 +1034,37 @@ body.single-product {
 
 .buy-wrapper,
 .container-sale-info {
-    display: none !important;
+    //display: none !important;
 }
 
 .page-header h1 {
     text-align: center;
+}
+
+.form-row.terms.wc-terms-and-conditions {
+    display: block;
+}
+
+.woocommerce #payment .terms,
+.woocommerce #payment .wc-terms-and-conditions,
+.woocommerce-page #payment .terms,
+.woocommerce-page #payment .wc-terms-and-conditions {
+    float: none !important;
+}
+
+.woocommerce-page table.cart td.actions {
+    #coupon_code {
+        width: 185px;
+    }
+}
+
+.woocommerce form.checkout_coupon {
+    overflow: hidden;
+    >p {
+        margin: 0;
+    }
+    #coupon_code {
+        font-size: 18px;
+        padding: 5px 3px;
+    }
 }

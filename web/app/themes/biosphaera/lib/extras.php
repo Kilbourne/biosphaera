@@ -455,7 +455,7 @@ add_action( 'init', function() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => array( "slug" => _x( 'aree_terapeutiche', 'URL slug', 'sage' ), "with_front" => true ),
+        "rewrite" => array( "slug" => _x( 'aree_terapeutiche', 'URL slug', 'sage        ' ), "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "editor", "thumbnail" ),
         "taxonomies" => array( "aree_terapeutice_tax" ),
@@ -1035,3 +1035,51 @@ function bios_footer_link($el){
 
 
 
+// Add extra tick box at checkout
+
+add_action('woocommerce_review_order_before_submit', __NAMESPACE__ . '\\bbloomer_add_checkout_tickbox', 9);
+
+function bbloomer_add_checkout_tickbox() {
+
+?>
+
+<p style="display:block;" class="form-row terms">
+<input type="checkbox" class="input-checkbox" name="privacycheck" id="privacycheck" />
+<label for="privacycheck" class="checkbox"><?php printf( __( 'I&rsquo;ve read and accept the <a href="%s" target="_blank">Privacy Policy</a>', 'sage' ), esc_url( wc_get_page_permalink( 'terms' ) ) ); ?> <abbr class="required" title="required">*</abbr></label>
+</p>
+
+<?php
+}
+
+// Show notice if customer does not tick
+
+add_action('woocommerce_checkout_process', __NAMESPACE__ . '\\bbloomer_not_approved_delivery');
+
+function bbloomer_not_approved_delivery() {
+    if ( ! $_POST['privacycheck'] )
+        wc_add_notice( __( 'You must accept our Privacy Policy.' ,'sage'), 'error' );
+}
+
+/*
+add_filter( 'woocommerce_checkout_fields',function($fields){
+    $fields['billing'][$name]=array(
+            'type'              => 'text',
+            'label'             => '',
+            'description'       => '',
+            'placeholder'       => '',
+            'maxlength'         => false,
+            'required'          => false,
+            'autocomplete'      => false,
+            'id'                => $key,
+            'class'             => array(),
+            'label_class'       => array(),
+            'input_class'       => array(),
+            'return'            => false,
+            'options'           => array(),
+            'custom_attributes' => array(),
+            'validate'          => array(),
+
+        );
+    return $fields;
+})
+*/

@@ -31,12 +31,20 @@
                 "../../plugins/woocommerce/assets/js/frontend/woocommerce.js",
                 "../../plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
                 "../../plugins/woocommerce/assets/js/frontend/cart-fragments.js",
-                "assets/js/frontend/address-i18n",
-                "assets/js/frontend/country-select",
-                "../../plugins/woocommerce/assets/js/frontend/checkout.js"
+                "../../plugins/woocommerce/assets/js/frontend/address-i18n",
+                "../../plugins/woocommerce/assets/js/frontend/country-select",
+                "../../plugins/woocommerce/assets/js/frontend/checkout.js",
+                "../../../wp/wp-includes/js/jquery/ui/core.min.js",
+                "../../../wp/wp-includes/js/jquery/ui/datepicker.min.js",
+                "../../plugins/woocommerce-checkout-field-editor/assets/js/checkout.js"
             ],
             "files": [
                 "scripts/single-product.js", "scripts/add-to-cart.js"
+            ]
+        },
+        "cfields.js": {
+            "files": [
+                "scripts/cfields.js"
             ]
         },
         "divi.js": {
