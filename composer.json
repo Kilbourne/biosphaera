@@ -79,8 +79,9 @@
         "johnpbloch/wordpress": "4.7.2",
         "oscarotero/env": "^1.0",
         "roots/wp-password-bcrypt": "1.0.0",
+        "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips": "*",
 
-        "wpackagist-plugin/woo-codice-fiscale": "*",
+        "wpackagist-plugin/woocommerce-pdf-invoices-italian-add-on": "*",
         "wpackagist-plugin/woocommerce-gateway-stripe": "*",
         "satispress/wooCommerce-dynamic-pricing": "*",
         "wpackagist-plugin/password-protected": "*",

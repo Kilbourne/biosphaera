@@ -84,15 +84,18 @@
     list-style: outside none none;
     margin: 0px;
     background-color: rgb(242, 242, 242);
-    padding: 0 9%;
+    padding: 0 5%;
     text-align: right;
+    display:flex;
     >.menu-item {
-        text-align: left;
+        text-align: center;
+        flex-grow: 2;
         position: relative;
-        margin-right: 10%;
+        //margin-right: 10%;
         >a {
             line-height: 2.5;
         }
+        /*
         &:nth-child(-n+2) {
             float: left;
             &:after {
@@ -101,6 +104,7 @@
                 clear: both;
             }
         }
+        */
         &:last-child {
             margin-right: 0;
         }

@@ -106,14 +106,14 @@
         color: inherit;
     }
 }
-
+/*
 @media(max-width:768px) {
     .divi-slider.header-slide,
     .area-img-wrapper {
         display: none;
     }
 }
-
+*/
 .et_divi_builder #et_builder_outer_content {
     @include media-query(palm) {
         .et_pb_row {
@@ -1066,5 +1066,96 @@ body.single-product {
     #coupon_code {
         font-size: 18px;
         padding: 5px 3px;
+    }
+}
+
+body.blog,
+body.single-post {
+    main {
+        padding: 1.5rem 4.5% 4.5rem;
+    }
+}
+
+body.single-post main {
+    padding-bottom: 2.5rem
+}
+
+body.single-post article {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 500;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-top: 0
+    }
+    a {
+        color: #000;
+    }
+    p {
+        overflow: hidden;
+    }
+    ol,
+    ul {
+        margin-left: 0;
+    }
+    .entry-content {
+        padding: 1.5rem 0;
+    }
+    br {
+        margin-bottom: 1rem;
+    }
+    .entry-title{ text-align:left}
+}
+
+body.blog {
+    .type-post {
+        overflow: hidden;
+        margin-bottom: 2.5rem;
+        .post-image {
+            @media(min-width: 650px) {
+                float: left;
+                margin-right: 1.5rem;
+                width: 25%;
+                img {
+                    margin: 0;
+                }
+            }
+            margin-bottom: .5rem;
+        }
+        header {
+            margin-bottom: 1rem;
+            .entry-title {
+                margin-bottom: .5rem;
+                margin-top: 0;
+                font-weight: 500;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 1.75rem;
+                }
+            }
+        }
+        .entry-summary {
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 500;
+            }
+            p {
+                margin-top: 0;
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+        }
     }
 }
