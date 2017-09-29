@@ -1,0 +1,15 @@
+<wpml-config>
+    <admin-texts>
+        <key name="responsive_menu_pro_options">
+            <key name="menu" />
+            <key name="button_text" />
+            <key name="title" />
+            <key name="title_link" />
+            <key name="image" />
+            <key name="button_image" />
+            <key name="html" />
+            <key name="button_image_clicked" />
+            <key name="search_text" />
+        </key>
+    </admin-texts>
+</wpml-config>

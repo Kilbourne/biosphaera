@@ -1,0 +1,192 @@
+<!-- Added by Responsive Menu Pro Plugin for WordPress - http://responsive.menu -->
+	
+<?php $Classes = is_admin_bar_showing() ? ' responsive_menu_pro_admin_bar_showing ' : '';  ?>
+
+<?php if( $data['use_header_bar'] ) : ?>
+	
+	<div id="responsive_menu_pro_header_bar" class="<?php echo $Classes; ?>">
+
+		<div id="responsive_menu_pro_header_bar_left">
+
+			<?php if( $data['include_header_search'] == 'include_header_search' && $data['header_search_position'] == 'before_logo' ) :
+	            self::searchBarHeader( $data['search_text'] );                
+	        endif; ?>
+	        
+	        <?php if( $data['header_bar_logo'] ) : ?>
+
+				<div id="responsive_menu_pro_header_bar_logo">
+						
+					<?php if( $data['header_bar_logo_link'] ) : ?>
+						<a href="<?php echo $data['header_bar_logo_link']; ?>">
+					<?php endif; ?>	
+
+							<img id="responsive_menu_pro_header_bar_logo_image" alt="Responsive Menu Pro Header Bar Logo" src="<?php echo $data['header_bar_logo']; ?>" />
+
+					<?php if( $data['header_bar_logo_link'] ) : ?>
+						</a>
+					<?php endif; ?>		
+
+				</div>
+
+			<?php endif; ?>
+
+			<?php echo $data['header_bar_html']; ?>
+
+			<?php if( $data['include_header_search'] == 'include_header_search' && $data['header_search_position'] == 'after_logo' ) :
+	            self::searchBarHeader( $data['search_text'] );                
+	        endif; ?>		
+
+        </div><!--
+		
+		--><div id="responsive_menu_pro_header_bar_right">
+
+<?php endif; ?>
+
+
+<!-- Added by Responsive Menu Pro Plugin for WordPress - http://responsive.menu -->
+<?php
+
+$Classes = '';
+$Classes .= is_admin_bar_showing() ? ' responsive_menu_pro_admin_bar_showing ' : ''; ?>
+
+<?php if( $data['disable_scrolling'] ) : ?>
+	<div id="responsive_menu_pro_disable_scrolling">	
+<?php endif; ?>
+
+<div id="responsive_menu_pro" class="<?php echo $Classes; ?>">
+		
+    <?php if( $data['title'] || $data['title_image'] ) : ?>
+
+        <div id="responsive_menu_pro_title">
+
+            <?php if( $data['title_image'] ) : ?>
+
+                <?php if( isset( $data['title_link'] ) && !empty( $data['title_link'] ) ) : ?>
+            
+                    <a href="<?php echo $data['title_link']; ?>" target="<?php echo $data['title_target']; ?>">
+                        
+                <?php endif; ?>
+                    
+                <img src="<?php echo $data['title_image']; ?>" 
+                     class="responsive_menu_title_image" 
+                     alt="<?php echo $data['title']; ?>" 
+                     title="<?php echo $data['title']; ?>" />
+                
+            <?php if( isset( $data['title_link'] ) && !empty( $data['title_link'] ) ) : ?>
+                
+                    </a>
+            
+            <?php endif; ?>
+
+            <?php endif; ?>
+
+            <?php if( isset( $data['title_link'] ) && !empty( $data['title_link'] ) ) : ?>
+            
+                <a href="<?php echo $data['title_link']; ?>" target="<?php echo $data['title_target']; ?>">
+                    
+            <?php endif; ?>
+                    
+            <?php echo $data['title']; ?>
+                
+            <?php if( isset( $data['title_link'] ) && !empty( $data['title_link'] ) ) : ?>
+                    
+                </a>
+            
+            <?php endif; ?>
+            
+        </div>
+    
+    <?php endif;
+
+        if( isset( $data['html'] ) && !empty( $data['html'] ) && $data['html_location'] == 'above' ) :
+            self::additionalContent( $data['html'] );
+        endif;
+            
+        if( !$data['include_search'] && $data['search_position'] == 'above' ) :
+            self::searchBar( $data['search_text'] );                
+        endif;
+        
+        /* 
+         * Cache Menu to save Memory/Time 
+         * Added 19/01/15 v2.3
+         */
+        
+       echo ResponsiveMenuPro_Transient::getTransientMenu( $data );
+        
+        /* End Caching */
+        
+        if( !$data['include_search'] && $data['search_position'] == 'below' ) :
+             self::searchBar( $data['search_text'] ); 
+        endif;
+        
+        if( isset( $data['html'] ) && !empty( $data['html'] ) && $data['html_location'] == 'below' ) :
+            self::additionalContent( $data['html'] );
+        endif;
+
+    ?>
+
+</div>
+
+<?php if( $data['disable_scrolling'] ) : ?>
+	</div>	
+<?php endif; ?>
+
+	<div id="responsive_menu_pro_button" 
+	     class="<?php echo is_admin_bar_showing() ? 'responsive_menu_pro_admin_bar_showing ' : ''; ?> 
+	     <?php echo $data['animation_type']; ?>"
+	     role="button" 
+	     aria-label="Responsive Menu Button"
+	     >
+	
+	<?php if( $data['use_x'] || $data['button_image_clicked'] ) : ?>
+	
+	    <?php if( $data['button_image_clicked'] ) : ?>
+	    
+	        <img 
+	            id="responsive_menu_x" 
+	            src="<?php echo $data['button_image_clicked']; ?>" 
+	            class="responsive_menu_pro_button_image"
+	            alt="Responsive Menu Pro Image"
+	            title="Responsive Menu Pro Image" />
+	    
+	    <?php else : ?>
+	    
+	        <div class="responsive_menu_pro_button_lines" id="responsive_menu_x">×</div>
+	    
+	    <?php endif; ?>
+	
+	<?php endif; ?>
+	
+	<?php if( !$data['button_image'] ) : ?>
+	
+	    <div 
+	    	id="responsive_menu_pro_three_lines" 
+	    	class="responsive_menu_pro_button_lines" >       
+	        <div class="responsive_menu_pro_button_line"></div>
+	        <div class="responsive_menu_pro_button_line"></div>
+	        <div class="responsive_menu_pro_button_line"></div>
+	    </div>
+	
+	<?php else : ?>
+	
+	    <img 
+	        id="responsive_menu_pro_three_lines" 
+	        src="<?php echo $data['button_image']; ?>" 
+	        class="responsive_menu_pro_button_image"
+	        alt="Responsive Menu Clicked Image"
+	        title="Responsive Menu Clicked Image" />
+	
+	<?php endif; ?>
+	
+	<?php if( $data['button_text'] ) : ?>
+	
+	    <div id="responsive_menu_pro_button_text"><?php echo $data['button_text']; ?></div>
+	
+	<?php endif; ?>
+	
+	</div>
+
+<?php if( $data['use_header_bar'] ) : ?>
+		 </div>
+	</div>
+<?php endif; ?>

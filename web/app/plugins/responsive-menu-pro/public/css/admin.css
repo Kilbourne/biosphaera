@@ -1,0 +1,128 @@
+h4
+{
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+h4.divider
+{
+    color: #D44A44;
+    font-size: 12px;
+}
+
+h5
+{
+    font-size: 11px;
+    margin: 10px 0px;
+}
+
+.numberInput
+{
+    width: 50px;
+}
+
+textarea
+{
+    width: 100%;
+}
+
+table
+{
+    width: 98%;
+    border-left: 4px solid #7AD03A;
+    padding-left: 2%;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    background: white;
+    padding-bottom: 15px;
+}
+
+table.inner-table
+{
+    border: 0px;
+    box-shadow: none;
+}
+
+table td
+{
+    width: 48%;
+    padding-right: 2%;
+    vertical-align: top;
+}
+
+.default
+{
+    font-size: 8px;
+    font-style: italic;
+}
+
+.error
+{
+    color: red;
+}
+
+.success
+{
+    color: green;
+}
+
+#responsive_menu_pro_version
+{
+    float: right;
+    border-left: 4px solid #7AD03A;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.note
+{
+    padding: 25px 0px 0px 0px;
+    color: green;
+}
+
+.button.file
+{
+    background: white;
+    padding: 0px !important;
+}
+
+@media only screen and ( min-width : 0px ) and ( max-width : 600px ) { 
+    table, table td, table tr
+    {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.nav-tabs .tab  {        
+    display: table-cell;
+    padding: 10px;
+    color: white;
+    background-color: #DE4B42;
+    border:#DE4B42;
+    border-radius: 2px 2px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 28px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0 10px 1px;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 0;
+}
+.nav-tabs .tab.active  { 
+    background-color: #EA645D;
+    background: #EA645D;
+    color: #ffffff;
+}
+
+.nav-tabs {
+    border-bottom: 1px #333 white;
+    width: 98%;
+}

@@ -1,0 +1,71 @@
+/**
+ * Styles the tinyMCE modal form more like WordPress's standard editor modals
+ */
+
+/* Form container */
+.mce-container.mce-wym {
+	border-radius: 0;
+}
+
+.mce-container.mce-wym .mce-foot {
+	background: #FCFCFC;
+	border-top: 1px solid #DFDFDF;
+}
+
+/* Cancel button */
+.mce-container.mce-wym .mce-cancel {
+	left: 20px !important;
+}
+
+.mce-container.mce-wym .mce-cancel button {
+	color: #A00;
+	font-size: 13px;
+}
+
+.mce-container.mce-wym .mce-cancel button:hover {
+	color: #F00;
+}
+
+/* Submit button */
+.mce-container.mce-wym .mce-btn.mce-submit,
+.mce-container.mce-wym .mce-btn.mce-submit:hover {
+	border: none;
+}
+
+.mce-container.mce-wym .mce-btn.mce-submit button {
+	background: #00A0D2;
+	border: 1px solid #0073AA;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.5), 0 1px 0 rgba(0, 0, 0, 0.15);
+	box-shadow:         inset 0 1px 0 rgba(120, 200, 230, 0.5), 0 1px 0 rgba(0, 0, 0, 0.15);
+	color: #FFF;
+	font-size: 13px;
+	padding: 0 10px;
+}
+
+.mce-container.mce-wym .mce-btn.mce-submit button:hover {
+	background: #0091CD;
+}
+
+/**
+ * tinyWYM toggle button styles
+ */
+i.mce-i-twym-show,
+i.mce-i-twym-hide {
+	font: normal 20px/1 'dashicons';
+	padding: 0;
+	vertical-align: top;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-left: -2px;
+	padding-right: 2px;
+}
+
+i.mce-i-twym-show:before {
+	content: "\f177";
+}
+
+i.mce-i-twym-hide:before {
+	content: "\f530";
+}

@@ -1,0 +1,11 @@
+/* =Button
+-------------------------------------------------------------- */
+.column-meta .column_label .inner .sorting:before {
+  content: "\f156";
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: normal 24px/17px 'dashicons';
+  vertical-align: top; }
+
+.column-meta .column_label .inner .sorting.on:before {
+  color: #21759B; }

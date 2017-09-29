@@ -1,0 +1,499 @@
+/*
+ * Overall layout and borders.
+ */
+
+#ws_admin_bar_editor {
+	margin-top: 8px;
+}
+
+/* Top toolbar + node list */
+#abe-editor-content {
+	float: left;
+	min-width: 540px;
+	background: white;
+}
+
+/* A panel with important buttons like "Save Changes". */
+#abe-editor-menu {
+	float: left;
+	clear: right;
+
+	margin-left: 10px;
+	min-width: 120px;
+
+	background: white;
+}
+
+.abe-panel {
+	padding: 6px;
+
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+}
+
+/*
+ * Node layout.
+ */
+
+li.abe-node {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+li.abe-node li.abe-node {
+    margin-left: 30px;
+}
+
+ul.abe-children, ol.abe-children {
+    margin: 6px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.abe-node-widget {
+    width: 450px;
+}
+
+/*
+ * Node header
+ */
+.abe-node-header {
+    position: relative;
+}
+
+.abe-node-handle {
+    position: relative;
+    cursor: move;
+    padding-left: 10px;
+    border-radius: 3px;
+
+    background-color: #e7e7e7;
+    background: linear-gradient(to top, #E1E1E1, #F2F2F2);
+}
+
+.abe-node-handle, .abe-node-settings {
+    border: 1px solid #d2d2d2;
+}
+
+.abe-settings-visible .abe-node-handle {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*
+ * Node header contents
+ */
+.abe-expand-button {
+    display: inline-block;
+    width: 18px;
+    height: 36px;
+    vertical-align: middle;
+
+    cursor: pointer;
+    background: url("../images/toggle-expand.png") 0 center no-repeat;
+
+    visibility: hidden;
+}
+
+.abe-expand-button.abe-expanded {
+    background-image: url("../images/toggle-collapse.png");
+}
+
+.abe-has-children .abe-expand-button {
+    visibility: visible;
+}
+
+.abe-node-visibility {
+    padding: 0 2px 0 0;
+
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 34px;
+}
+
+.abe-node-title {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 7px 0;
+}
+
+.abe-node-controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    height: 36px;
+    line-height: 36px;
+}
+
+.abe-node-type {
+    color: #999;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.abe-node-edit {
+    display: inline-block;
+    height: 36px;
+    width: 30px;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    background: url("../images/arrows.png") 8px 10px no-repeat transparent;
+}
+
+.abe-node-edit:hover {
+    background-image: url('../images/arrows-dark.png');
+}
+
+.abe-flag {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 16px;
+    padding: 0 2px;
+
+    background: no-repeat center;
+}
+
+.abe-flag-custom {
+    background-image: url("../images/page_white_add.png");
+}
+
+/*
+ * Node settings panel
+ */
+.abe-node-settings {
+    display: block;
+    padding: 10px 0 10px 10px;
+
+    border-top-width: 0;
+
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#ws_admin_bar_editor .abe-default-value {
+    color: gray;
+}
+
+.abe-field {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.abe-field-value-wrap {
+    display: block;
+    margin-right: 32px;
+}
+
+.abe-field input[type="text"].abe-field-value {
+    width: 100%;
+}
+
+.abe-field label {
+    cursor:  auto;
+}
+
+/* The "reset to default" button */
+.abe-reset-button {
+    display: block;
+
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+
+    background: url("../images/pencil_delete_gray.png") no-repeat center;
+}
+
+.abe-reset-button:hover {
+    background-image: url("../images/pencil_delete.png");
+}
+
+
+/*
+ * Special node states.
+ */
+
+/* Hidden nodes */
+.abe-hidden .abe-node-handle,
+.abe-hidden .abe-node-settings {
+    border-color: #CBCBCB;
+}
+
+.abe-hidden .abe-node-handle {
+    background-color: #f6f6f6;
+    background: linear-gradient(to top, #F0F0F0, #fefefe);
+}
+
+.abe-hidden .abe-node-title {
+    color: gray;
+}
+
+.abe-hidden .abe-expand-button {
+    opacity: 0.7;
+}
+
+.abe-hidden .abe-flag {
+    opacity: 0.7;
+}
+
+/* Selected nodes */
+.abe-selected .abe-node-handle,
+.abe-selected .abe-node-settings {
+    border-color: #a5a5a5;
+}
+
+.abe-selected .abe-node-handle {
+    background-color: #cdcdcd;
+    background: linear-gradient(to top, #C6C6C6, #dadada);
+}
+
+/* Selected hidden nodes. */
+.abe-hidden.abe-selected .abe-node-handle {
+    /* No special styles for now. */
+}
+
+
+/*
+ * Actor list.
+ */
+
+#abe-actor-list li::after {
+    content: " | ";
+}
+
+#abe-actor-list li:last-child:after {
+    content: '';
+}
+
+#abe-actor-list {
+    margin-top: 0;
+}
+
+#abe-actor-list-container {
+    margin-bottom: 8px;
+}
+
+
+/*
+ * Toolbar.
+ */
+
+.abe-toolbar {
+    margin-bottom: 10px;
+}
+
+.abe-toolbar::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.abe-toolbar-button {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+
+    margin-right: 4px;
+    padding: 4px;
+
+    border: 1px solid silver;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.abe-toolbar-button:hover {
+    background: #eee linear-gradient(to top, #e5e5e5, #fff);
+    border-color: #909090;
+}
+
+.abe-toolbar-button:active {
+    outline: 0;
+    background: #eee linear-gradient(to top, #f6f6f6, #e3e3e3);
+    border-color: #909090 silver silver #909090;
+}
+
+.abe-toolbar-button.abe-disabled-button {
+    border-color: #e0e0e0;
+    background: #f1f1f1;
+
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+}
+
+.abe-toolbar-button.abe-disabled-button:hover {
+    background: #f1f1f1;
+}
+
+.abe-toolbar-spacer {
+    display: block;
+    float: left;
+    width: 4px;
+    height: 16px;
+    margin: 0;
+}
+
+.abe-button-image {
+    width: 16px;
+    height: 16px;
+    background: no-repeat center;
+}
+
+#abe-delete-node .abe-button-image {
+    background-image: url("../images/page_white_delete.png");
+}
+
+#abe-delete-node.abe-disabled-button .abe-button-image {
+    background-image: url("../images/page_white_delete_disabled.png");
+}
+
+#abe-create-group .abe-button-image {
+    background-image: url("../images/page_add.png");
+}
+
+#abe-create-group.abe-disabled-button .abe-button-image {
+    background-image: url("../images/page_add_disabled.png");
+}
+
+#abe-copy-node .abe-button-image {
+    background-image: url("../images/page_white_copy.png");
+}
+
+#abe-copy-node.abe-disabled-button .abe-button-image {
+    background-image: url("../images/page_white_copy_disabled.png");
+}
+
+#abe-paste-node .abe-button-image {
+    background-image: url("../images/page_white_paste.png");
+}
+
+#abe-paste-node.abe-disabled-button .abe-button-image {
+    background-image: url("../images/page_white_paste_disabled.png");
+}
+
+#abe-cut-node .abe-button-image {
+    background-image: url("../images/cut.png");
+}
+
+#abe-cut-node.abe-disabled-button .abe-button-image {
+    background-image: url("../images/cut_disabled.png");
+}
+
+
+/*
+ * Primary editor menu.
+ */
+
+#abe-editor-menu .button {
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#abe-editor-menu #abe-save-menu {
+	margin-bottom: 20px;
+}
+
+#abe-editor-menu #abe-export-menu {
+	margin-top: 20px;
+}
+
+/* No bottom margin on the last button to make the menu padding symmetrical all around. */
+#abe-editor-menu #abe-import-nodes {
+	margin-bottom: 0;
+}
+
+/*
+ * Node import/export
+ */
+
+#abe-import-dialog {
+    display: none;
+}
+
+#abe-import-form {
+    background-color: white;
+}
+
+#abe-import-file {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+}
+
+#abe-import-complete-notice {
+    text-align: center;
+    font-size: large;
+    height: 100px;
+    line-height: 100px;
+}
+
+#abe-upload-file-button {
+    display: block;
+    margin-top: 20px;
+}
+
+
+/*
+ * Drag & drop sorting.
+ */
+
+.abe-sort-placeholder {
+    outline: 1px dashed #4183C4;
+}
+
+li.abe-node .abe-sort-placeholder {
+    margin-left: 30px;
+}
+
+.abe-sort-error {
+	outline-color: red;
+	background: rgb(255, 239, 219);
+}
+
+/*
+ * Tooltips
+ */
+
+.abe-tooltip-trigger {
+	/*content: "(?)";*/
+	color: silver;
+	font-size: 0.9em;
+	font-weight: bold;
+
+	margin-left: 1px;
+	background: url("../images/question_small_grey.png") no-repeat center center;
+	/*
+	question_small_grey.png is from the "Fugue" icon set by Yusuke Kamiyamane (http://p.yusukekamiyamane.com/)
+	Original icon filename was "question_small_white.png".
+	*/
+
+	opacity: 0.5;
+
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.abe-tooltip-trigger:hover {
+	opacity: 1;
+}
+
+.abe-tooltip {
+    font-size: 12px;
+    line-height: 15px;
+}
+

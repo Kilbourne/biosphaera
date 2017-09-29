@@ -1,0 +1,57 @@
+jQuery(function($) {
+	var widget = $('#ws_php_error_log'),
+
+		dashboardNoFilterOption = widget.find('#elm_dashboard_message_filter_all'),
+		dashboardCustomFilterOption = widget.find('#elm_dashboard_message_filter_selected'),
+
+		emailMatchFilterOption = widget.find('#elm_email_message_filter_same'),
+		emailCustomFilterOption = widget.find('#elm_email_message_filter_selected'),
+
+		dashboardFilterOptions = widget.find('input[name^="ws_php_error_log[dashboard_severity_option-"]'),
+		emailFilterOptions = widget.find('input[name^="ws_php_error_log[email_severity_option-"]');
+
+	function updateDashboardOptions() {
+		dashboardFilterOptions.prop('disabled', !dashboardCustomFilterOption.is(':checked'))
+	}
+	function updateEmailOptions() {
+		emailFilterOptions.prop('disabled', !emailCustomFilterOption.is(':checked'));
+	}
+
+	//First enable/disable the checkboxes when the page loads.
+	updateDashboardOptions();
+	updateEmailOptions();
+
+	//Then refresh them when the user changes filter settings.
+	dashboardCustomFilterOption.add(dashboardNoFilterOption).on('change', function() {
+		updateDashboardOptions();
+	});
+	emailCustomFilterOption.add(emailMatchFilterOption).on('change', function() {
+		updateEmailOptions();
+	});
+
+	//Handle the "Ignore" link.
+	widget.on('click', '.elm-ignore-message', function() {
+		var row = $(this).closest('.elm-entry'),
+			message = row.data('raw-message');
+
+		//Hide all copies of this message.
+		row.closest('.elm-log-entries').find('.elm-entry').filter(function() {
+			return $(this).data('raw-message') === message;
+		}).hide().remove();
+
+		AjawV1.getAction('elm-ignore-message').post({ message: message });
+
+		return false;
+	});
+
+	//And the "Unignore" link.
+	widget.on('click', '.elm-unignore-message', function() {
+		var row = $(this).closest('tr'),
+			message = row.data('raw-message');
+
+		row.remove();
+		AjawV1.getAction('elm-unignore-message').post({ message: message });
+
+		return false;
+	});
+});

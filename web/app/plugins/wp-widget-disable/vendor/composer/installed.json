@@ -1,0 +1,42 @@
+[
+    {
+        "name": "wearerequired/wp-requirements-check",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wearerequired/wp-requirements-check.git",
+            "reference": "0d9f602ed83def11f97c07ee76ad204cc1ba247f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wearerequired/wp-requirements-check/zipball/0d9f602ed83def11f97c07ee76ad204cc1ba247f",
+            "reference": "0d9f602ed83def11f97c07ee76ad204cc1ba247f",
+            "shasum": ""
+        },
+        "time": "2016-06-06T18:20:15+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "WP_Requirements_Check.php"
+            ]
+        },
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "required",
+                "email": "support@required.ch",
+                "homepage": "http://required.ch",
+                "role": "Developer"
+            }
+        ],
+        "description": "Simple requirements checking class",
+        "support": {
+            "source": "https://github.com/wearerequired/wp-requirements-check/tree/master",
+            "issues": "https://github.com/wearerequired/wp-requirements-check/issues"
+        }
+    }
+]

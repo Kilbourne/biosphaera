@@ -1,0 +1,129 @@
+/**
+ * Variation column
+ * ----------------------------------------------------------------------------
+ */
+.column-wc-variation .variation {
+	border-radius: 4px;
+	padding: 2px 0;
+}
+.column-wc-variation span.label {
+	font-size: 13px;
+	font-weight: bold;
+	color: #545454;
+	margin-right: 8px;
+}
+.column-wc-variation span.stock {
+	display: inline-block;
+	font-size: 13px;
+}
+.column-wc-variation span.instock {
+	color: #7ad03a;
+}
+.column-wc-variation span.qty {
+	padding: 2px 5px;
+	border-radius: 8px;
+	background-color: #ddd;
+	color: #545454;
+	font-size: 11px;
+}
+.column-wc-variation span.outofstock {
+	color: #a44;
+}
+.column-wc-variation span.price {
+	padding: 0 8px;
+}
+
+/**
+ * User order column
+ * ----------------------------------------------------------------------------
+ */
+.column-wc-user-orders .order {
+	position: relative;
+	margin-left: 10px;
+}
+.column-wc-user-orders .order:before {
+	font-family: WooCommerce;
+	speak: none;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin: -2px 4px 0 0;
+	text-indent: 0;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.column-wc-user-orders .order-pending:before {
+	content: "\e012";
+	color: #ffba00;
+}
+.column-wc-user-orders .order-completed:before {
+	content: "\e015";
+	color: #2ea2cc;
+}
+.column-wc-user-orders .order-on-hold:before {
+	content: "\e033";
+	color: #999;
+}
+.column-wc-user-orders .order-failed:before {
+	content: "\e016";
+	color: #d0c21f;
+}
+.column-wc-user-orders .order-cancelled:before {
+	content: "\e013";
+	color: #a00;
+}
+.column-wc-user-orders .order-processing:before {
+	content: "\e011";
+	color: #73a724;
+}
+.column-wc-user-orders .order-refunded:before {
+	content: "\e014";
+	color: #999;
+}
+
+/**
+ * Subscription Expiration column
+ * ----------------------------------------------------------------------------
+ */
+.column-wc-user-subscription-expiration-date span.active {
+	color: #7ad03a; /* green */
+}
+.column-wc-user-subscription-expiration-date span.on-hold,
+.column-wc-user-subscription-expiration-date span.suspend,
+.column-wc-user-subscription-expiration-date span.pending {
+	color: #ffba00; /* orange */
+}
+.column-wc-user-subscription-expiration-date span.failed,
+.column-wc-user-subscription-expiration-date span.expired,
+.column-wc-user-subscription-expiration-date span.cancelled, {
+	color: #a44; /* red */
+}
+
+.column-wc-user-subscription-expiration-date .product {
+	padding: 2px 5px;
+	border-radius: 8px;
+	background-color: #ddd;
+	color: #545454;
+	font-size: 11px;
+}
+
+/**
+ * Subscription Expiration column
+ * ----------------------------------------------------------------------------
+ */
+#the-list .cpac_wc_product {
+    margin-bottom: 8px;
+}
+#the-list .cpac_wc_product .qty {
+    padding: 2px 5px;
+    padding-left: 0;
+    color: #545454;
+    font-size: 11px;
+}
+#the-list .cpac_wc_product .meta {
+    font-size: 11px;
+}

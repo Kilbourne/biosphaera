@@ -1,0 +1,80 @@
+== Changelog ==
+
+= 1.4 =
+Release Date: March 16th, 2016
+
+* [Added] Added Tax Status column for products with support for filtering
+* [Added] Added Tax Class column for products with support for filtering
+* [Added] Added Shipping method column for orders with support for filtering
+* [Added] Added filtering support for "Reviews enabled" column
+* [Added] Added filtering support for "Shipping method" column
+* [Added] Added Product detail column for orders
+* [Fixed] Changed groupnames for upcoming plugin release
+* [Fixed] Default WooCommerce columns are not clonable
+* [Fixed] Discount columns fixed
+* [Updated] Changed status icons with dashicons
+
+= 1.3.2 =
+Release Date: January 21th, 2016
+
+* [Added] Broken support for WooCommerce < 2.3
+* [Fixed] Minimized the number of strings that needs translating
+* [Improved] Script loading is improved
+
+= 1.3.1 =
+Release Date: November 26th, 2015
+
+* [Added] Added a Product column for Order screen which can display Title, ID, SKU or Thumbnails
+* [Added] Added an Attributes column for product screen which can display any attribute
+* [Fixed] Replaced deprecated method get_product with wc_get_product
+
+= 1.3 =
+Release Date: October 13th, 2015
+
+* [Added] Variation column: displays variations properties such as price and stock
+* [Added] Order column for Users: displays order ID's with edit link. On hover it shows price, date and item count
+* [Added] Total Sales column for Users: displays the total sales per user per currency
+* [Added] Subscription Expiration Date column for Users which can be sorted
+* [Fixed] Translations will be loaded from pro version
+
+= 1.2 =
+Release Date: May 4th, 2015
+
+* [Added] Added product column: shipping class (editable, sortable, filterable )
+* [Added] Added product column: visibility (editable, sortable, filterable )
+* [Added] Added product column: featured (editable, sortable, filterable )
+* [Added] Products, Coupons and Order will be in it's own menu group inside the admin columns menu
+* [Added] Fixed error when using Weight column
+* [Added] Added languages folder and po file
+
+= 1.1 =
+Release Date: March 2nd, 2015
+
+* [Added] Added product upsells column, displaying all upsells for a product (editable)
+* [Added] Added product cross sells column, displaying all cross sells for a product (editable)
+* [Added] Added coupon amount column, displaying the amount or percentage of discount for a column (editable, sortable)
+* [Added] Added column for displaying whether a coupon is applide before or after tax (editable, sortable, filterable)
+* [Added] Added coupon include products column, displaying to which products the coupon can be applied (editable)
+* [Added] Added coupon exclude products column, displaying to which products the coupon cannot be applied (editable)
+* [Added] Added coupon free shipping column, displaying whether a coupon provides free shipping (editable, sortable, filterable)
+* [Added] Added coupon minimum amount column, displaying the minimum order amount necessary for a coupon to be applied (editable)
+* [Added] Coupon description column: added editability and sortability
+* [Added] Coupon type column: added editability and sortability
+* [Added] Coupon usage column: added editability
+* [Added] Order status column: added editability
+* [Removed] Removed column "Order cart discount", use "order discount".
+* [Update] Handle default WooCommerce columns without changing the column name
+* [Update] Implement SKU as default column
+* [Update] Add base for tooltips for stock status column
+* [Update] Changed product group to 'Default' and 'WooCommerce Custom'
+* [Update] Make product name column editable
+
+= 1.0.1 =
+Release Date: Januari 6th, 2015
+
+* [Added] Added order column: Product Thumbnails
+
+= 1.0 =
+Release Date: July 9th, 2014
+
+* Initial release

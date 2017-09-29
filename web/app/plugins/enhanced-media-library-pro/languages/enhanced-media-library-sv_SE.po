@@ -1,0 +1,1178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Enhanced Media Library PRO\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-27 15:48+0100\n"
+"PO-Revision-Date: 2016-06-27 23:56+0300\n"
+"Last-Translator: wpUXsolutions <wpUXsolutions@gmail.com>\n"
+"Language-Team: Swedish (Sweden)\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Loco-Source-Locale: en-US\n"
+"X-Loco-Project-Id: 16288\n"
+"X-Loco-Api-Version: 1.0.14 20160610-1\n"
+
+#: core/mime-types.php:30 loco:57713fd314d7250f728b4567
+msgid "MIME Types settings restored."
+msgstr ""
+
+#: core/mime-types.php:39 loco:57713fd314d7250f728b4568
+msgid "MIME Types settings saved."
+msgstr ""
+
+#: core/mime-types.php:115 loco:57713fd314d7250f728b4569
+msgid " <span class=\"count\">(%s)</span>"
+msgid_plural " <span class=\"count\">(%s)</span>"
+msgstr[0] " <span class=\"count\">(%s)</span>"
+msgstr[1] " <span class=\"count\">(%s)</span>"
+
+#: core/options-pages.php:97 core/options-pages.php:217
+#: core/options-pages.php:932 core/options-pages.php:1057
+#: core/options-pages.php:1370 core/options-pages.php:1547
+#: loco:57713fd314d7250f728b456c
+msgid "Media Settings"
+msgstr "Mediainställningar"
+
+#: core/options-pages.php:106 core/options-pages.php:189
+#: loco:57713fd314d7250f728b456d
+msgid "Media Library"
+msgstr "Mediabiblioteket"
+
+#: core/options-pages.php:115 loco:57713fd314d7250f728b456e
+msgid "Taxonomies"
+msgstr "Taxonomier"
+
+#: core/options-pages.php:124 core/options-pages.php:191
+#: loco:57713fd314d7250f728b456f
+msgid "MIME Types"
+msgstr "MIME-typer"
+
+#: core/options-pages.php:135 core/options-pages.php:136
+#: loco:57713fd314d7250f728b4570
+msgid "Enhanced Media Library"
+msgstr "Enhanced Media Library"
+
+#: core/options-pages.php:188 loco:57713fd314d7250f728b4571
+msgid "General"
+msgstr ""
+
+#: core/options-pages.php:190 core/options-pages.php:1078
+#: loco:57713fd314d7250f728b4572
+msgid "Media Taxonomies"
+msgstr "Mediataxonomier"
+
+#: core/options-pages.php:214 core/options-pages.php:520
+#: core/options-pages.php:928 core/options-pages.php:1053
+#: core/options-pages.php:1366 loco:57713fd314d7250f728b4573
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Du har inte tillräckliga tillstånd för tillgång till denna sida."
+
+#: core/options-pages.php:228 loco:57713fd314d7250f728b4574
+msgid "Image sizes"
+msgstr ""
+
+#: core/options-pages.php:229 loco:57713fd314d7250f728b4575
+msgid ""
+"The sizes listed below determine the maximum dimensions in pixels to use "
+"when adding an image to the Media Library."
+msgstr ""
+
+#: core/options-pages.php:233 loco:57713fd314d7250f728b4576
+msgid "Thumbnail size"
+msgstr ""
+
+#: core/options-pages.php:235 loco:57713fd314d7250f728b4577
+msgid "Width"
+msgstr ""
+
+#: core/options-pages.php:237 loco:57713fd314d7250f728b4578
+msgid "Height"
+msgstr ""
+
+#: core/options-pages.php:240 loco:57713fd314d7250f728b4579
+msgid ""
+"Crop thumbnail to exact dimensions (normally thumbnails are proportional)"
+msgstr ""
+
+#: core/options-pages.php:245 core/options-pages.php:246
+#: loco:57713fd314d7250f728b457a
+msgid "Medium size"
+msgstr ""
+
+#: core/options-pages.php:247 core/options-pages.php:257
+#: loco:57713fd314d7250f728b457b
+msgid "Max Width"
+msgstr ""
+
+#: core/options-pages.php:249 core/options-pages.php:259
+#: loco:57713fd314d7250f728b457c
+msgid "Max Height"
+msgstr ""
+
+#: core/options-pages.php:255 core/options-pages.php:256
+#: loco:57713fd314d7250f728b457d
+msgid "Large size"
+msgstr ""
+
+#: core/options-pages.php:272 loco:57713fd314d7250f728b457e
+msgid "Embeds"
+msgstr ""
+
+#: core/options-pages.php:279 loco:57713fd314d7250f728b457f
+msgid "Uploading Files"
+msgstr ""
+
+#: core/options-pages.php:286 loco:57713fd314d7250f728b4580
+msgid "Store uploads in this folder"
+msgstr ""
+
+#: core/options-pages.php:290 loco:57713fd314d7250f728b4581
+msgid "Default is %s"
+msgstr ""
+
+#: core/options-pages.php:296 loco:57713fd314d7250f728b4582
+msgid "Full URL path to files"
+msgstr ""
+
+#: core/options-pages.php:298 loco:57713fd314d7250f728b4583
+msgid "Configuring this is optional. By default, it should be blank."
+msgstr ""
+
+#: core/options-pages.php:306 loco:57713fd314d7250f728b4584
+msgid "Organize my uploads into month- and year-based folders"
+msgstr ""
+
+#: core/options-pages.php:378 core/options-pages.php:1102
+#: core/options-pages.php:1117 core/options-pages.php:1180
+#: core/options-pages.php:1249 loco:57713fd314d7250f728b4585
+msgid "Edit"
+msgstr "Redigera"
+
+#: core/options-pages.php:379 pro/enhanced-media-library-pro.php:125
+#: loco:57713fd314d7250f728b4586
+msgid "Close"
+msgstr "Stäng"
+
+#: core/options-pages.php:380 core/options-pages.php:1118
+#: core/options-pages.php:1181 loco:57713fd314d7250f728b4587
+msgid "View"
+msgstr "Visa"
+
+#: core/options-pages.php:381 core/options-pages.php:1119
+#: core/options-pages.php:1182 loco:57713fd314d7250f728b4588
+msgid "Update"
+msgstr "Uppdatera"
+
+#: core/options-pages.php:382 core/options-pages.php:1120
+#: core/options-pages.php:1183 loco:57713fd314d7250f728b4589
+msgid "Add New"
+msgstr "Lägg Till Ny"
+
+#: core/options-pages.php:383 core/options-pages.php:1121
+#: core/options-pages.php:1184 loco:57713fd314d7250f728b458a
+msgid "New"
+msgstr "Ny"
+
+#: core/options-pages.php:384 loco:57713fd314d7250f728b458b
+msgid "Name"
+msgstr "Namn"
+
+#: core/options-pages.php:385 core/options-pages.php:1122
+#: core/options-pages.php:1185 loco:57713fd314d7250f728b458c
+msgid "Parent"
+msgstr "Förälder"
+
+#: core/options-pages.php:386 core/options-pages.php:616
+#: core/options-pages.php:1116 core/options-pages.php:1179
+#: core/taxonomies.php:365 enhanced-media-library.php:490
+#: loco:57713fd314d7250f728b458d
+msgid "All"
+msgstr "Alla"
+
+#: core/options-pages.php:387 core/options-pages.php:1123
+#: core/options-pages.php:1186 loco:57713fd314d7250f728b458e
+msgid "Search"
+msgstr "Sök"
+
+#: core/options-pages.php:389 core/options-pages.php:1167
+#: loco:57713fd314d7250f728b458f
+msgid "New Taxonomy"
+msgstr "Ny Taxonomi"
+
+#: core/options-pages.php:391 loco:57713fd314d7250f728b4590
+msgid "Remove Taxonomy"
+msgstr ""
+
+#: core/options-pages.php:392 loco:57713fd314d7250f728b4591
+msgid "Taxonomy will be removed."
+msgstr ""
+
+#: core/options-pages.php:393 loco:57713fd314d7250f728b4592
+msgid ""
+"Taxonomy terms (categories) will remain intact in the database. If you "
+"create a taxonomy with the same name in the future, its terms (categories) "
+"will be available again."
+msgstr ""
+
+#: core/options-pages.php:394 loco:57713fd314d7250f728b4593
+msgid "Media items will remain intact."
+msgstr ""
+
+#: core/options-pages.php:395 loco:57713fd314d7250f728b4594
+msgid "Are you still sure?"
+msgstr ""
+
+#: core/options-pages.php:396 loco:57713fd314d7250f728b4595
+msgid "Yes, remove taxonomy"
+msgstr ""
+
+#: core/options-pages.php:398 loco:57713fd314d7250f728b4596
+msgid "Duplicate"
+msgstr ""
+
+#: core/options-pages.php:399 loco:57713fd314d7250f728b4597
+msgid "Taxonomy with the same name already exists. Please chose other one."
+msgstr ""
+"Det finns redan en taxonomi med detta namn. Var god välj ett annat namn."
+
+#: core/options-pages.php:401 loco:57713fd314d7250f728b4598
+msgid "Empty Fields"
+msgstr ""
+
+#: core/options-pages.php:402 loco:57713fd314d7250f728b4599
+msgid "Please choose Singular and Plural names for all new taxomonies."
+msgstr ""
+
+#: core/options-pages.php:422 loco:57713fd314d7250f728b459a
+msgid "Please choose Singular name for all new taxomonies."
+msgstr ""
+
+#: core/options-pages.php:404 loco:57713fd314d7250f728b459b
+msgid "Please choose Plural Name for all new taxomonies."
+msgstr ""
+
+#: core/options-pages.php:406 loco:57713fd314d7250f728b459c
+msgid "Ok"
+msgstr ""
+
+#: core/options-pages.php:407 core/options-pages.php:412
+#: core/options-pages.php:495 loco:57713fd314d7250f728b459d
+msgid "Cancel"
+msgstr ""
+
+#: core/options-pages.php:409 pro/core/options-pages.php:165
+#: loco:57713fd314d7250f728b459e
+msgid "Synchronize Now"
+msgstr ""
+
+#: core/options-pages.php:410 core/options-pages.php:492
+#: loco:57713fd314d7250f728b459f
+msgid "This operation cannot be canceled! Are you still sure?"
+msgstr ""
+
+#: core/options-pages.php:411 loco:57713fd314d7250f728b45a0
+msgid "Synchronize"
+msgstr ""
+
+#: core/options-pages.php:413 loco:57713fd314d7250f728b45a1
+msgid "Synchronizing..."
+msgstr ""
+
+#: core/options-pages.php:451 loco:57713fd314d7250f728b45a2
+msgid "Warning! All your custom MIME Types will be deleted by this operation."
+msgstr ""
+"Varning! Alla dina anpassade MIME-typer kommer att tas bort med denna åtgärd."
+
+#: core/options-pages.php:452 loco:57713fd314d7250f728b45a3
+msgid "Please fill into all fields."
+msgstr "Var god fyll i alla fält."
+
+#: core/options-pages.php:453 loco:57713fd314d7250f728b45a4
+msgid "Duplicate extensions or MIME types. Please chose other one."
+msgstr "Dubbeldefinition av filändelse eller MIME-typ. Var god välj en annan."
+
+#: core/options-pages.php:490 core/options-pages.php:607
+#: loco:57713fd314d7250f728b45a5
+msgid "Complete Cleanup"
+msgstr ""
+
+#: core/options-pages.php:491 loco:57713fd314d7250f728b45a6
+msgid ""
+"You are about to <strong style=\"text-transform:uppercase\">delete all "
+"plugin data</strong> from the database including backups."
+msgstr ""
+
+#: core/options-pages.php:493 loco:57713fd314d7250f728b45a7
+msgid "Yes, delete all data"
+msgstr ""
+
+#: core/options-pages.php:494 loco:57713fd314d7250f728b45a8
+msgid "Cleaning..."
+msgstr ""
+
+#: core/options-pages.php:525 loco:57713fd314d7250f728b45a9
+msgid "Enhanced Media Library Settings"
+msgstr ""
+
+#: core/options-pages.php:535 loco:57713fd314d7250f728b45aa
+msgid "Export"
+msgstr ""
+
+#: core/options-pages.php:539 loco:57713fd314d7250f728b45ab
+msgid ""
+"Plugin settings tabs <strong>Media Library</strong>, <strong>Media "
+"Taxonomies</strong>, and <strong>MIME Types</strong> will be exported to a "
+"configuration file. It allows you to easily import the configuration into "
+"another website."
+msgstr ""
+
+#: core/options-pages.php:544 loco:57713fd314d7250f728b45ac
+msgid "Export Plugin Settings"
+msgstr ""
+
+#: core/options-pages.php:554 loco:57713fd314d7250f728b45ad
+msgid "Import"
+msgstr ""
+
+#: core/options-pages.php:558 loco:57713fd314d7250f728b45ae
+msgid ""
+"Plugin settings tabs <strong>Media Library</strong>, <strong>Media "
+"Taxonomies</strong>, and <strong>MIME Types</strong> will be imported from a "
+"configuration file which can be obtained by exporting the settings on "
+"another website using the export button above."
+msgstr ""
+
+#: core/options-pages.php:559 loco:57713fd314d7250f728b45af
+msgid ""
+"All plugin settings will be overridden by the import. You will have a chance "
+"to restore current data from an automatic backup in case you are not "
+"satisfied with the result of the import."
+msgstr ""
+
+#: core/options-pages.php:566 loco:57713fd314d7250f728b45b0
+msgid "Import Plugin Settings"
+msgstr ""
+
+#: core/options-pages.php:578 loco:57713fd314d7250f728b45b1
+msgid "Restore"
+msgstr ""
+
+#: core/options-pages.php:584 loco:57713fd314d7250f728b45b2
+msgid "No backup available at the moment."
+msgstr ""
+
+#: core/options-pages.php:586 loco:57713fd314d7250f728b45b3
+msgid "Backup will be created automatically before any import operation."
+msgstr ""
+
+#: core/options-pages.php:590 loco:57713fd314d7250f728b45b4
+msgid ""
+"The backup has been automatically created before the latest import operation."
+msgstr ""
+
+#: core/options-pages.php:594 loco:57713fd314d7250f728b45b5
+msgid "Restore Settings from the Backup"
+msgstr ""
+
+#: core/options-pages.php:614 loco:57713fd314d7250f728b45b6
+msgid "What will be deleted:"
+msgstr ""
+
+#: core/options-pages.php:619 loco:57713fd314d7250f728b45b7
+msgid "All plugin options"
+msgstr ""
+
+#: core/options-pages.php:620 loco:57713fd314d7250f728b45b8
+msgid "All plugin backups stored in database"
+msgstr ""
+
+#: core/options-pages.php:624 loco:57713fd314d7250f728b45b9
+msgid "What will remain intact:"
+msgstr ""
+
+#: core/options-pages.php:625 loco:57713fd314d7250f728b45ba
+msgid "All media items"
+msgstr ""
+
+#: core/options-pages.php:626 loco:57713fd314d7250f728b45bb
+msgid "All taxonomies not listed above"
+msgstr ""
+
+#: core/options-pages.php:629 loco:57713fd314d7250f728b45bc
+msgid ""
+"The plugin cannot delete itself because of security reason. Please delete it "
+"manually from plugin list after cleanup."
+msgstr ""
+
+#: core/options-pages.php:631 loco:57713fd314d7250f728b45bd
+msgid ""
+"If you are not sure about this operation please create a backup of your "
+"database prior to cleanup!"
+msgstr ""
+
+#: core/options-pages.php:637 loco:57713fd314d7250f728b45be
+msgid "Delete All Data & Deactivate"
+msgstr ""
+
+#: core/options-pages.php:742 loco:57713fd314d7250f728b45bf
+msgid "Please upload a file to import settings."
+msgstr ""
+
+#: core/options-pages.php:762 loco:57713fd314d7250f728b45c0
+msgid "Plugin settings imported."
+msgstr ""
+
+#: core/options-pages.php:809 loco:57713fd314d7250f728b45c1
+msgid "Plugin settings restored from the backup."
+msgstr ""
+
+#: core/options-pages.php:953 loco:57713fd314d7250f728b45c2
+msgid "Media Items Order"
+msgstr ""
+
+#: core/options-pages.php:960 loco:57713fd314d7250f728b45c3
+msgid "Order media items by"
+msgstr ""
+
+#: pro/core/medialist.php:28 pro/core/medialist.php:73
+#: loco:57713fd314d7250f728b45c4
+msgid "Date"
+msgstr ""
+
+#: pro/core/medialist.php:31 pro/core/medialist.php:76
+#: loco:57713fd314d7250f728b45c5
+msgid "Title"
+msgstr ""
+
+#: pro/core/medialist.php:34 pro/core/medialist.php:79
+#: loco:57713fd314d7250f728b45c6
+msgid "Custom Order"
+msgstr ""
+
+#: core/options-pages.php:967 core/options-pages.php:979
+#: loco:57713fd314d7250f728b45c7
+msgid "For media library and media popups"
+msgstr ""
+
+#: core/options-pages.php:968 loco:57713fd314d7250f728b45c8
+msgid "Option allows to change order by drag and drop with Custom Order value."
+msgstr ""
+
+#: core/options-pages.php:973 loco:57713fd314d7250f728b45c9
+msgid "Sort order"
+msgstr ""
+
+#: pro/core/medialist.php:47 pro/core/medialist.php:92
+#: loco:57713fd314d7250f728b45ca
+msgid "Ascending"
+msgstr ""
+
+#: pro/core/medialist.php:50 pro/core/medialist.php:95
+#: loco:57713fd314d7250f728b45cb
+msgid "Descending"
+msgstr ""
+
+#: core/options-pages.php:992 loco:57713fd314d7250f728b45cc
+msgid "Media Shortcodes"
+msgstr ""
+
+#: core/options-pages.php:999 core/options-pages.php:1002
+#: loco:57713fd314d7250f728b45cd
+msgid "Enhanced media shortcodes"
+msgstr ""
+
+#: core/options-pages.php:1003 loco:57713fd314d7250f728b45ce
+msgid ""
+"Enhance WordPress media shortcodes to make them understand media taxonomies, "
+"upload date, and media items number limit"
+msgstr ""
+
+#: core/options-pages.php:1004 loco:57713fd314d7250f728b45cf
+msgid "Gallery example:"
+msgstr ""
+
+#: core/options-pages.php:1005 loco:57713fd314d7250f728b45d0
+msgid "Audio playlist example:"
+msgstr ""
+
+#: core/options-pages.php:1006 loco:57713fd314d7250f728b45d1
+msgid "Video playlist example:"
+msgstr ""
+
+#: core/options-pages.php:1008 loco:57713fd314d7250f728b45d2
+msgid ""
+"%sWarning:%s Incompatibility with other gallery plugins or themes possible!"
+msgstr ""
+
+#: core/options-pages.php:1010 loco:57713fd314d7250f728b45d3
+msgid "%sLearn more%s."
+msgstr ""
+
+#: core/options-pages.php:1012 loco:57713fd314d7250f728b45d4
+msgid ""
+"Please check out your gallery front-end and back-end functionality once this "
+"option activated. If you find an issue please inform plugin authors at %s or "
+"%s."
+msgstr ""
+
+#: core/options-pages.php:1082 core/options-pages.php:1229
+#: loco:57713fd314d7250f728b45d5
+msgid "Assign following taxonomies to Media Library:"
+msgstr "Tilldela följande taxonomier till Mediabiblioteket:"
+
+#: core/options-pages.php:1101 core/options-pages.php:1167
+#: core/options-pages.php:1248 loco:57713fd314d7250f728b45d6
+msgid "Assign Taxonomy"
+msgstr "Tilldela Taxonomi"
+
+#: core/options-pages.php:1102 core/options-pages.php:1249
+#: loco:57713fd314d7250f728b45d7
+msgid "Edit Taxonomy"
+msgstr "Redigera Taxonomi"
+
+#: core/options-pages.php:1106 core/options-pages.php:1169
+#: loco:57713fd314d7250f728b45d8
+msgid "Delete Taxonomy"
+msgstr "Ta Bort Taxonomi"
+
+#: core/options-pages.php:1111 core/options-pages.php:1174
+#: loco:57713fd314d7250f728b45d9
+msgid "Labels"
+msgstr "Etiketter"
+
+#: core/options-pages.php:1113 core/options-pages.php:1176
+#: loco:57713fd314d7250f728b45da
+msgid "Singular"
+msgstr "Singular"
+
+#: core/options-pages.php:1114 core/options-pages.php:1177
+#: loco:57713fd314d7250f728b45db
+msgid "Plural"
+msgstr "Plural"
+
+#: core/options-pages.php:1115 core/options-pages.php:1178
+#: loco:57713fd314d7250f728b45dc
+msgid "Menu Name"
+msgstr "Menynamn"
+
+#: core/options-pages.php:1128 core/options-pages.php:1151
+#: core/options-pages.php:1191 core/options-pages.php:1252
+#: loco:57713fd314d7250f728b45dd
+msgid "Settings"
+msgstr "Inställningar"
+
+#: core/options-pages.php:1130 core/options-pages.php:1193
+#: loco:57713fd314d7250f728b45de
+msgid "Taxonomy Name"
+msgstr "Taxonominamn"
+
+#: core/options-pages.php:1131 core/options-pages.php:1194
+#: loco:57713fd314d7250f728b45df
+msgid "Hierarchical"
+msgstr "Hierarkisk"
+
+#: core/options-pages.php:1132 core/options-pages.php:1195
+#: loco:57713fd314d7250f728b45e0
+msgid "Column for List View"
+msgstr ""
+
+#: core/options-pages.php:1133 core/options-pages.php:1153
+#: core/options-pages.php:1196 core/options-pages.php:1254
+#: loco:57713fd314d7250f728b45e1
+msgid "Filter for List View"
+msgstr ""
+
+#: core/options-pages.php:1134 core/options-pages.php:1154
+#: core/options-pages.php:1197 core/options-pages.php:1255
+#: loco:57713fd314d7250f728b45e2
+msgid "Filter for Grid View / Media Popup"
+msgstr ""
+
+#: core/options-pages.php:1135 core/options-pages.php:1155
+#: core/options-pages.php:1198 core/options-pages.php:1256
+#: loco:57713fd314d7250f728b45e3
+msgid "Edit in Media Popup"
+msgstr "Redigera i Media-popup"
+
+#: core/options-pages.php:1136 core/options-pages.php:1199
+#: loco:57713fd314d7250f728b45e4
+msgid "Show in Nav Menu"
+msgstr "Visa i Nav Menu"
+
+#: core/options-pages.php:1137 core/options-pages.php:1200
+#: loco:57713fd314d7250f728b45e5
+msgid "Remember Terms Order (sort)"
+msgstr ""
+
+#: core/options-pages.php:1138 core/options-pages.php:1201
+#: loco:57713fd314d7250f728b45e6
+msgid "Show in REST"
+msgstr ""
+
+#: core/options-pages.php:1139 core/options-pages.php:1202
+#: loco:57713fd314d7250f728b45e7
+msgid "Rewrite Slug"
+msgstr "Skriv Om Slug"
+
+#: core/options-pages.php:1140 core/options-pages.php:1203
+#: loco:57713fd314d7250f728b45e8
+msgid "Slug with Front"
+msgstr "Slug med Framsida"
+
+#: core/options-pages.php:1215 loco:57713fd314d7250f728b45e9
+msgid "Add New Taxonomy"
+msgstr "Lägg Till Ny Taxonomi"
+
+#: core/options-pages.php:1225 loco:57713fd314d7250f728b45ea
+msgid "Non-Media Taxonomies"
+msgstr "Icke-Media-taxonomier"
+
+#: core/options-pages.php:1286 loco:57713fd314d7250f728b45eb
+msgid "Options"
+msgstr "Alternativ"
+
+#: core/options-pages.php:1296 core/options-pages.php:1299
+#: loco:57713fd314d7250f728b45ec
+msgid "Taxonomy archive pages"
+msgstr "Arkivsidor för Taxonomier"
+
+#: core/options-pages.php:1300 loco:57713fd314d7250f728b45ed
+msgid "Turn on media taxonomy archive pages on the front-end"
+msgstr "Slå på arkivsidor för mediataxonomier i frontend"
+
+#: core/options-pages.php:1301 loco:57713fd314d7250f728b45ee
+msgid ""
+"Re-save your permalink settings after this option change to make it work."
+msgstr ""
+"Återspara inställningarna för permalänkar efter en ändring av detta "
+"alternativ för att få det att fungera."
+
+#: core/options-pages.php:1307 core/options-pages.php:1310
+#: loco:57713fd314d7250f728b45ef
+msgid "Assign all like hierarchical"
+msgstr "Tilldela alla som hierarkiska"
+
+#: core/options-pages.php:1311 loco:57713fd314d7250f728b45f0
+msgid ""
+"Show non-hierarchical taxonomies like hierarchical in Grid View / Media Popup"
+msgstr ""
+"Visa icke-hierarkiska taxonomier som hierarkiska i Rutnätsvy / Media-popup"
+
+#: core/options-pages.php:1317 core/options-pages.php:1320
+#: loco:57713fd314d7250f728b45f1
+msgid "Force filters"
+msgstr "Tvinga filter"
+
+#: core/options-pages.php:1321 loco:57713fd314d7250f728b45f2
+msgid "Show media filters for ANY Media Popup"
+msgstr ""
+
+#: core/options-pages.php:1322 loco:57713fd314d7250f728b45f3
+msgid "Try this if filters are not shown for third-party plugins or themes."
+msgstr ""
+
+#: core/options-pages.php:1393 core/options-pages.php:1396
+#: loco:57713fd314d7250f728b45f4
+msgid "Show count"
+msgstr ""
+
+#: core/options-pages.php:1397 loco:57713fd314d7250f728b45f5
+msgid "Show item count per category for media filters"
+msgstr ""
+
+#: core/options-pages.php:1376 loco:57713fd314d7250f728b45f6
+msgid "Add New MIME Type"
+msgstr "Lägg Till Ny MIME-typ"
+
+#: core/options-pages.php:1394 core/options-pages.php:1449
+#: loco:57713fd314d7250f728b45f7
+msgid "Extension"
+msgstr "Utökning"
+
+#: core/options-pages.php:1395 core/options-pages.php:1450
+#: loco:57713fd314d7250f728b45f8
+msgid "MIME Type"
+msgstr "MIME-typ"
+
+#: core/options-pages.php:1396 core/options-pages.php:1451
+#: loco:57713fd314d7250f728b45f9
+msgid "Singular Label"
+msgstr "Singular-etikett"
+
+#: core/options-pages.php:1397 core/options-pages.php:1452
+#: loco:57713fd314d7250f728b45fa
+msgid "Plural Label"
+msgstr "Plural-etikett"
+
+#: core/options-pages.php:1398 core/options-pages.php:1428
+#: core/options-pages.php:1441 core/options-pages.php:1453
+#: loco:57713fd314d7250f728b45fb
+msgid "Add Filter"
+msgstr "Lägg Till Filter"
+
+#: core/options-pages.php:1399 core/options-pages.php:1429
+#: core/options-pages.php:1442 core/options-pages.php:1454
+#: loco:57713fd314d7250f728b45fc
+msgid "Allow Upload"
+msgstr "Tillåt Uppladdning"
+
+#: core/options-pages.php:1443 loco:57713fd314d7250f728b45fd
+msgid "Delete MIME Type"
+msgstr "Ta Bort MIME-typ"
+
+#: core/options-pages.php:1460 loco:57713fd314d7250f728b45fe
+msgid "Restore WordPress default MIME Types"
+msgstr ""
+
+#: core/options-pages.php:1462 pro/enhanced-media-library-pro.php:124
+#: loco:57713fd314d7250f728b45ff
+msgid "Save Changes"
+msgstr "Spara Ändringar"
+
+#: core/options-pages.php:1499 loco:57713fd314d7250f728b4600
+msgid "Changelog"
+msgstr ""
+
+#: core/options-pages.php:1500 loco:57713fd314d7250f728b4601
+msgid "What's new in"
+msgstr ""
+
+#: core/options-pages.php:1500 loco:57713fd314d7250f728b4602
+msgid "version"
+msgstr ""
+
+#: core/options-pages.php:1503 loco:57713fd314d7250f728b4603
+msgid "More features under the hood"
+msgstr ""
+
+#: core/options-pages.php:1505 loco:57713fd314d7250f728b4604
+msgid "Support"
+msgstr ""
+
+#: core/options-pages.php:1506 loco:57713fd314d7250f728b4605
+msgid "Feel free to ask for help on"
+msgstr ""
+
+#: core/options-pages.php:1506 loco:57713fd314d7250f728b4606
+msgid "Support is free for both versions of the plugin."
+msgstr ""
+
+#: core/options-pages.php:1508 loco:57713fd314d7250f728b4607
+msgid "Plugin rating"
+msgstr ""
+
+#: core/options-pages.php:1509 loco:57713fd314d7250f728b4608
+msgid "Please"
+msgstr ""
+
+#: core/options-pages.php:1509 loco:57713fd314d7250f728b4609
+msgid "vote for the plugin"
+msgstr ""
+
+#: core/options-pages.php:1509 loco:57713fd314d7250f728b460a
+msgid "Thanks!"
+msgstr ""
+
+#: core/options-pages.php:1511 loco:57713fd314d7250f728b460b
+msgid "Other plugins you may find useful"
+msgstr ""
+
+#: core/options-pages.php:1550 loco:57713fd314d7250f728b460c
+msgid "Utility"
+msgstr ""
+
+#: core/options-pages.php:1571 loco:57713fd314d7250f728b460d
+msgid "Vote!"
+msgstr ""
+
+#: core/taxonomies.php:101 loco:57713fd314d7250f728b460e
+msgid "Media Taxonomies settings saved."
+msgstr ""
+
+#: core/taxonomies.php:159 loco:57713fd314d7250f728b460f
+msgid "Media Library settings saved."
+msgstr ""
+
+#: core/taxonomies.php:358 core/taxonomies.php:364
+#: enhanced-media-library.php:489 loco:57713fd314d7250f728b4610
+msgid "Filter by"
+msgstr "Filtrera efter"
+
+#: core/taxonomies.php:366 enhanced-media-library.php:491
+#: loco:57713fd314d7250f728b4611
+msgid "Not in"
+msgstr "Ej i"
+
+#: enhanced-media-library.php:331 enhanced-media-library.php:488
+#: loco:57713fd314d7250f728b4612
+msgid "All Uncategorized"
+msgstr "Alla Okategoriserade"
+
+#: enhanced-media-library.php:332 enhanced-media-library.php:492
+#: loco:57713fd314d7250f728b4613
+msgid "Reset All Filters"
+msgstr "Återställ alla filter"
+
+#: enhanced-media-library.php:523 loco:57713fd314d7250f728b4614
+msgid "Uploaded to post #"
+msgstr ""
+
+#: enhanced-media-library.php:524 loco:57713fd314d7250f728b4615
+msgid "Based On"
+msgstr ""
+
+#: enhanced-media-library.php:569 enhanced-media-library.php:571
+#: loco:57713fd314d7250f728b4616
+msgid "Media Categories"
+msgstr ""
+
+#: enhanced-media-library.php:570 loco:57713fd314d7250f728b4617
+msgid "Media Category"
+msgstr ""
+
+#: enhanced-media-library.php:572 loco:57713fd314d7250f728b4618
+msgid "All Media Categories"
+msgstr ""
+
+#: enhanced-media-library.php:573 loco:57713fd314d7250f728b4619
+msgid "Edit Media Category"
+msgstr ""
+
+#: enhanced-media-library.php:574 loco:57713fd314d7250f728b461a
+msgid "View Media Category"
+msgstr ""
+
+#: enhanced-media-library.php:575 loco:57713fd314d7250f728b461b
+msgid "Update Media Category"
+msgstr ""
+
+#: enhanced-media-library.php:576 loco:57713fd314d7250f728b461c
+msgid "Add New Media Category"
+msgstr ""
+
+#: enhanced-media-library.php:577 loco:57713fd314d7250f728b461d
+msgid "New Media Category Name"
+msgstr ""
+
+#: enhanced-media-library.php:578 loco:57713fd314d7250f728b461e
+msgid "Parent Media Category"
+msgstr ""
+
+#: enhanced-media-library.php:579 loco:57713fd314d7250f728b461f
+msgid "Parent Media Category:"
+msgstr ""
+
+#: enhanced-media-library.php:580 loco:57713fd314d7250f728b4620
+msgid "Search Media Categories"
+msgstr ""
+
+#: pro/core/bulk-edit.php:51 pro/core/bulk-edit.php:58
+#: loco:57713fd314d7250f728b4621
+msgid "Remove"
+msgstr "Ta Bort"
+
+#: pro/core/bulk-edit.php:53 pro/core/bulk-edit.php:60
+#: loco:57713fd314d7250f728b4622
+msgid "Deselect"
+msgstr "Avmarkera"
+
+#: pro/core/bulk-edit.php:105 loco:57713fd314d7250f728b4623
+msgid "Caption this image&hellip;"
+msgstr "Rubricera denna bild&hellip;"
+
+#: pro/core/bulk-edit.php:109 loco:57713fd314d7250f728b4624
+msgid "Describe this video&hellip;"
+msgstr "Beskriv denna video&hellip;"
+
+#: pro/core/bulk-edit.php:111 loco:57713fd314d7250f728b4625
+msgid "Describe this audio file&hellip;"
+msgstr "Beskriv denna audiofil&hellip;"
+
+#: pro/core/bulk-edit.php:113 loco:57713fd314d7250f728b4626
+msgid "Describe this media file&hellip;"
+msgstr "Beskriv denna mediafil&hellip;"
+
+#: pro/core/bulk-edit.php:122 loco:57713fd314d7250f728b4627
+msgid "Attachments Details"
+msgstr "Detaljer För Bilaga"
+
+#: pro/core/bulk-edit.php:175 pro/core/bulk-edit.php:180
+#: loco:57713fd314d7250f728b4628
+msgid "Select All"
+msgstr "Välj Alla"
+
+#: pro/core/bulk-edit.php:177 pro/core/bulk-edit.php:182
+#: loco:57713fd314d7250f728b4629
+msgid "Deselect All"
+msgstr "Avmarkera Alla"
+
+#: pro/core/bulk-edit.php:178 pro/core/bulk-edit.php:183
+#: loco:57713fd314d7250f728b462a
+msgid "Delete Selected"
+msgstr "Ta Bort Valda"
+
+#: pro/core/bulk-edit.php:178 loco:57713fd314d7250f728b462b
+msgid "Trash Selected"
+msgstr ""
+
+#: pro/core/bulk-edit.php:179 loco:57713fd314d7250f728b462c
+msgid "Restore Selected"
+msgstr ""
+
+#: pro/core/bulk-edit.php:180 pro/enhanced-media-library-pro.php:130
+#: loco:57713fd314d7250f728b462d
+msgid "Delete Selected Permanently"
+msgstr ""
+
+#: pro/core/medialist.php:24 pro/core/medialist.php:69
+#: loco:57713fd314d7250f728b462e
+msgid "Order By"
+msgstr ""
+
+#: pro/core/medialist.php:37 pro/core/medialist.php:82
+#: loco:57713fd314d7250f728b462f
+msgid "Random"
+msgstr ""
+
+#: pro/core/medialist.php:43 pro/core/medialist.php:88
+#: loco:57713fd314d7250f728b4630
+msgid "Order"
+msgstr ""
+
+#: pro/core/medialist.php:60 pro/core/medialist.php:101
+#: loco:57713fd314d7250f728b4631
+msgid "Limit"
+msgstr ""
+
+#: pro/core/options-pages.php:78 loco:57713fd314d7250f728b4632
+msgid "Your license has been deactivated."
+msgstr ""
+
+#: pro/core/options-pages.php:88 loco:57713fd314d7250f728b4633
+msgid "Please check if your license key is correct and try again."
+msgstr ""
+
+#: pro/core/options-pages.php:101 loco:57713fd314d7250f728b4634
+msgid ""
+"Wrong license key or a server error occured. Please check your license key "
+"and try again."
+msgstr ""
+
+#: pro/core/options-pages.php:111 loco:57713fd314d7250f728b4635
+msgid "You license has been activated."
+msgstr ""
+
+#: pro/core/options-pages.php:164 loco:57713fd314d7250f728b4636
+msgid "Auto-assign media items to parent %s %s on upload"
+msgstr ""
+
+#: pro/core/options-pages.php:165 loco:57713fd314d7250f728b4637
+msgid ""
+"%sWarning:%s As a result of clicking \"Synchronize Now\" all media items "
+"attached to a %s will be assigned to %s of their parent %s. Currently "
+"assigned %s will not be saved. Media items that are not attached to any %s "
+"will not be affected."
+msgstr ""
+
+#: pro/core/options-pages.php:188 pro/enhanced-media-library-pro.php:127
+#: loco:57713fd314d7250f728b4638
+msgid "Bulk Edit"
+msgstr "Bulkredigering"
+
+#: pro/core/options-pages.php:196 pro/core/options-pages.php:199
+#: loco:57713fd314d7250f728b4639
+msgid "Turn off 'Save Changes' button"
+msgstr "Stäng av knappen 'Spara Ändringar'"
+
+#: pro/core/options-pages.php:200 loco:57713fd314d7250f728b463a
+msgid "Save changes on the fly"
+msgstr "Spara ändringar direkt"
+
+#: pro/core/options-pages.php:201 loco:57713fd314d7250f728b463b
+msgid ""
+"Any click on a taxonomy checkbox during media files bulk editing will lead "
+"to an <strong style=\"color:red\">immediate saving</strong> of the data. "
+"Please, be careful! You have much greater chance to <strong style=\"color:red"
+"\">accidentally perform wrong re-assigning</strong> of a lot of your media "
+"files / taxonomies with this option turned on."
+msgstr ""
+
+#: pro/core/options-pages.php:202 loco:57713fd314d7250f728b463c
+msgid ""
+"Strongly NOT recommended option if you work with more than hundred of files "
+"at a time."
+msgstr ""
+"Detta alternativ rekommenderas INTE om du arbetar med fler än hundra filer "
+"åt gången."
+
+#: pro/core/options-pages.php:241 pro/core/options-pages.php:259
+#: loco:57713fd314d7250f728b463d
+msgid "License Key"
+msgstr "Licensnyckel"
+
+#: pro/core/options-pages.php:252 loco:57713fd314d7250f728b463e
+msgid ""
+"To unlock updates please enter your license key below. You can get your "
+"license key in <a href=\"%s\">Your Account</a>. If you do not have a "
+"license, you are welcome to <a href=\"%s\">purchase it</a>."
+msgstr ""
+
+#: pro/core/options-pages.php:262 loco:57713fd314d7250f728b463f
+msgid "Activate License"
+msgstr "Aktivera Licens"
+
+#: pro/core/options-pages.php:269 loco:57713fd314d7250f728b4640
+msgid "Your license is active!"
+msgstr "Din licens är aktiv!"
+
+#: pro/core/options-pages.php:273 loco:57713fd314d7250f728b4641
+msgid "Deactivate License"
+msgstr ""
+
+#: pro/core/update.php:113 pro/core/update.php:119 pro/core/update.php:125
+#: loco:57713fd314d7250f728b4642
+msgid ""
+"An unexpected error occurred. Something may be wrong with WordPress.org or "
+"this server&#8217;s configuration. If you continue to have problems, please "
+"try the <a href=\"https://wordpress.org/support/\">support forums</a>."
+msgstr ""
+"Ett oväntat fel uppstod. Någonting kanske är fel på WordPress.org eller med "
+"denna servers konfigurering. Om du fortsätter att stöta på problem, var god "
+"prova <a href=\"https://wordpress.org/support/\">WordPress supportforum</a>."
+
+#: pro/core/update.php:113 loco:57713fd314d7250f728b4643
+msgid ""
+"(WordPress could not establish a secure connection to WordPress.org. Please "
+"contact your server administrator.)"
+msgstr ""
+"(WordPress kunde inte etablera en säker uppkoppling till WordPress.org. Var "
+"god kontakta din serveradministratör)"
+
+#: pro/core/update.php:180 loco:57713fd314d7250f728b4644
+msgid ""
+"To unlock updates, please <a href=\"%s\">activate your license</a>. You can "
+"get your license key in <a href=\"%s\">Your Account</a>. If you do not have "
+"a license, you are welcome to <a href=\"%s\">purchase it</a>."
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:119 loco:57713fd314d7250f728b4645
+msgid "ALL files belong to this item"
+msgstr "ALLA filer tillhör detta objekt"
+
+#: pro/enhanced-media-library-pro.php:120 loco:57713fd314d7250f728b4646
+msgid "SOME files belong to this item"
+msgstr "NÅGRA filer tillhör detta objekt"
+
+#: pro/enhanced-media-library-pro.php:121 loco:57713fd314d7250f728b4647
+msgid "NO files belong to this item"
+msgstr "INGA filer tillhör detta objekt"
+
+#: pro/enhanced-media-library-pro.php:122 loco:57713fd314d7250f728b4648
+msgid "Changes saved."
+msgstr "Ändringar sparade."
+
+#: pro/enhanced-media-library-pro.php:123 loco:57713fd314d7250f728b4649
+msgid "Something went wrong."
+msgstr "Någonting gick fel."
+
+#: pro/enhanced-media-library-pro.php:126 loco:57713fd314d7250f728b464a
+msgid "Edit Media Files"
+msgstr "Redigera Mediafiler"
+
+#: pro/enhanced-media-library-pro.php:129 loco:57713fd314d7250f728b464b
+msgid "Selecting"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:131 loco:57713fd314d7250f728b464c
+msgid "You are about to permanently delete all selected items."
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:132 loco:57713fd314d7250f728b464d
+msgid "Delete"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:134 loco:57713fd314d7250f728b464e
+msgid "Moving to Trash"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:135 loco:57713fd314d7250f728b464f
+msgid "Restoring"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:136 loco:57713fd314d7250f728b4650
+msgid "Deleting"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:151 loco:57713fd314d7250f728b4651
+msgid "Create a filter-based gallery"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:152 loco:57713fd314d7250f728b4652
+msgid "Create a filter-based playlist"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:153 loco:57713fd314d7250f728b4653
+msgid "Create a filter-based video playlist"
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:231 loco:57713fd314d7250f728b4654
+msgid ""
+"Please deactivate and <strong>remove</strong> the old FREE version prior to "
+"the <strong>Enhanced Media Library PRO</strong> activation. All your data "
+"will remain intact."
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:231 loco:57713fd314d7250f728b4655
+msgid "Return to Plugins"
+msgstr "Återgå till Tillägg"
+
+#: pro/enhanced-media-library-pro.php:282 loco:57713fd314d7250f728b4656
+msgid ""
+"Both FREE and PRO versions of the Enhanced Media Library are network active. "
+"<strong>Enhanced Media Library PRO</strong> does not require free version to "
+"be active. Please network deactivate and delete the free versions of the "
+"plugin. All your data will remain intact."
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:299 loco:57713fd314d7250f728b4657
+msgid ""
+"<strong>Enhanced Media Library PRO</strong> does not require free version to "
+"be active. Please deactivate and delete the free version of the plugin. All "
+"your data will remain intact."
+msgstr ""
+
+#: pro/enhanced-media-library-pro.php:315 loco:57713fd314d7250f728b4658
+msgid ""
+"Both FREE and PRO versions of the Enhanced Media Library are active for this "
+"site. <strong>Enhanced Media Library PRO</strong> does not require free "
+"version to be active. Please deactivate (or network deactivate) and delete "
+"the free version of the plugin for this site. All your data will remail "
+"intact."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: loco:57713fd314d7250f728b4659
+msgid "Enhanced Media Library PRO"
+msgstr "Enhanced Media Library PRO"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+#: loco:57713fd314d7250f728b465a
+msgid "http://wpUXsolutions.com"
+msgstr ""
+
+#. Description of the plugin/theme
+#: loco:57713fd314d7250f728b465b
+msgid ""
+"This plugin will be handy for those who need to manage a lot of media files."
+msgstr ""
+"Detta är ett praktiskt tillägg för de som behöver hantera många mediafiler."
+
+#. Author of the plugin/theme
+#: loco:57713fd314d7250f728b465c
+msgid "wpUXsolutions"
+msgstr ""

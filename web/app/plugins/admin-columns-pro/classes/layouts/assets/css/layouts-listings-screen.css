@@ -1,0 +1,21 @@
+form.layout-switcher {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 4px 6px 4px 10px;
+  border-radius: 4px; }
+  form.layout-switcher .label {
+    display: inline-block;
+    font-size: 13px;
+    height: 28px;
+    line-height: 29px;
+    vertical-align: top;
+    color: #5d6a78;
+    font-weight: bold; }
+  form.layout-switcher select,
+  form.layout-switcher input.button {
+    vertical-align: top; }
+  form.layout-switcher input.button {
+    margin-left: -2px; }
+  form.layout-switcher.loading .spinner {
+    margin-left: 6px;
+    visibility: visible; }

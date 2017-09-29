@@ -1,0 +1,376 @@
+
+/* == EML Grid == */
+
+body.upload-php.eml-grid #wpfooter {
+    margin: 0;
+    left: auto;
+    position: absolute !important;
+}
+body.upload-php.eml-grid #wpfooter #footer-left {
+    display: none;
+}
+
+body.upload-php.eml-grid #wpbody  {
+    height: 100%;
+}
+
+body.upload-php.eml-grid #wpbody-content {
+    padding: 0;
+    float: none;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 32px;
+    bottom: 0;
+    left: 180px;
+    right: 0;
+}
+
+body.upload-php.eml-grid #wpbody-content > .wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.media-frame.mode-eml-grid {
+    top: 60px;
+    z-index: 10;
+}
+.media-frame.mode-eml-grid .media-frame-title,
+.media-frame.mode-eml-grid .media-frame-menu {
+    display: none;
+}
+.media-frame.mode-eml-grid .media-frame-content {
+    top: 0;
+    border: none;
+    background: none;
+    overflow: hidden;
+}
+.media-frame.mode-eml-grid .attachments-browser {
+    position: absolute;
+    left: 0;
+    top: 71px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    overflow: visible;
+}
+.media-frame.mode-eml-grid .attachments-browser .media-toolbar {
+    position: absolute;
+    top: -81px;
+    width: 100%;
+    margin-right: 0;
+}
+.media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter select {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+}
+.media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter .search-form input[type="search"] {
+    font-size: 16px;
+}
+.media-frame.mode-eml-grid .attachments-browser .attachments,
+.media-frame.mode-eml-grid .attachments-browser .uploader-inline {
+    top: 0;
+}
+.media-frame.mode-eml-grid .attachments-browser .attachments {
+    padding: 8px;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.media-frame.mode-eml-grid .media-selection {
+    padding: 0;
+}
+.media-frame.mode-eml-grid .attachments-browser .uploader-inline {
+    position: relative;
+    top: 10px;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    padding-top: 0;
+    margin: 0 312px 0 12px;
+    border: 4px dashed #bbb;
+}
+.media-frame.mode-eml-grid .uploader-inline-content {
+    position: static;
+    margin-top: 30px;
+}
+.media-frame.mode-eml-grid .attachments-browser .no-media {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 40px 0 0;
+    margin: 0 300px 0 0;
+    color: #777;
+}
+
+
+.media-frame.mode-eml-bulk-edit .attachments-browser .media-toolbar {
+    height: 40px;
+}
+.media-frame.mode-eml-bulk-edit .attachments-browser .media-toolbar-secondary {
+    position: static;
+}
+
+
+.media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter .media-toolbar-primary,
+.media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter .media-toolbar-secondary {
+    float: left;
+}
+
+
+@media only screen and (max-width: 940px) {
+
+    body.upload-php.eml-grid #wpbody-content {
+        float: left;
+        width: 100%;
+        position: static;
+    }
+
+    .media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter .search-form input[type="search"] {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter .media-toolbar-primary,
+    .media-frame.mode-eml-grid .attachments-browser .media-toolbar.wp-filter .media-toolbar-secondary {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+
+
+/* == Sidebar :: Attachments Details == */
+
+.media-frame .attachments-detail {
+    position: relative;
+    overflow: auto;
+}
+
+
+
+/* == Sidebar :: Gallery Settings == */
+
+body.eml-media-css .media-sidebar .setting.limit input {
+    float: none;
+    width: 50px;
+    max-width: 65%;
+    padding: 5px 6px 4px 6px;
+    margin-top: 3px;
+    line-height: 12px;
+}
+
+
+
+/* == Bulk Edit Save Changes Button == */
+
+.media-frame .media-frame-toolbar .media-toolbar-primary {
+    position: relative;
+    width: auto;
+}
+.media-frame.mode-eml-grid .media-frame-toolbar .media-toolbar-primary {
+    margin-right: 70px;
+}
+.media-frame .media-frame-toolbar .eml-button-bulk-save-changes,
+.media-toolbar-primary > .media-button,
+.media-toolbar-primary > .media-button-group {
+    float: right;
+}
+.media-frame .media-frame-toolbar #eml-bulk-save-changes-spinner {
+    display: inline-block;
+    float: right;
+    margin-top: 19px;
+}
+.media-frame .media-frame-toolbar #eml-bulk-save-changes-failure,
+.media-frame .media-frame-toolbar #eml-bulk-save-changes-success {
+    white-space: nowrap;
+    float: right;
+    margin: 10px 5px 0 0;
+    display: none;
+}
+
+
+
+
+/* == EML Upload Bulk Edit == */
+
+.media-frame.mode-eml-bulk-edit .attachments-browser .attachments {
+    top: 10px;
+}
+
+
+
+/* == Media Uploader Bulk Edit Button == */
+
+.eml-bulk-edit-button-container {
+    margin: 20px 0;
+}
+
+
+
+/* == Single Attachment Inline Toolbar == */
+
+.eml-attacment-inline-toolbar {
+    position: absolute;
+    z-index: 10;
+    left: 7px;
+    top: 7px;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+
+    visibility: hidden;
+    opacity: 0;
+}
+.js--select-attachment:hover .eml-attacment-inline-toolbar {
+    visibility: visible;
+    opacity: 1;
+}
+.eml-attacment-inline-toolbar i {
+    margin: 0 5px 0 0;
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    background-color: #000;
+    background-color: rgba(0,0,0,0.9);
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    line-height: 24px;
+}
+.eml-attacment-inline-toolbar i:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    background-color: #000;
+    color: #2ea2cc;
+}
+
+
+
+
+/* == Media Selection == */
+
+body.eml-media-css .media-selection {
+    right: 320px;
+}
+body.eml-media-css .media-selection:after {
+    background-image: none;
+}
+
+body.eml-media-css .media-selection.empty {
+    display: block;
+}
+
+body.eml-media-css .media-selection .button-link {
+    border-right: 0;
+    border-left: 1px solid #ddd;
+}
+body.eml-media-css .media-selection .button-link:first-of-type {
+    border-left: 0;
+}
+
+body.eml-media-css .media-selection .select,
+body.eml-media-css .media-selection .restore,
+body.eml-media-css .media-selection .delete-permanently {
+    display: none;
+}
+
+body.eml-media-css .media-selection.empty .select {
+    display: block;
+}
+
+body.eml-media-css .media-selection.empty .delete,
+body.eml-media-css .media-selection.empty .trash,
+body.eml-media-css .media-selection.empty .deselect,
+body.eml-media-css .media-selection.empty .restore,
+body.eml-media-css .media-selection.empty .delete-permanently {
+    display: none;
+}
+
+body.eml-media-css .media-selection.trash .delete,
+body.eml-media-css .media-selection.trash .trash {
+    display: none;
+}
+
+body.eml-media-css .media-selection.trash .restore,
+body.eml-media-css .media-selection.trash .delete-permanently {
+    display: block;
+}
+
+body.eml-media-css .media-selection.trash.empty .restore,
+body.eml-media-css .media-selection.trash.empty .delete-permanently {
+    display: none;
+}
+
+body.eml-media-css .media-selection .delete,
+body.eml-media-css .media-selection .trash,
+body.eml-media-css .media-selection .delete-permanently  {
+    color: red;
+}
+body.eml-media-css .media-selection .delete:hover,
+body.eml-media-css .media-selection .trash:hover,
+body.eml-media-css .media-selection .delete-permanently:hover {
+    background: red;
+    color: #fff;
+}
+body.eml-media-css .media-selection .deselect {
+    color: #21759B;
+}
+body.eml-media-css .media-selection .deselect:hover {
+    background: #21759B;
+    color: #fff;
+}
+
+
+
+
+/* == EML Settings Page Styles == */
+
+#wpuxss-eml-form-updates .postbox h4 {
+    padding: 0;
+    margin: 0;
+}
+#wpuxss-eml-form-updates #wpuxss_eml_pro_license_key {
+    width: 100%;
+}
+
+#wpuxss-eml-global-options-wrap p.submit {
+    margin-top: 10px;
+
+}
+
+
+
+
+/* == Admin Notice Styles == */
+
+div.updated.eml-admin-notice {
+    border-left: 4px solid #ffba00;
+}
+body.eml-grid #update-nag,
+body.eml-grid .update-nag {
+    margin: 15px 20px 0 220px;
+}
+body.eml-grid .notice,
+body.eml-grid div.updated,
+body.eml-grid div.error {
+    z-index: 20;
+    position: relative;
+}

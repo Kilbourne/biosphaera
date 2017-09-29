@@ -1,0 +1,35 @@
+form.layout-switcher {
+	display: inline-block;
+	margin-left: 20px;
+	padding: 4px 6px 4px 10px;
+	border-radius: 4px;
+
+	//border: 1px solid lighten( #808080, 40 );
+	//background: lighten( #808080, 48 );
+
+	.label {
+		display: inline-block;
+		font-size: 13px;
+		height: 28px;
+		line-height: 29px;
+		vertical-align: top;
+		color: lighten( #23282d, 26 );
+		font-weight: bold;
+	}
+
+	select,
+	input.button {
+		vertical-align: top;
+	}
+	input.button {
+		margin-left: -2px;
+	}
+
+	&.loading {
+		.spinner {
+			margin-left: 6px;
+			visibility: visible;
+		}
+	}
+}
+

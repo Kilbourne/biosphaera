@@ -1,0 +1,27 @@
+{% set count = 0 %}
+{% for issue in data.issues if (options.limit > 0 and count < options.limit) %}
+	<h3>
+		{{ strings.title }}
+	</h3>
+
+	<div>
+		<div>
+			<ul class="wpml-status-list wpml-plugins-status-list">
+				{% for requirement in issue.requirements %}
+					<li>
+						{% if requirement.missing %}
+						<i class="otgs-ico-warning"></i>
+						{% else %}
+						<i class="otgs-ico-ok"></i>
+						{% endif %}
+						{{ requirement.name }}
+						{% if requirement.missing %}
+						 (<a href="{{ shared.install_link }}">{{ strings.install }}</a> | <a href="{{ requirement.url }}" target="_blank">{{ strings.download }}</a>)
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	{% set count = loop.index %}
+{% endfor %}

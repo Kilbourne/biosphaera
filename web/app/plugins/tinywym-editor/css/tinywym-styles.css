@@ -1,0 +1,430 @@
+/**
+ * Adds labels and styles to highlight all common elements in the editor.
+ */
+
+/* Base Editor Styles
+==================================================== */
+.tiny-wym body {
+	background: #f4f4f4;
+	font-size: 16px;
+}
+
+.tiny-wym div {
+	-moz-box-sizing: border-box;
+	box-sizing:      border-box;
+}
+
+.tiny-wym img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Block Element Labels
+==================================================== */
+.tiny-wym p::before,
+.tiny-wym h1::before,
+.tiny-wym h2::before,
+.tiny-wym h3::before,
+.tiny-wym h4::before,
+.tiny-wym h5::before,
+.tiny-wym h6::before,
+.tiny-wym blockquote::before,
+.tiny-wym dl::before,
+.tiny-wym ol::before,
+.tiny-wym ul::before,
+.tiny-wym pre::before,
+.tiny-wym address::before,
+.tiny-wym div::before,
+.tiny-wym table::before,
+.tiny-wym section::before {
+	background: #444;
+	color: #fff;
+	font-size: 12px;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 1.3;
+	padding: 2px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.tiny-wym p::before {
+	content: "<p>";
+}
+
+.tiny-wym h1::before {
+	content: "<h1>";
+}
+
+.tiny-wym h2::before {
+	content: "<h2>";
+}
+
+.tiny-wym h3::before {
+	content: "<h3>";
+}
+
+.tiny-wym h4::before {
+	content: "<h4>";
+}
+
+.tiny-wym h5::before {
+	content: "<h5>";
+}
+
+.tiny-wym h6::before {
+	content: "<h6>";
+}
+
+.tiny-wym blockquote::before {
+	content: "<blockquote>";
+}
+
+.tiny-wym dl::before {
+	content: "<dl>";
+}
+
+.tiny-wym ol::before {
+	content: "<ol>";
+}
+
+.tiny-wym ul::before {
+	content: "<ul>";
+}
+
+.tiny-wym pre::before {
+	content: "<pre>";
+}
+
+.tiny-wym address::before {
+	content: "<address>";
+}
+
+.tiny-wym div::before {
+	content: "<div>";
+	top: 3px;
+	left: 3px;
+}
+
+.tiny-wym table::before {
+	content: "<table>";
+}
+
+.tiny-wym section::before {
+	content: "<section>";
+	top: 3px;
+	left: 3px;
+}
+
+/* Block Element Styles
+==================================================== */
+.tiny-wym p,
+.tiny-wym h1,
+.tiny-wym h2,
+.tiny-wym h3,
+.tiny-wym h4,
+.tiny-wym h5,
+.tiny-wym h6,
+.tiny-wym blockquote,
+.tiny-wym dl,
+.tiny-wym ol,
+.tiny-wym ul,
+.tiny-wym pre,
+.tiny-wym address,
+.tiny-wym div,
+.tiny-wym table,
+.tiny-wym section {
+	background: #fff;
+	border: 1px solid #DDD;
+	margin: 15px 0;
+	overflow: hidden;
+	padding: 24px 6px 3px;
+	position: relative;
+}
+
+/* Individual Block Element Styles */
+.tiny-wym div,
+.tiny-wym section {
+	background: transparent;
+	border: 3px dashed #BBB;
+	margin-bottom: 15px; 
+	padding: 20px 6px 3px;
+	overflow: hidden;
+}
+
+.tiny-wym p {
+	line-height: 2;
+}
+
+.tiny-wym blockquote p {
+	margin-top: 5px;
+}
+
+.tiny-wym ol,
+.tiny-wym ul {
+	list-style-position: inside;
+	margin: 3px 0;
+	padding-left: 30px;
+}
+
+.tiny-wym li {
+	margin: 3px 0;
+}
+
+.tiny-wym table {
+	border-collapse: initial;
+}
+
+.tiny-wym dd,
+.tiny-wym dt {
+	border: 1px solid #DDD;
+	margin-bottom: 4px;
+	padding: 2px 10px;
+}
+
+.tiny-wym hr {
+	background: #AAA;
+	border: none;
+	padding: 4px;
+}
+
+/* Inline Element Styles
+==================================================== */
+.tiny-wym strong,
+.tiny-wym b,
+.tiny-wym em,
+.tiny-wym i,
+.tiny-wym a,
+.tiny-wym span,
+.tiny-wym del,
+.tiny-wym code,
+.tiny-wym ins,
+.tiny-wym kbd,
+.tiny-wym q,
+.tiny-wym abbr,
+.tiny-wym acronym,
+.tiny-wym big,
+.tiny-wym cite,
+.tiny-wym strike,
+.tiny-wym s,
+.tiny-wym sub,
+.tiny-wym sup,
+.tiny-wym tt,
+.tiny-wym var,
+.tiny-wym u,
+.tiny-wym small {
+	background: #FAFAFA;
+	border: 2px dotted #C4C4C4;
+	padding: 1px 5px;
+}
+
+/* Individual Inline Element Styles */
+.tiny-wym td {
+	padding: 5px;
+}
+
+/* Style Fixes for Wordpress Things
+==================================================== */
+
+/* Gallery and Other Embeds ======================== */
+
+/* Remove unnecessary margins inside gallery and embeds div */
+.tiny-wym div.wpview-wrap div {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Undo lableling */
+.tiny-wym div.wpview-wrap::before,
+.tiny-wym div.wpview-wrap *::before {
+	content: "";
+	display: none;
+}
+
+/* Leave a little padding */
+.tiny-wym div.wpview-wrap {
+	padding: 10px;
+}
+
+/* Undo tiny-wym styling of dl inside gallery */
+.tiny-wym div.wpview-wrap dl {
+	background: transparent;
+	border: none;
+	padding-top: 6px;
+}
+
+.tiny-wym .gallery dt,
+.tiny-wym .gallery dd {
+	border-color: #CCC;
+}
+
+/* Hide WP's empty paragraphs at begining and end of gallery/videos */
+.tiny-wym p.wpview-selection-before,
+.tiny-wym p.wpview-selection-after {
+	display: none;
+}
+
+/* Unstyle spans on video embeds */
+.tiny-wym span.mce-shim,
+.tiny-wym span.wpview-end {
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
+/* Images & Captions =============================== */
+.tiny-wym img {
+	margin: 5px 0;
+}
+
+.tiny-wym img.alignleft {
+	margin-right: 10px;
+}
+
+.tiny-wym img.alignright {
+	margin-left: 10px;
+}
+
+.tiny-wym img.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Remove margin for images inside links */
+.tiny-wym a > img,
+.tiny-wym a > img.alignleft,
+.tiny-wym a > img.alignright {
+	margin: 0;
+}
+
+/* Undo labeling for tinyMCE and WP things */
+.tiny-wym .mce-resizehandle::before,
+.tiny-wym div.mceTemp::before,
+.tiny-wym dl.wp-caption::before {
+	content: "";
+	display: none;
+}
+
+.tiny-wym .mce-resizehandle {
+	-moz-box-sizing: content-box;
+	box-sizing:      content-box;
+}
+
+/* Undo tinyWYM styles for mceTemp divs */
+.tiny-wym div.mceTemp {
+	border: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+/* Keep tinyWYM styles for captions */
+.tiny-wym .wp-caption {
+	background: #fff;
+	border-color: #F4F4F4;
+	box-shadow: 1px 1px #DDD inset, -1px -1px #DDD inset;
+	-moz-box-sizing: border-box;
+	box-sizing:      border-box;
+	margin: 0 0 5px;
+	max-width: 100%;
+	padding: 5px;
+}
+
+/* Caption image alignment */
+.tiny-wym .wp-caption.alignleft {
+	border-right: 10px solid #F4F4F4;
+	margin-right: 0;
+}
+ 
+.tiny-wym .wp-caption.alignright {
+	border-left: 10px solid #F4F4F4;
+	margin-left: 0;
+}
+
+.tiny-wym .wp-caption.aligncenter {
+	margin: 0 auto;
+}
+
+/* Keep space between image and caption */
+.tiny-wym .wp-caption-dt {
+	border: 0;
+	padding: 0;
+}
+
+/* Hide bogus break in caption image link on Firefox */
+.wp-caption-dt br {
+	display: none;
+}
+
+/* Styles for actual caption */
+.tiny-wym .wp-caption-dd {
+	border: 0;
+	margin: 0;
+	padding: 2px 5px;
+}
+
+/* Style images and links around images inside captions */
+.tiny-wym .wp-caption-dt a {
+	display: block;
+	margin: 0;
+	padding: 3px;
+}
+
+.tiny-wym .wp-caption-dt img {
+	display: block;
+	margin: 0;
+	height: auto;
+	width: 100%;
+}
+
+/* Alignment etc. for images inside links */
+.tiny-wym a[data-wym-align] {
+	display: block;
+	padding: 4px;
+	text-decoration: none;
+}
+
+.tiny-wym a[data-wym-align] img {
+	display: block;
+}
+
+.tiny-wym a[data-wym-align="alignleft"] {
+	float: left;
+	margin-right: 10px;
+}
+
+.tiny-wym a[data-wym-align="alignright"] {
+	float: right;
+	margin-left: 10px;
+}
+
+.tiny-wym a[data-wym-align="aligncenter"] {
+	float: none;
+}
+
+.tiny-wym a[data-wym-align="aligncenter"] img {
+	margin: 0 auto;
+}
+
+.tiny-wym a[data-wym-align="alignnone"] {
+	display: inline-block;
+}
+
+/* Fix or Adjust tinyMCE Default Sytles */
+.tiny-wym #_mce_caret {
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
+.tiny-wym .mce-resize-helper {
+	padding-top: 4px;
+}
+
+.tiny-wym .mce-resize-helper:before {
+	content: "";
+	display: none;
+}
