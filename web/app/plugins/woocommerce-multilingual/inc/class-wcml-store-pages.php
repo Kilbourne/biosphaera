@@ -254,6 +254,26 @@ class WCML_Store_Pages{
             }
         }
 
+	    // copy get parameters?
+	    $gets_passed = array();
+	    $parameters_copied = apply_filters( 'icl_lang_sel_copy_parameters',
+		    array_map( 'trim',
+			    explode( ',',
+				    wpml_get_setting_filter('',
+					    'icl_lang_sel_copy_parameters') ) ) );
+	    if ( $parameters_copied ) {
+		    foreach ( $_GET as $k => $v ) {
+			    if ( in_array( $k, $parameters_copied ) ) {
+				    $gets_passed[ $k ] = $v;
+			    }
+		    }
+
+		    foreach( $languages as $code => $language ){
+			    $languages[$code]['url'] = add_query_arg( $gets_passed, $language['url'] );
+		    }
+	    }
+
+
         return $languages;
     }
 
@@ -324,19 +344,19 @@ class WCML_Store_Pages{
 
                         switch( $page ){
                             case 'woocommerce_shop_page_id':
-                                $page_title = __( 'Shop', 'woocommerce-multilingual');
+                                $page_title = $mis_lang !== 'en'  ?  __( 'Shop', 'woocommerce-multilingual') : 'Shop';
                                 break;
                             case 'woocommerce_cart_page_id':
-                                $page_title = __( 'Cart', 'woocommerce-multilingual');
+                                $page_title = $mis_lang !== 'en'  ?  __( 'Cart', 'woocommerce-multilingual') : 'Cart';
                                 break;
                             case 'woocommerce_checkout_page_id':
-                                $page_title = __( 'Checkout', 'woocommerce-multilingual');
+                                $page_title = $mis_lang !== 'en'  ?  __( 'Checkout', 'woocommerce-multilingual') : 'Checkout';
                                 break;
                             case 'woocommerce_myaccount_page_id':
-                                $page_title = __( 'My Account', 'woocommerce-multilingual');
+                                $page_title = $mis_lang !== 'en'  ?  __( 'My Account', 'woocommerce-multilingual') : 'My Account';
                                 break;
                             default:
-                                $page_title = __( $orig_page->post_title, 'woocommerce-multilingual');
+                                $page_title = $mis_lang !== 'en'  ?  translate( $orig_page->post_title, 'woocommerce-multilingual') : $orig_page->post_title;
                                 break;
                         }
 
@@ -377,7 +397,7 @@ class WCML_Store_Pages{
 
         $check_pages = $this->get_wc_pages();
 
-        $missing_lang = '';
+        $missing_lang = array();
         $pages_in_progress = array();
 
         foreach ($check_pages as $page) {

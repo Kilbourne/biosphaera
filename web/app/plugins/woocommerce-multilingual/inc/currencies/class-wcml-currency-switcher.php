@@ -77,6 +77,10 @@ class WCML_Currency_Switcher {
             return '';
         }
 
+        if( $args === '' ){
+        	$args = array();
+        }
+
         $wcml_settings = $this->woocommerce_wpml->get_settings();
         $multi_currency_object =& $this->woocommerce_wpml->multi_currency;
 
@@ -104,7 +108,7 @@ class WCML_Currency_Switcher {
             if( $is_cart_or_checkout ){
                 $show_currency_switcher = false;
             }elseif( is_product() ){
-                $current_product_id = wc_get_product()->id;
+                $current_product_id = get_post()->ID;
                 $original_product_language = $this->woocommerce_wpml->products->get_original_product_language( $current_product_id );
 
                 $use_custom_prices  = get_post_meta(
