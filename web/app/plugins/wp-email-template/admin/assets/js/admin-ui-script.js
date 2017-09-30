@@ -265,9 +265,7 @@
 				box_data.is_open = 1;
 				$(this).addClass('box_open');
 				box_handle.siblings('.a3rev_panel_box_inside').addClass('box_open').slideDown(500);
-				box_handle.siblings('.a3rev_panel_box_inside').find('img.rwd_image_maps').each(function(i){
-					$(this).rwdImageMaps();
-				});
+				box_handle.siblings('.a3rev_panel_box_inside').find('img.rwd_image_maps').rwdImageMaps();
 			}
 
 			if ( $(this).hasClass('enable_toggle_box_save') && typeof a3_admin_ui_script_params != 'undefined' ) {

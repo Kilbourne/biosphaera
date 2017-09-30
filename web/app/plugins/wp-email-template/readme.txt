@@ -1,9 +1,9 @@
 === WP Email Template  ===
 Contributors: a3rev, nguyencongtuan
 Tags: wordpress email template, wordpress email, email, email template, contact, contact forms,  wp e-commerce email, woocommerce email, contact form 7, e-commerce email, comment forms, comments, forms
-Requires at least: 4.5
-Tested up to: 4.8.0
-Stable tag: 2.2.0
+Requires at least: 4.1
+Tested up to: 4.6.1
+Stable tag: 2.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,7 +22,7 @@ WP Email Template 2 things - beautifully
 * Mandrill (API or SMTP)
 * SparkPost (HTTP API or SMTP API)
 
-= EMAIL TEMPLATE =
+= Email Template =
 
 The plugin applies a HTML template to email sent from your WordPress site. The Template is optimized to show your HTML emails perfectly in the10 most popular email browsers.
 
@@ -36,7 +36,7 @@ The plugin applies a HTML template to email sent from your WordPress site. The T
 * Windows Live Desktop
 * Mozilla Thunderbird
 
-= TEMPLATE EDIT OPTIONS =
+= Template Edit Options =
 
 * Option to Turn the Template ON | OFF. OFF to just use the plugin use to set up wp email sender without using the template (see below).
 * Dynamic Template Width - admin can edit the 600px default width of the Template.
@@ -49,7 +49,7 @@ The plugin applies a HTML template to email sent from your WordPress site. The T
 * Many more dynamic style options available in the Pro version.
 
 
-= EMAIL SENDING OPTIONS =
+= Email Sending Options =
 
 The biggest issue users have are:
 
@@ -75,7 +75,7 @@ At a3rev we want users to be able to
 
 That is why we have added the Email Sending Provider Configuration Options so you can do all of that with just one plugin - WP Email Template.
 
-= EMAIL FROM PLUGINS =
+= Email from WordPress Plugins =
 
 WP Email Template will not work with any plugin that:
 
@@ -93,15 +93,48 @@ Some of the better known plugins of the 1,000's of plugins that WP Email Templat
 * BackupBuddy - I love it when even my admin emails are branded - see the screenshots
 * Wordfence - Branded security emails - nice.
 
-= PREMIUM VERSION =
+= Mobile First App style admin interface =
 
-For those who want more advanced features there is a Premium version. View addition features at [WP EMAIL TEMPLATE PREMIUM](http://a3rev.com/shop/wp-email-template/)
+* 100% compatible with WordPress v4.2.2 admin interface.
+* Backward compatibility to WordPress v4.0
+* Mobile first admin interface.
 
-= CONTRIBUTE =
+= a3rev Plugins Lite & Pro Version Admin Interface =
 
-When you download WP Email Template, you join our the a3rev Software community. Regardless of if you are a WordPress beginner or experienced developer if you are interested in contributing to the future development of this plugin head over to the WP Email Template public [GitHub Repository](https://github.com/a3rev/wp-email-template-lite) to find out how you can contribute.
+* All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version.
+* Pro Version feature Setting Boxes have a green box header.
+* The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
+* Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Setting Box header green background
+>= Premium Support =
 
-Want to add a new language to WP Email Template! You can contribute via [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/wp-email-template)
+>The a3rev team does not provide support for the WP Email Template plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/wordpress-plugins/wp-email-template/) to people who have purchased a [WP Email Template Pro](http://a3rev.com/shop/wp-email-template/) plugin Lifetime License.
+
+>The Pro Version has lots of extra features that coupled with developer support might be well worth your investment!
+
+= The Pro Version Upgrade =
+
+* Wow your web clients and customers with an email template that perfectly matches the site design.
+* Ability to only apply to emails that you want the template to apply to instead of all.
+* We use it on every site we do and it just blows the client away.
+* Best thing of all it takes just minutes to do.
+* Our clients love tweaking the design with the point and click settings.
+
+See the Lite Versions plugin admin panel for more Pro Version details.
+
+= Localization =
+
+If you do a translation for your site please send it to us and we'll include it in the plugins language folder and credit you here with the translation and a link to your site.
+
+* English (default) - always included.
+* German - DE Thanks to Marko Geisler
+* Russian - RU Thanks to Viktor Demidov
+* .po file (wp_email_template.po) in languages folder for translations.
+* [Go here](http://a3rev.com/contact-us-page/) to send your translation files to us.
+
+= Plugin Resources =
+
+[PRO Version](http://a3rev.com/shop/wp-email-template/) |
+[Documentation](http://docs.a3rev.com/user-guides/wordpress/wp-email-template/) |
 
 
 == Installation ==
@@ -149,40 +182,6 @@ The manual installation method involves down loading our plugin and uploading it
 
 
 == Changelog ==
-
-= 2.2.0 - 2017/06/08 =
-* Feature - Launched WP Email Template public Repository
-* Tweak - Tested for compatibility with WordPress major version 4.8.0
-* Tweak - Tested for full compatibility with WooCommerce version 3.0.8
-* Tweak - Include bootstrap modal script into plugin framework
-* Tweak - Update a3rev plugin framework to latest version
-
-= 2.1.4 - 2017/05/03 =
-* Tweak - Update  email_header.html template file for compatibility with WooCommerce version 3.0.5
-* Tweak - Update  email_footer.html template file for compatibility with WooCommerce version 3.0.5
-* Tweak - Full compatibility with WooCommerce version 3.0.5
-* Tweak - Tested for full compatibility with WordPress version 4.7.4
-
-= 2.1.3 - 2017/04/19 =
-* Tweak - Change class name of Simple Html Dom lib to avoid conflict with any other lib with same class name
-* Fix - Check if Simple Html Dom lib exists from another plugin, if so use the lib from there to resolve redeclare file_get_html()fatal Error
-* Credit - Thanks to Premium customers Greg Cole, Todd Wilson and Free users @rnzo and @manish9034 for reporting the Simple HTML Lib conflict on their sites
-
-= 2.1.2 - 2017/04/14 =
-* Tweak - Include new Simple Html Dom lib
-* Tweak - Just get content inside body tag of message if message contain html, body tags. 
-* Tweak - Full compatibility with WooCommerce version 3.0.3 with backward compatibility to WC version 2.6.0
-* Tweak - Tested for full compatibility with WordPress version 4.7.3
-* Credit - Thanks to Per Söderman for reporting the issue with content that contains html and body tags
-
-= 2.1.1 - 2017/03/16 =
-* Tweak - Update Mandrill lib for compatibility with PHP 7.0
-* Tweak - Change global $$variable to global ${$variable} for compatibility with PHP 7.0
-* Tweak - Update a3 Revolution to a3rev Software on plugins description
-* Tweak - Added Settings link to plugins description on plugins menu
-* Tweak - Tested for full compatibility with WordPress version 4.7.3
-* Tweak - Tested for full compatibility with WooCommerce version 2.6.14
-* Credit - Thanks to Henry Walker, @krishaamer and others for reporting the PHP 7.0 compatibility issues
 
 = 2.1.0 - 2016/10/25 =
 * Feature - Added upload custom social media icons options
@@ -540,21 +539,6 @@ The manual installation method involves down loading our plugin and uploading it
 
 
 == Upgrade Notice ==
-
-= 2.2.0 =
-Feature Update. 2 code tweaks for compatibility with WordPress major version 4.8.0 and WooCommerce version 3.0.8 and launch of the plugins public Github repo
-
-= 2.1.4 =
-Maintenance Update. 2 code tweaks for compatibility with WooCommerce 3.0.5 and WordPress 4.7.4
-
-= 2.1.3 =
-Maintenance Update. 1 Tweak and 1 Bug Fix for Simple HTML Dom lib introduced in version 2.3.2 and causing fatal error on some sites
-
-= 2.1.2 =
-Maintenance Update. 2 code tweaks for full compatibility with WordPress 4.7.3 and WooCommerce 3.0.3 with backward to WC 2.6.0
-
-= 2.1.1 =
-Maintenance Update. 3 code tweaks for compatibility with PHP 7.0 - plus tweaks for compatibility with WordPress v 4.7.3 and WooCommerce 2.6.14
 
 = 2.1.0 =
 Feature Upgrade. Added 2 new features, 5 code tweaks plus 2 bug fixes and full compatibility with WooCommerce version 2.6.6

@@ -396,15 +396,6 @@ class WP_Email_Template_Functions
 		if (stristr($message, '<!--NO_USE_EMAIL_TEMPLATE-->') === false )
 			$html .= WP_Email_Template_Functions::email_header($email_heading);
 
-		// Just get content from body tag if message include full html structure
-		if ( stristr( $message, '<html' ) !== false || stristr( $message, '<body' ) !== false ) {
-			if ( ! function_exists( 'a3_str_get_html' ) ) {
-				include( WP_EMAIL_TEMPLATE_DIR. '/includes/simple_html_dom.php' );
-			}
-			$message_dom = a3_str_get_html( $message );
-			$message = $message_dom->find( 'body', 0 )->innertext;
-		}
-
 		$html .= wpautop( make_clickable( $message) );
 
 		if (stristr($message, '<!--NO_USE_EMAIL_TEMPLATE-->') === false ) {

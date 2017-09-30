@@ -63,7 +63,7 @@ class Mandrill {
         $this->apikey = $apikey;
 
         $this->ch = curl_init();
-        curl_setopt($this->ch, CURLOPT_USERAGENT, 'Mandrill-PHP/1.0.55');
+        curl_setopt($this->ch, CURLOPT_USERAGENT, 'Mandrill-PHP/1.0.52');
         curl_setopt($this->ch, CURLOPT_POST, true);
         curl_setopt($this->ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($this->ch, CURLOPT_HEADER, false);
@@ -213,7 +213,7 @@ class Mandrill {
                 
                 list($headers, $response_body) = explode("\r\n\r\n", $response_body, 2);
 
-                $response_body = stripslashes($response_body);
+                if(ini_get("magic_quotes_runtime")) $response_body = stripslashes($response_body);
     	        $info = array('http_code' => 200);
             } else {
                 ob_end_clean();
@@ -290,9 +290,16 @@ class Mandrill {
                 function set_magic_quotes($value) { return true;}
             }
             
+            if (strnatcmp(phpversion(),'6') >= 0) {
+                $magic_quotes = get_magic_quotes_runtime();
+                set_magic_quotes_runtime(0);
+            }
+            
             $file_buffer  = file_get_contents($path);
             $file_buffer  = chunk_split(base64_encode($file_buffer), 76, "\n");
-                        
+            
+            if (strnatcmp(phpversion(),'6') >= 0) set_magic_quotes_runtime($magic_quotes);
+            
             $mime_type = '';
 			if ( function_exists('finfo_open') && function_exists('finfo_file') ) {
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
