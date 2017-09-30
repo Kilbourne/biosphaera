@@ -24,3 +24,4 @@ node_modules
 # Vagrant
 bin
 .vagrant
+web/app/ewww/
