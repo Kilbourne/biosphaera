@@ -667,72 +667,6 @@
             "homepage": "https://searchwp.com/"
         },
         {
-            "name": "satispress/searchwp-term-priority",
-            "version": "1.1.2",
-            "dist": {
-                "type": "zip",
-                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-term-priority/1.1.2",
-                "reference": null,
-                "shasum": "9428e97a339687658d3298d868ebcc65870d8e13"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "Jonathan Christopher",
-                    "homepage": "https://searchwp.com/"
-                }
-            ],
-            "description": "Bubbles term archive pages to the top of search results for supplemental search engines",
-            "homepage": "https://searchwp.com/"
-        },
-        {
-            "name": "satispress/searchwp-woocommerce",
-            "version": "1.1.10",
-            "dist": {
-                "type": "zip",
-                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-woocommerce/1.1.10",
-                "reference": null,
-                "shasum": "95861493699afb205edf084217368d19ee4a5f61"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "SearchWP, LLC",
-                    "homepage": "https://searchwp.com/"
-                }
-            ],
-            "description": "Integrate SearchWP with WooCommerce searches and Layered Navigation",
-            "homepage": "https://searchwp.com/"
-        },
-        {
-            "name": "satispress/searchwp-wpml",
-            "version": "1.2.1",
-            "dist": {
-                "type": "zip",
-                "url": "http://www.menthalia.com/premiumpress/satispress/searchwp-wpml/1.2.1",
-                "reference": null,
-                "shasum": "48a9ed46e3ba497275aa1159acf87aee675d4bd9"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "Jonathan Christopher",
-                    "homepage": "https://searchwp.com/"
-                }
-            ],
-            "description": "Integrate SearchWP with WPML",
-            "homepage": "https://searchwp.com/"
-        },
-        {
             "name": "satispress/sitepress-multilingual-cms",
             "version": "3.6.1",
             "dist": {
@@ -841,28 +775,6 @@
             ],
             "description": "Allows running fully multilingual e-Commerce sites with WooCommerce and WPML. Documentation.",
             "homepage": "http://wpml.org/documentation/related-projects/woocommerce-multilingual/"
-        },
-        {
-            "name": "satispress/wp-migrate-db-pro",
-            "version": "1.7",
-            "dist": {
-                "type": "zip",
-                "url": "http://www.menthalia.com/premiumpress/satispress/wp-migrate-db-pro/1.7",
-                "reference": null,
-                "shasum": "4be9598eec84f374ab184ae5a1f34fc99bb1bd3b"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "Delicious Brains",
-                    "homepage": "http://deliciousbrains.com"
-                }
-            ],
-            "description": "Export, push, and pull to migrate your WordPress databases.",
-            "homepage": "http://deliciousbrains.com/wp-migrate-db-pro/"
         },
         {
             "name": "satispress/wp-migrate-db-pro-media-files",

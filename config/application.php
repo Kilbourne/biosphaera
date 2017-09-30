@@ -78,7 +78,7 @@ define('DISALLOW_FILE_EDIT', true);
 define('FS_CHMOD_FILE',0755);
 
 define('FS_CHMOD_DIR',0755);
-define('WP_MEMORY_LIMIT', '1028M');
+define('WP_MEMORY_LIMIT', '512M');
 /**
  * Bootstrap WordPress
  */

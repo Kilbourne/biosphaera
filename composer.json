@@ -71,37 +71,45 @@
     }, {
         "type": "vcs",
         "url": "https://github.com/pressjitsu/wp-transients-cleaner"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/inpsyde/translation-cache"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/kilbourne/composerpress"
     }],
     "require": {
         "php": ">=5.6",
         "composer/installers": "~1.0.12",
         "vlucas/phpdotenv": "^2.0.1",
-        "johnpbloch/wordpress": "4.7.2",
+        "johnpbloch/wordpress": "4.6.1",
         "oscarotero/env": "^1.0",
         "roots/wp-password-bcrypt": "1.0.0",
-        "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips": "*",
 
-        "wpackagist-plugin/woocommerce-pdf-invoices-italian-add-on": "*",
-        "wpackagist-plugin/woocommerce-gateway-stripe": "*",
-        "satispress/wooCommerce-dynamic-pricing": "*",
+
+
+        "wpackagist-plugin/woocommerce-ajax-add-to-cart-for-variable-products": "1.2.9",
+        "satispress/yith-woocommerce-catalog-mode-premium": "*",
         "wpackagist-plugin/password-protected": "*",
-        "wpackagist-plugin/post-2-post-for-acf": "*",
+
         "satispress/divi-builder": "*",
         "wpackagist-plugin/tinywym-editor": "*",
+        "wpackagist-plugin/cpt-onomies": "*",
 
 
         "satispress/gravityforms": "*",
 
-        "wpackagist-plugin/menu-social-icons": "*",
+
         "wpackagist-plugin/plugin-organizer": "*",
         "satispress/xslt": "*",
         "satispress/global-meta-box-order": "*",
 
         "satispress/advanced-custom-fields-pro": "*",
+        "wpackagist-plugin/advanced-excerpt": "*",
         "wpackagist-plugin/wp-spamshield": "*",
         "satispress/searchwp": "*",
         "wpackagist-plugin/woocommerce": "*",
-        "satispress/sitepress-multilingual-cms": "*",
+        "satispress/sitepress-multilingual-cms": "3.5.3.1",
         "wpackagist-plugin/wp-email-template": "*",
         "wpackagist-plugin/disable-comments": "*",
         "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
@@ -145,17 +153,14 @@
 
 
         "satispress/searchwp-exclude-ui-master": "*",
-
-        "satispress/searchwp-term-priority": "*",
         "satispress/wpml-media": "*",
         "satispress/wpml-string-translation": "*",
         "satispress/wpml-translation-management": "*",
         "satispress/gravityformsmailchimp": "*",
         "satispress/gravityforms-multilingual": "*",
-        "satispress/searchwp-wpml": "*",
+
         "satispress/woocommerce-multilingual": "*",
         "satispress/cac-addon-woocommerce": "*",
-        "satispress/searchwp-woocommerce": "*",
         "satispress/woocommerce-google-analytics-pro": "*"
 
 
